@@ -27,6 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     'bao-cao-cuoi-ky-web-3-41e9314b4801.herokuapp.com',
+    "127.0.0.1"    
 ]
 
 
