@@ -1,0 +1,2347 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Dashboard</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+    <meta name="theme-color" content="#16081a" />
+    <meta name="description" content="" />
+    <link
+      rel="icon" type="image/x-icon" href="https://dashboard.boostroyal.com/favicon.ico?v=3"/>
+    <script
+      async=""
+      src="./Dashboard/OneSignalSDK.js.download"
+      type="text/javascript"></script>
+
+      <!--Style-->
+    <style type="text/css">
+      @font-face {
+        font-family: "Noto Sans";
+        font-style: normal;
+        font-weight: 300;
+        src: url(https://fonts.gstatic.com/s/notosans/v32/o-0NIpQlx3QUlC5A4PNjThZVadyBx2pqPIif.woff2)
+          format("woff2");
+        unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF,
+          U+A640-A69F, U+FE2E-FE2F;
+      }
+      @font-face {
+        font-family: "Noto Sans";
+        font-style: normal;
+        font-weight: 300;
+        src: url(https://fonts.gstatic.com/s/notosans/v32/o-0NIpQlx3QUlC5A4PNjThZVYNyBx2pqPIif.woff2)
+          format("woff2");
+        unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+      }
+      @font-face {
+        font-family: "Noto Sans";
+        font-style: normal;
+        font-weight: 300;
+        src: url(https://fonts.gstatic.com/s/notosans/v32/o-0NIpQlx3QUlC5A4PNjThZVZdyBx2pqPIif.woff2)
+          format("woff2");
+        unicode-range: U+0900-097F, U+1CD0-1CF9, U+200C-200D, U+20A8, U+20B9,
+          U+25CC, U+A830-A839, U+A8E0-A8FF;
+      }
+      @font-face {
+        font-family: "Noto Sans";
+        font-style: normal;
+        font-weight: 300;
+        src: url(https://fonts.gstatic.com/s/notosans/v32/o-0NIpQlx3QUlC5A4PNjThZVaNyBx2pqPIif.woff2)
+          format("woff2");
+        unicode-range: U+1F00-1FFF;
+      }
+      @font-face {
+        font-family: "Noto Sans";
+        font-style: normal;
+        font-weight: 300;
+        src: url(https://fonts.gstatic.com/s/notosans/v32/o-0NIpQlx3QUlC5A4PNjThZVZ9yBx2pqPIif.woff2)
+          format("woff2");
+        unicode-range: U+0370-03FF;
+      }
+      @font-face {
+        font-family: "Noto Sans";
+        font-style: normal;
+        font-weight: 300;
+        src: url(https://fonts.gstatic.com/s/notosans/v32/o-0NIpQlx3QUlC5A4PNjThZVa9yBx2pqPIif.woff2)
+          format("woff2");
+        unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169,
+          U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309,
+          U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+      }
+      @font-face {
+        font-family: "Noto Sans";
+        font-style: normal;
+        font-weight: 300;
+        src: url(https://fonts.gstatic.com/s/notosans/v32/o-0NIpQlx3QUlC5A4PNjThZVatyBx2pqPIif.woff2)
+          format("woff2");
+        unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F,
+          U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F,
+          U+A720-A7FF;
+      }
+      @font-face {
+        font-family: "Noto Sans";
+        font-style: normal;
+        font-weight: 300;
+        src: url(https://fonts.gstatic.com/s/notosans/v32/o-0NIpQlx3QUlC5A4PNjThZVZNyBx2pqPA.woff2)
+          format("woff2");
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+          U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC,
+          U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+      @font-face {
+        font-family: "Noto Sans";
+        font-style: normal;
+        font-weight: 400;
+        src: url(https://fonts.gstatic.com/s/notosans/v32/o-0IIpQlx3QUlC5A4PNr6DRASf6M7VBj.woff2)
+          format("woff2");
+        unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF,
+          U+A640-A69F, U+FE2E-FE2F;
+      }
+      @font-face {
+        font-family: "Noto Sans";
+        font-style: normal;
+        font-weight: 400;
+        src: url(https://fonts.gstatic.com/s/notosans/v32/o-0IIpQlx3QUlC5A4PNr4TRASf6M7VBj.woff2)
+          format("woff2");
+        unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+      }
+      @font-face {
+        font-family: "Noto Sans";
+        font-style: normal;
+        font-weight: 400;
+        src: url(https://fonts.gstatic.com/s/notosans/v32/o-0IIpQlx3QUlC5A4PNr5DRASf6M7VBj.woff2)
+          format("woff2");
+        unicode-range: U+0900-097F, U+1CD0-1CF9, U+200C-200D, U+20A8, U+20B9,
+          U+25CC, U+A830-A839, U+A8E0-A8FF;
+      }
+      @font-face {
+        font-family: "Noto Sans";
+        font-style: normal;
+        font-weight: 400;
+        src: url(https://fonts.gstatic.com/s/notosans/v32/o-0IIpQlx3QUlC5A4PNr6TRASf6M7VBj.woff2)
+          format("woff2");
+        unicode-range: U+1F00-1FFF;
+      }
+      @font-face {
+        font-family: "Noto Sans";
+        font-style: normal;
+        font-weight: 400;
+        src: url(https://fonts.gstatic.com/s/notosans/v32/o-0IIpQlx3QUlC5A4PNr5jRASf6M7VBj.woff2)
+          format("woff2");
+        unicode-range: U+0370-03FF;
+      }
+      @font-face {
+        font-family: "Noto Sans";
+        font-style: normal;
+        font-weight: 400;
+        src: url(https://fonts.gstatic.com/s/notosans/v32/o-0IIpQlx3QUlC5A4PNr6jRASf6M7VBj.woff2)
+          format("woff2");
+        unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169,
+          U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309,
+          U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+      }
+      @font-face {
+        font-family: "Noto Sans";
+        font-style: normal;
+        font-weight: 400;
+        src: url(https://fonts.gstatic.com/s/notosans/v32/o-0IIpQlx3QUlC5A4PNr6zRASf6M7VBj.woff2)
+          format("woff2");
+        unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F,
+          U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F,
+          U+A720-A7FF;
+      }
+      @font-face {
+        font-family: "Noto Sans";
+        font-style: normal;
+        font-weight: 400;
+        src: url(https://fonts.gstatic.com/s/notosans/v32/o-0IIpQlx3QUlC5A4PNr5TRASf6M7Q.woff2)
+          format("woff2");
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+          U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC,
+          U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+      @font-face {
+        font-family: "Noto Sans";
+        font-style: normal;
+        font-weight: 500;
+        src: url(https://fonts.gstatic.com/s/notosans/v32/o-0NIpQlx3QUlC5A4PNjFhdVadyBx2pqPIif.woff2)
+          format("woff2");
+        unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF,
+          U+A640-A69F, U+FE2E-FE2F;
+      }
+      @font-face {
+        font-family: "Noto Sans";
+        font-style: normal;
+        font-weight: 500;
+        src: url(https://fonts.gstatic.com/s/notosans/v32/o-0NIpQlx3QUlC5A4PNjFhdVYNyBx2pqPIif.woff2)
+          format("woff2");
+        unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+      }
+      @font-face {
+        font-family: "Noto Sans";
+        font-style: normal;
+        font-weight: 500;
+        src: url(https://fonts.gstatic.com/s/notosans/v32/o-0NIpQlx3QUlC5A4PNjFhdVZdyBx2pqPIif.woff2)
+          format("woff2");
+        unicode-range: U+0900-097F, U+1CD0-1CF9, U+200C-200D, U+20A8, U+20B9,
+          U+25CC, U+A830-A839, U+A8E0-A8FF;
+      }
+      @font-face {
+        font-family: "Noto Sans";
+        font-style: normal;
+        font-weight: 500;
+        src: url(https://fonts.gstatic.com/s/notosans/v32/o-0NIpQlx3QUlC5A4PNjFhdVaNyBx2pqPIif.woff2)
+          format("woff2");
+        unicode-range: U+1F00-1FFF;
+      }
+      @font-face {
+        font-family: "Noto Sans";
+        font-style: normal;
+        font-weight: 500;
+        src: url(https://fonts.gstatic.com/s/notosans/v32/o-0NIpQlx3QUlC5A4PNjFhdVZ9yBx2pqPIif.woff2)
+          format("woff2");
+        unicode-range: U+0370-03FF;
+      }
+      @font-face {
+        font-family: "Noto Sans";
+        font-style: normal;
+        font-weight: 500;
+        src: url(https://fonts.gstatic.com/s/notosans/v32/o-0NIpQlx3QUlC5A4PNjFhdVa9yBx2pqPIif.woff2)
+          format("woff2");
+        unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169,
+          U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309,
+          U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+      }
+      @font-face {
+        font-family: "Noto Sans";
+        font-style: normal;
+        font-weight: 500;
+        src: url(https://fonts.gstatic.com/s/notosans/v32/o-0NIpQlx3QUlC5A4PNjFhdVatyBx2pqPIif.woff2)
+          format("woff2");
+        unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F,
+          U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F,
+          U+A720-A7FF;
+      }
+      @font-face {
+        font-family: "Noto Sans";
+        font-style: normal;
+        font-weight: 500;
+        src: url(https://fonts.gstatic.com/s/notosans/v32/o-0NIpQlx3QUlC5A4PNjFhdVZNyBx2pqPA.woff2)
+          format("woff2");
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+          U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC,
+          U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+      @font-face {
+        font-family: "Noto Sans";
+        font-style: normal;
+        font-weight: 700;
+        src: url(https://fonts.gstatic.com/s/notosans/v32/o-0NIpQlx3QUlC5A4PNjXhFVadyBx2pqPIif.woff2)
+          format("woff2");
+        unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF,
+          U+A640-A69F, U+FE2E-FE2F;
+      }
+      @font-face {
+        font-family: "Noto Sans";
+        font-style: normal;
+        font-weight: 700;
+        src: url(https://fonts.gstatic.com/s/notosans/v32/o-0NIpQlx3QUlC5A4PNjXhFVYNyBx2pqPIif.woff2)
+          format("woff2");
+        unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+      }
+      @font-face {
+        font-family: "Noto Sans";
+        font-style: normal;
+        font-weight: 700;
+        src: url(https://fonts.gstatic.com/s/notosans/v32/o-0NIpQlx3QUlC5A4PNjXhFVZdyBx2pqPIif.woff2)
+          format("woff2");
+        unicode-range: U+0900-097F, U+1CD0-1CF9, U+200C-200D, U+20A8, U+20B9,
+          U+25CC, U+A830-A839, U+A8E0-A8FF;
+      }
+      @font-face {
+        font-family: "Noto Sans";
+        font-style: normal;
+        font-weight: 700;
+        src: url(https://fonts.gstatic.com/s/notosans/v32/o-0NIpQlx3QUlC5A4PNjXhFVaNyBx2pqPIif.woff2)
+          format("woff2");
+        unicode-range: U+1F00-1FFF;
+      }
+      @font-face {
+        font-family: "Noto Sans";
+        font-style: normal;
+        font-weight: 700;
+        src: url(https://fonts.gstatic.com/s/notosans/v32/o-0NIpQlx3QUlC5A4PNjXhFVZ9yBx2pqPIif.woff2)
+          format("woff2");
+        unicode-range: U+0370-03FF;
+      }
+      @font-face {
+        font-family: "Noto Sans";
+        font-style: normal;
+        font-weight: 700;
+        src: url(https://fonts.gstatic.com/s/notosans/v32/o-0NIpQlx3QUlC5A4PNjXhFVa9yBx2pqPIif.woff2)
+          format("woff2");
+        unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169,
+          U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309,
+          U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+      }
+      @font-face {
+        font-family: "Noto Sans";
+        font-style: normal;
+        font-weight: 700;
+        src: url(https://fonts.gstatic.com/s/notosans/v32/o-0NIpQlx3QUlC5A4PNjXhFVatyBx2pqPIif.woff2)
+          format("woff2");
+        unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F,
+          U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F,
+          U+A720-A7FF;
+      }
+      @font-face {
+        font-family: "Noto Sans";
+        font-style: normal;
+        font-weight: 700;
+        src: url(https://fonts.gstatic.com/s/notosans/v32/o-0NIpQlx3QUlC5A4PNjXhFVZNyBx2pqPA.woff2)
+          format("woff2");
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+          U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC,
+          U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+    </style>
+    <link
+      rel="manifest"
+      href="https://dashboard.boostroyal.com/manifest.webmanifest"
+    />
+    <meta name="theme-color" content="#1976d2" />
+    <style>
+      *,
+      :before,
+      :after {
+        box-sizing: border-box;
+        border-width: 0;
+        border-style: solid;
+        border-color: currentColor;
+      }
+      :before,
+      :after {
+        --tw-content: "";
+      }
+      html {
+        line-height: 1.5;
+        -webkit-text-size-adjust: 100%;
+        -moz-tab-size: 4;
+        -o-tab-size: 4;
+        tab-size: 4;
+        font-family: Open Sans, sans-serif;
+      }
+      body {
+        margin: 0;
+        line-height: inherit;
+      }
+      *,
+      :before,
+      :after {
+        --tw-border-spacing-x: 0;
+        --tw-border-spacing-y: 0;
+        --tw-translate-x: 0;
+        --tw-translate-y: 0;
+        --tw-rotate: 0;
+        --tw-skew-x: 0;
+        --tw-skew-y: 0;
+        --tw-scale-x: 1;
+        --tw-scale-y: 1;
+        --tw-pan-x: ;
+        --tw-pan-y: ;
+        --tw-pinch-zoom: ;
+        --tw-scroll-snap-strictness: proximity;
+        --tw-ordinal: ;
+        --tw-slashed-zero: ;
+        --tw-numeric-figure: ;
+        --tw-numeric-spacing: ;
+        --tw-numeric-fraction: ;
+        --tw-ring-inset: ;
+        --tw-ring-offset-width: 0px;
+        --tw-ring-offset-color: #fff;
+        --tw-ring-color: rgb(59 130 246 / 0.5);
+        --tw-ring-offset-shadow: 0 0 #0000;
+        --tw-ring-shadow: 0 0 #0000;
+        --tw-shadow: 0 0 #0000;
+        --tw-shadow-colored: 0 0 #0000;
+        --tw-blur: ;
+        --tw-brightness: ;
+        --tw-contrast: ;
+        --tw-grayscale: ;
+        --tw-hue-rotate: ;
+        --tw-invert: ;
+        --tw-saturate: ;
+        --tw-sepia: ;
+        --tw-drop-shadow: ;
+        --tw-backdrop-blur: ;
+        --tw-backdrop-brightness: ;
+        --tw-backdrop-contrast: ;
+        --tw-backdrop-grayscale: ;
+        --tw-backdrop-hue-rotate: ;
+        --tw-backdrop-invert: ;
+        --tw-backdrop-opacity: ;
+        --tw-backdrop-saturate: ;
+        --tw-backdrop-sepia: ;
+      }
+      .overflow-x-hidden {
+        overflow-x: hidden;
+      }
+      .bg-deep-purple-1 {
+        --tw-bg-opacity: 1;
+        background-color: rgb(22 8 26 / var(--tw-bg-opacity));
+      }
+      .text-base {
+        font-size: 1rem;
+      }
+      .text-white {
+        --tw-text-opacity: 1;
+        color: rgb(255 255 255 / var(--tw-text-opacity));
+      }
+      :root {
+        --primary-color: #ff9155;
+        --secondary-color: #40bdab;
+        --primary-background: #16081a;
+        --secondary-background: #231526;
+        --box-background: #342239;
+        --text-color: #797b7d;
+        --title-color: #ffffff;
+        --red-color: #bd4063;
+        --blue-color: #0578dc;
+        --orange-color: #d54e4e;
+        --primary-gradient: linear-gradient(
+          90deg,
+          var(--orange-color) 0,
+          var(--primary-color)
+        );
+        --secondary-gradient: linear-gradient(
+          90deg,
+          var(--blue-color) 0,
+          var(--secondary-color)
+        );
+        --primary-font: "Noto Sans", sans-serif;
+        --secondary-font: "Noto Sans", sans-serif;
+        --break-xs: 599px;
+        --break-sm: 959px;
+        --break-md: 1279px;
+        --break-lg: 1919px;
+      }
+      html,
+      body {
+        -webkit-touch-callout: none;
+        width: 100%;
+        height: 100%;
+        min-height: 100%;
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        position: relative;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="./Dashboard/styles.13124b6b853a8a65.css"
+      media="all"
+    />
+    <noscript
+      ><link rel="stylesheet" href="styles.13124b6b853a8a65.css"
+    /></noscript>
+    <style>
+      :is(
+          [id*="google_ads_iframe"],
+          [id*="taboola-"],
+          .taboolaHeight,
+          .taboola-placeholder,
+          #credential_picker_container,
+          #credentials-picker-container,
+          #credential_picker_iframe,
+          [id*="google-one-tap-iframe"],
+          #google-one-tap-popup-container,
+          .google-one-tap-modal-div,
+          #amp_floatingAdDiv,
+          #ez-content-blocker-container
+        ) {
+        display: none !important;
+        min-height: 0 !important;
+        height: 0 !important;
+      }
+    </style>
+    <style>
+      .cke {
+        visibility: hidden;
+      }
+    </style>
+    <style>
+      body.shimeji-pinned iframe {
+        pointer-events: none;
+      }
+      body.shimeji-select-ie {
+        cursor: cell !important;
+      }
+      #shimeji-contextMenu::-webkit-scrollbar {
+        width: 6px;
+      }
+      #shimeji-contextMenu::-webkit-scrollbar-thumb {
+        background-color: rgba(30, 30, 30, 0.6);
+        border-radius: 3px;
+      }
+      #shimeji-contextMenu::-webkit-scrollbar-thumb:hover {
+        background: #555;
+      }
+    </style>
+    <meta
+      name="shimejiBrowserExtensionId"
+      content="gohjpllcolmccldfdggmamodembldgpc"
+      data-version="2.0.4"
+    />
+    <style>
+      .br-loading[_ngcontent-ixw-c53]
+        .pulse[_ngcontent-ixw-c53]
+        img[_ngcontent-ixw-c53] {
+        -webkit-animation: pulse 2s ease-in-out infinite;
+        animation: pulse 2s ease-in-out infinite;
+      }
+      @-webkit-keyframes pulse {
+        0% {
+          transform: scale(1);
+          opacity: 1;
+        }
+        50% {
+          transform: scale(0.9);
+          opacity: 0.3;
+        }
+        to {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+          opacity: 1;
+        }
+        50% {
+          transform: scale(0.9);
+          opacity: 0.3;
+        }
+        to {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+      .lds-ellipsis[_ngcontent-ixw-c53] div[_ngcontent-ixw-c53] {
+        position: absolute;
+        top: 27px;
+        width: 11px;
+        height: 11px;
+        border-radius: 50%;
+        background: var(--primary-gradient);
+        -webkit-animation-timing-function: cubic-bezier(0, 1, 1, 0);
+        animation-timing-function: cubic-bezier(0, 1, 1, 0);
+      }
+      .lds-ellipsis[_ngcontent-ixw-c53] div[_ngcontent-ixw-c53]:nth-child(1) {
+        left: 6px;
+        -webkit-animation: lds-ellipsis1 0.6s infinite;
+        animation: lds-ellipsis1 0.6s infinite;
+      }
+      .lds-ellipsis[_ngcontent-ixw-c53] div[_ngcontent-ixw-c53]:nth-child(2) {
+        left: 6px;
+        -webkit-animation: lds-ellipsis2 0.6s infinite;
+        animation: lds-ellipsis2 0.6s infinite;
+      }
+      .lds-ellipsis[_ngcontent-ixw-c53] div[_ngcontent-ixw-c53]:nth-child(3) {
+        left: 26px;
+        -webkit-animation: lds-ellipsis2 0.6s infinite;
+        animation: lds-ellipsis2 0.6s infinite;
+      }
+      .lds-ellipsis[_ngcontent-ixw-c53] div[_ngcontent-ixw-c53]:nth-child(4) {
+        left: 45px;
+        -webkit-animation: lds-ellipsis3 0.6s infinite;
+        animation: lds-ellipsis3 0.6s infinite;
+      }
+      @-webkit-keyframes lds-ellipsis1 {
+        0% {
+          transform: scale(0);
+        }
+        to {
+          transform: scale(1);
+        }
+      }
+      @keyframes lds-ellipsis1 {
+        0% {
+          transform: scale(0);
+        }
+        to {
+          transform: scale(1);
+        }
+      }
+      @-webkit-keyframes lds-ellipsis3 {
+        0% {
+          transform: scale(1);
+        }
+        to {
+          transform: scale(0);
+        }
+      }
+      @keyframes lds-ellipsis3 {
+        0% {
+          transform: scale(1);
+        }
+        to {
+          transform: scale(0);
+        }
+      }
+      @-webkit-keyframes lds-ellipsis2 {
+        0% {
+          transform: translate(0);
+        }
+        to {
+          transform: translate(19px);
+        }
+      }
+      @keyframes lds-ellipsis2 {
+        0% {
+          transform: translate(0);
+        }
+        to {
+          transform: translate(19px);
+        }
+      }
+    </style>
+    <style>
+      .nav-icon[_ngcontent-ixw-c51] {
+        color: #ffffff80;
+        transition-duration: 0.3s;
+        font-size: 10px;
+      }
+      .nav-icon.active[_ngcontent-ixw-c51],
+      .nav-icon[_ngcontent-ixw-c51]:hover {
+        color: #fff;
+      }
+      .nav-icon.active[_ngcontent-ixw-c51]
+        svg[_ngcontent-ixw-c51]
+        path[_ngcontent-ixw-c51],
+      .nav-icon.active[_ngcontent-ixw-c51]
+        svg[_ngcontent-ixw-c51]
+        rect[_ngcontent-ixw-c51],
+      .nav-icon[_ngcontent-ixw-c51]:hover
+        svg[_ngcontent-ixw-c51]
+        path[_ngcontent-ixw-c51],
+      .nav-icon[_ngcontent-ixw-c51]:hover
+        svg[_ngcontent-ixw-c51]
+        rect[_ngcontent-ixw-c51] {
+        transition-duration: 0.3s;
+        fill-opacity: 1;
+        stroke-opacity: 1;
+      }
+    </style>
+    <style type="text/css"></style>
+    <style>
+      .dash-table .datatable-header {
+        background: #291c2c;
+        border-radius: 20px 20px 0 0;
+        border-bottom: 1px solid rgba(217, 217, 217, 0.1);
+        height: auto !important;
+        height: initial !important;
+        font-weight: 700;
+      }
+      .dash-table .datatable-header .datatable-header-cell {
+        padding: 20px;
+      }
+      .dash-table .datatable-body {
+        background: #291c2c;
+        border-radius: 0 0 20px 20px;
+      }
+      .dash-table .datatable-body .empty-row {
+        padding: 20px;
+      }
+      .dash-table .datatable-body .datatable-scroll {
+        width: 100% !important;
+      }
+      .dash-table .datatable-body .datatable-body-cell-label {
+        display: flex;
+        align-items: center;
+        align-content: center;
+        flex-wrap: wrap;
+        padding: 10px 20px;
+        height: 100%;
+      }
+      .dash-table .datatable-body .datatable-row-wrapper {
+        border-bottom: 1px solid rgba(217, 217, 217, 0.1);
+      }
+      .dash-table .datatable-body .datatable-row-wrapper:last-of-type {
+        border: 0;
+      }
+      .dash-table .datatable-body .datatable-row-wrapper .datatable-body-row {
+        position: relative;
+      }
+      .dash-table
+        .datatable-body
+        .datatable-row-wrapper
+        .datatable-body-row.active {
+        background: #1c0d21;
+      }
+      .dash-table
+        .datatable-body
+        .datatable-row-wrapper
+        .datatable-body-row.active:before {
+        content: "";
+        background: #ff9155;
+        border-radius: 20px 0 0 20px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 4px;
+      }
+      .dash-table
+        .datatable-body
+        .datatable-row-wrapper
+        .datatable-body-row.active:after {
+        content: "";
+        background: #ff9155;
+        border-radius: 0 20px 20px 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        width: 4px;
+      }
+      .dash-table .datatable-footer .datatable-footer-inner {
+        justify-content: flex-end;
+      }
+      .dash-table .datatable-footer .datatable-footer-inner .page-count {
+        flex: 0 1 100px;
+        opacity: 0.6;
+        font-size: 14px;
+      }
+      .dash-table .datatable-footer .datatable-footer-inner .datatable-pager {
+        flex: 0 1 150px;
+      }
+      .dash-table
+        .datatable-footer
+        .datatable-footer-inner
+        .datatable-pager
+        .pager {
+        display: flex;
+        align-items: center;
+      }
+      .dash-table
+        .datatable-footer
+        .datatable-footer-inner
+        .datatable-pager
+        .pager
+        li
+        a {
+        width: 37px;
+        height: 37px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff9;
+        transition-duration: 0.3s;
+      }
+      .dash-table
+        .datatable-footer
+        .datatable-footer-inner
+        .datatable-pager
+        .pager
+        li
+        a:hover {
+        color: #fff;
+      }
+      @media screen and (max-width: 599px) {
+        .dash-table
+          .datatable-footer
+          .datatable-footer-inner
+          .datatable-pager
+          .pager
+          li
+          a {
+          width: 25px;
+          height: 25px;
+        }
+      }
+      .dash-table
+        .datatable-footer
+        .datatable-footer-inner
+        .datatable-pager
+        .pager
+        .active
+        a {
+        background: linear-gradient(
+          112.95deg,
+          #c9504e 26.83%,
+          #d35e4f 47.36%,
+          #ec8353 85.67%
+        );
+        border-radius: 13px;
+        color: #fff;
+      }
+      @media screen and (max-width: 599px) {
+        .dash-table
+          .datatable-footer
+          .datatable-footer-inner
+          .datatable-pager
+          .pager
+          .active
+          a {
+          border-radius: 8px;
+        }
+      }
+      .dash-table
+        .datatable-footer
+        .datatable-footer-inner
+        .datatable-pager
+        .pager
+        .disabled
+        a {
+        opacity: 0.1;
+      }
+      .dash-table
+        .datatable-footer
+        .datatable-footer-inner
+        .datatable-pager
+        .pager
+        i {
+        margin-top: 5px;
+        scale: 1.3;
+      }
+      .dash-table.clickable .datatable-body-row {
+        cursor: pointer;
+      }
+      .dash-table.dense .datatable-body-cell-label {
+        padding: 5px 20px;
+        font-size: 15px;
+      }
+      .dash-table .show-mobile {
+        display: none;
+      }
+      @media screen and (mix-width: 768px) {
+        .dash-table.center {
+          text-align: center;
+        }
+        .dash-table.center .datatable-body-cell-label {
+          justify-content: center;
+        }
+      }
+      @media screen and (max-width: 767px) {
+        .dash-table .datatable-header {
+          display: none !important;
+        }
+        .dash-table .datatable-body {
+          border-radius: 20px;
+        }
+        .dash-table.custom-mobile-template .datatable-body {
+          background: none;
+        }
+        .dash-table.custom-mobile-template
+          .datatable-body
+          .datatable-row-wrapper {
+          border: 0;
+        }
+        .dash-table.custom-mobile-template
+          .datatable-body
+          .datatable-row-wrapper
+          .datatable-body-row
+          .datatable-row-group
+          .datatable-body-cell {
+          display: none;
+        }
+        .dash-table.custom-mobile-template
+          .datatable-body
+          .datatable-row-wrapper
+          .datatable-body-row
+          .datatable-row-group
+          .datatable-body-cell:first-of-type {
+          display: inline;
+          display: initial;
+          width: 100% !important;
+        }
+        .dash-table.custom-mobile-template
+          .datatable-body
+          .datatable-row-wrapper
+          .datatable-body-row
+          .datatable-row-group
+          .datatable-body-cell
+          .datatable-body-cell-label {
+          padding: 0;
+        }
+        .dash-table.mobile-layout .datatable-row-group {
+          flex-direction: column;
+        }
+        .dash-table.mobile-layout .datatable-row-group .datatable-body-cell {
+          width: 100% !important;
+        }
+        .dash-table .show-mobile {
+          display: block;
+        }
+        .dash-table .hide-mobile {
+          display: none;
+        }
+      }
+    </style>
+    <style>
+      .ngx-datatable {
+        display: block;
+        overflow: hidden;
+        justify-content: center;
+        position: relative;
+        transform: translateZ(0);
+      }
+      .ngx-datatable [hidden] {
+        display: none !important;
+      }
+      .ngx-datatable *,
+      .ngx-datatable :after,
+      .ngx-datatable :before {
+        box-sizing: border-box;
+      }
+      .ngx-datatable.scroll-vertical .datatable-body {
+        overflow-y: auto;
+      }
+      .ngx-datatable.scroll-vertical.virtualized
+        .datatable-body
+        .datatable-row-wrapper {
+        position: absolute;
+      }
+      .ngx-datatable.scroll-horz .datatable-body {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+      .ngx-datatable.fixed-header .datatable-header .datatable-header-inner {
+        white-space: nowrap;
+      }
+      .ngx-datatable.fixed-header
+        .datatable-header
+        .datatable-header-inner
+        .datatable-header-cell {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .ngx-datatable.fixed-row .datatable-scroll,
+      .ngx-datatable.fixed-row .datatable-scroll .datatable-body-row {
+        white-space: nowrap;
+      }
+      .ngx-datatable.fixed-row
+        .datatable-scroll
+        .datatable-body-row
+        .datatable-body-cell,
+      .ngx-datatable.fixed-row
+        .datatable-scroll
+        .datatable-body-row
+        .datatable-body-group-cell {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+      .ngx-datatable .datatable-body-row,
+      .ngx-datatable .datatable-header-inner,
+      .ngx-datatable .datatable-row-center {
+        display: flex;
+        flex-direction: row;
+        -o-flex-flow: row;
+        flex-flow: row;
+      }
+      .ngx-datatable .datatable-body-cell,
+      .ngx-datatable .datatable-header-cell {
+        overflow-x: hidden;
+        vertical-align: top;
+        display: inline-block;
+        line-height: 1.625;
+      }
+      .ngx-datatable .datatable-body-cell:focus,
+      .ngx-datatable .datatable-header-cell:focus {
+        outline: none;
+      }
+      .ngx-datatable .datatable-row-left,
+      .ngx-datatable .datatable-row-right {
+        z-index: 9;
+      }
+      .ngx-datatable .datatable-row-center,
+      .ngx-datatable .datatable-row-group,
+      .ngx-datatable .datatable-row-left,
+      .ngx-datatable .datatable-row-right {
+        position: relative;
+      }
+      .ngx-datatable .datatable-header {
+        display: block;
+        overflow: hidden;
+      }
+      .ngx-datatable .datatable-header .datatable-header-inner {
+        align-items: stretch;
+        -webkit-align-items: stretch;
+      }
+      .ngx-datatable .datatable-header .datatable-header-cell {
+        position: relative;
+        display: inline-block;
+      }
+      .ngx-datatable
+        .datatable-header
+        .datatable-header-cell.sortable
+        .datatable-header-cell-wrapper {
+        cursor: pointer;
+      }
+      .ngx-datatable
+        .datatable-header
+        .datatable-header-cell.longpress
+        .datatable-header-cell-wrapper {
+        cursor: move;
+      }
+      .ngx-datatable .datatable-header .datatable-header-cell .sort-btn {
+        line-height: 100%;
+        vertical-align: middle;
+        display: inline-block;
+        cursor: pointer;
+      }
+      .ngx-datatable .datatable-header .datatable-header-cell .resize-handle,
+      .ngx-datatable
+        .datatable-header
+        .datatable-header-cell
+        .resize-handle--not-resizable {
+        display: inline-block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 5px;
+        padding: 0 4px;
+        visibility: hidden;
+      }
+      .ngx-datatable .datatable-header .datatable-header-cell .resize-handle {
+        cursor: ew-resize;
+      }
+      .ngx-datatable
+        .datatable-header
+        .datatable-header-cell.resizeable:hover
+        .resize-handle,
+      .ngx-datatable
+        .datatable-header
+        .datatable-header-cell:hover
+        .resize-handle--not-resizable {
+        visibility: visible;
+      }
+      .ngx-datatable .datatable-header .datatable-header-cell .targetMarker {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+      }
+      .ngx-datatable
+        .datatable-header
+        .datatable-header-cell
+        .targetMarker.dragFromLeft {
+        right: 0;
+      }
+      .ngx-datatable
+        .datatable-header
+        .datatable-header-cell
+        .targetMarker.dragFromRight {
+        left: 0;
+      }
+      .ngx-datatable
+        .datatable-header
+        .datatable-header-cell
+        .datatable-header-cell-template-wrap {
+        height: inherit;
+      }
+      .ngx-datatable .datatable-body {
+        position: relative;
+        z-index: 10;
+        display: block;
+      }
+      .ngx-datatable .datatable-body .datatable-scroll {
+        display: inline-block;
+      }
+      .ngx-datatable .datatable-body .datatable-row-detail {
+        overflow-y: hidden;
+      }
+      .ngx-datatable .datatable-body .datatable-row-wrapper {
+        display: flex;
+        flex-direction: column;
+      }
+      .ngx-datatable .datatable-body .datatable-body-row {
+        outline: none;
+      }
+      .ngx-datatable .datatable-body .datatable-body-row > div {
+        display: flex;
+      }
+      .ngx-datatable .datatable-footer {
+        display: block;
+        width: 100%;
+        overflow: auto;
+      }
+      .ngx-datatable .datatable-footer .datatable-footer-inner {
+        display: flex;
+        align-items: center;
+        width: 100%;
+      }
+      .ngx-datatable .datatable-footer .selected-count .page-count {
+        flex: 1 1 40%;
+      }
+      .ngx-datatable .datatable-footer .selected-count .datatable-pager {
+        flex: 1 1 60%;
+      }
+      .ngx-datatable .datatable-footer .page-count {
+        flex: 1 1 20%;
+      }
+      .ngx-datatable .datatable-footer .datatable-pager {
+        flex: 1 1 80%;
+        text-align: right;
+      }
+      .ngx-datatable .datatable-footer .datatable-pager .pager,
+      .ngx-datatable .datatable-footer .datatable-pager .pager li {
+        padding: 0;
+        margin: 0;
+        display: inline-block;
+        list-style: none;
+      }
+      .ngx-datatable .datatable-footer .datatable-pager .pager li,
+      .ngx-datatable .datatable-footer .datatable-pager .pager li a {
+        outline: none;
+      }
+      .ngx-datatable .datatable-footer .datatable-pager .pager li a {
+        cursor: pointer;
+        display: inline-block;
+      }
+      .ngx-datatable .datatable-footer .datatable-pager .pager li.disabled a {
+        cursor: not-allowed;
+      }
+    </style>
+    <style>
+      :is(
+          [id*="google_ads_iframe"],
+          [id*="taboola-"],
+          .taboolaHeight,
+          .taboola-placeholder,
+          #credential_picker_container,
+          #credentials-picker-container,
+          #credential_picker_iframe,
+          [id*="google-one-tap-iframe"],
+          #google-one-tap-popup-container,
+          .google-one-tap-modal-div,
+          #amp_floatingAdDiv,
+          #ez-content-blocker-container
+        ) {
+        display: none !important;
+        min-height: 0 !important;
+        height: 0 !important;
+      }
+    </style>
+    <style>
+      [_nghost-ixw-c133] {
+        min-width: 40%;
+      }
+    </style>
+    <style>
+      :is(
+          [id*="google_ads_iframe"],
+          [id*="taboola-"],
+          .taboolaHeight,
+          .taboola-placeholder,
+          #credential_picker_container,
+          #credentials-picker-container,
+          #credential_picker_iframe,
+          [id*="google-one-tap-iframe"],
+          #google-one-tap-popup-container,
+          .google-one-tap-modal-div,
+          #amp_floatingAdDiv,
+          #ez-content-blocker-container
+        ) {
+        display: none !important;
+        min-height: 0 !important;
+        height: 0 !important;
+      }
+    </style>
+    <style>
+      :is(
+          [id*="google_ads_iframe"],
+          [id*="taboola-"],
+          .taboolaHeight,
+          .taboola-placeholder,
+          #credential_picker_container,
+          #credentials-picker-container,
+          #credential_picker_iframe,
+          [id*="google-one-tap-iframe"],
+          #google-one-tap-popup-container,
+          .google-one-tap-modal-div,
+          #amp_floatingAdDiv,
+          #ez-content-blocker-container
+        ) {
+        display: none !important;
+        min-height: 0 !important;
+        height: 0 !important;
+      }
+    </style>
+    <style>
+      [_nghost-ixw-c74] {
+        max-width: 200px;
+        background-color: #000;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 8px;
+        position: absolute;
+        pointer-events: none;
+        z-index: 1000;
+        display: block;
+        opacity: 0;
+        transition: opacity 0.3s;
+        top: 0;
+        left: 0;
+      }
+      .tooltip-show[_nghost-ixw-c74] {
+        opacity: 1;
+      }
+      .tooltip-shadow[_nghost-ixw-c74] {
+        box-shadow: 0 7px 15px -5px #0006;
+      }
+      .tooltip-light.tooltip-shadow[_nghost-ixw-c74] {
+        box-shadow: 0 5px 15px -5px #0006;
+      }
+      .tooltip[_nghost-ixw-c74]:after {
+        content: "";
+        position: absolute;
+        border-style: solid;
+      }
+      .tooltip-top[_nghost-ixw-c74]:after {
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-color: #000 #0000 #0000;
+      }
+      .tooltip-bottom[_nghost-ixw-c74]:after {
+        bottom: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-color: #0000 #0000 #000;
+      }
+      .tooltip-left[_nghost-ixw-c74]:after {
+        top: 50%;
+        left: 100%;
+        margin-top: -5px;
+        border-width: 5px;
+        border-color: #0000 #0000 #0000 #000;
+      }
+      .tooltip-right[_nghost-ixw-c74]:after {
+        top: 50%;
+        right: 100%;
+        margin-top: -5px;
+        border-width: 5px;
+        border-color: #0000 #000 #0000 #0000;
+      }
+      .tooltip-light[_nghost-ixw-c74]:after {
+        display: none;
+      }
+      .tooltip-light[_nghost-ixw-c74] {
+        border: 1px solid #0000000f;
+        background-color: #fff;
+        color: #000;
+      }
+      .tooltip-light[_nghost-ixw-c74] .tooltip-arrow[_ngcontent-ixw-c74] {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        transform: rotate(135deg);
+        background-color: #00000012;
+      }
+      .tooltip-light[_nghost-ixw-c74] .tooltip-arrow[_ngcontent-ixw-c74]:after {
+        background-color: #fff;
+        content: "";
+        display: block;
+        position: absolute;
+        width: 10px;
+        height: 10px;
+      }
+      .tooltip-top.tooltip-light[_nghost-ixw-c74] {
+        margin-top: -2px;
+      }
+      .tooltip-top.tooltip-light[_nghost-ixw-c74]
+        .tooltip-arrow[_ngcontent-ixw-c74] {
+        top: 100%;
+        left: 50%;
+        margin-top: -4px;
+        margin-left: -5px;
+        background: linear-gradient(to bottom left, #00000012 50%, #0000 0);
+      }
+      .tooltip-top.tooltip-light[_nghost-ixw-c74]
+        .tooltip-arrow[_ngcontent-ixw-c74]:after {
+        top: 1px;
+        right: 1px;
+      }
+      .tooltip-bottom.tooltip-light[_nghost-ixw-c74]
+        .tooltip-arrow[_ngcontent-ixw-c74] {
+        bottom: 100%;
+        left: 50%;
+        margin-bottom: -4px;
+        margin-left: -5px;
+        background: linear-gradient(to top right, #0000001a 50%, #0000 0);
+      }
+      .tooltip-bottom.tooltip-light[_nghost-ixw-c74]
+        .tooltip-arrow[_ngcontent-ixw-c74]:after {
+        top: -1px;
+        right: -1px;
+      }
+      .tooltip-left.tooltip-light[_nghost-ixw-c74]
+        .tooltip-arrow[_ngcontent-ixw-c74] {
+        top: 50%;
+        left: 100%;
+        margin-top: -5px;
+        margin-left: -4px;
+        background: linear-gradient(to bottom right, #00000012 50%, #0000 0);
+      }
+      .tooltip-left.tooltip-light[_nghost-ixw-c74]
+        .tooltip-arrow[_ngcontent-ixw-c74]:after {
+        top: 1px;
+        right: -1px;
+      }
+      .tooltip-right.tooltip-light[_nghost-ixw-c74]
+        .tooltip-arrow[_ngcontent-ixw-c74] {
+        top: 50%;
+        right: 100%;
+        margin-top: -5px;
+        margin-right: -4px;
+        background: linear-gradient(to top left, #00000012 50%, #0000 0);
+      }
+      .tooltip-right.tooltip-light[_nghost-ixw-c74]
+        .tooltip-arrow[_ngcontent-ixw-c74]:after {
+        top: -1px;
+        right: 1px;
+      }
+    </style>
+    <style>
+      :is(
+          [id*="google_ads_iframe"],
+          [id*="taboola-"],
+          .taboolaHeight,
+          .taboola-placeholder,
+          #credential_picker_container,
+          #credentials-picker-container,
+          #credential_picker_iframe,
+          [id*="google-one-tap-iframe"],
+          #google-one-tap-popup-container,
+          .google-one-tap-modal-div,
+          #amp_floatingAdDiv,
+          #ez-content-blocker-container
+        ) {
+        display: none !important;
+        min-height: 0 !important;
+        height: 0 !important;
+      }
+    </style>
+    <style>
+      :is(
+          [id*="google_ads_iframe"],
+          [id*="taboola-"],
+          .taboolaHeight,
+          .taboola-placeholder,
+          #credential_picker_container,
+          #credentials-picker-container,
+          #credential_picker_iframe,
+          [id*="google-one-tap-iframe"],
+          #google-one-tap-popup-container,
+          .google-one-tap-modal-div,
+          #amp_floatingAdDiv,
+          #ez-content-blocker-container
+        ) {
+        display: none !important;
+        min-height: 0 !important;
+        height: 0 !important;
+      }
+    </style>
+    <style>
+      :is(
+          [id*="google_ads_iframe"],
+          [id*="taboola-"],
+          .taboolaHeight,
+          .taboola-placeholder,
+          #credential_picker_container,
+          #credentials-picker-container,
+          #credential_picker_iframe,
+          [id*="google-one-tap-iframe"],
+          #google-one-tap-popup-container,
+          .google-one-tap-modal-div,
+          #amp_floatingAdDiv,
+          #ez-content-blocker-container
+        ) {
+        display: none !important;
+        min-height: 0 !important;
+        height: 0 !important;
+      }
+    </style>
+
+    <!--End Style-->
+  </head>
+
+  <body
+    class="text-white text-base overflow-x-hidden bg-deep-purple-1"
+    data-aos-easing="ease"
+    data-aos-duration="400"
+    data-aos-delay="0"
+  >
+    <br-dashboard ng-version="14.1.3"
+      ><loading _nghost-ixw-c53=""><!----></loading
+      ><router-outlet></router-outlet
+      ><layout
+        ><div class="flex items-stretch">
+          <sidebar _nghost-ixw-c51=""
+            ><div _ngcontent-ixw-c51="" class="relative">
+              <!---->
+              <div
+                _ngcontent-ixw-c51=""
+                class="h-full relative z-50 md:fixed"
+                style="width: 120px"
+              >
+                <div
+                  _ngcontent-ixw-c51=""
+                  data-aos="fade-right"
+                  class="fixed flex flex-col py-12 h-screen justify-between border-2 overflow-y-auto border-white/10 md:bg-deep-purple-1 md:py-8 md:justify-start aos-init aos-animate"
+                  style="width: 120px"
+                >
+                  <a
+                    _ngcontent-ixw-c51=""
+                    class="self-center"
+                    href="#"
+                    ><img
+                      _ngcontent-ixw-c51=""
+                      src="./Dashboard/logo-icon.svg"
+                      width="52px"
+                      height="52px"
+                      style="
+                        filter: drop-shadow(
+                          0px 4px 34px rgba(234, 128, 82, 0.2)
+                        );
+                      " /></a
+                  ><!----><!---->
+                  <div
+                    _ngcontent-ixw-c51=""
+                    class="py-24 flex flex-col items-center justify-center gap-6"
+                    style="
+                      width: 90px;
+                      background: url(&#39;/assets/img/nav-bg.png&#39;)
+                        no-repeat;
+                      background-size: 100% 100%;
+                    "
+                  >
+                    <a
+                      _ngcontent-ixw-c51=""
+                      routerlink="/"
+                      routerlinkactive="active"
+                      class="cursor-pointer nav-icon flex flex-col gap-1 items-center active"
+                      href="#"
+                      ><svg
+                        _ngcontent-ixw-c51=""
+                        width="15"
+                        height="15"
+                        viewbox="0 0 15 15"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g
+                          _ngcontent-ixw-c51=""
+                          clip-path="url(#clip0_149_407)"
+                        >
+                          <path
+                            _ngcontent-ixw-c51=""
+                            d="M5.78121 0H1.09371C0.490608 0 0 0.490608 0 1.09371V3.90621C0 4.50943 0.490608 5.00004 1.09371 5.00004H5.78121C6.38443 5.00004 6.87504 4.50943 6.87504 3.90621V1.09371C6.87504 0.490608 6.38443 0 5.78121 0Z"
+                            fill="white"
+                            fill-opacity="0.3"
+                          ></path>
+                          <path
+                            _ngcontent-ixw-c51=""
+                            d="M5.78121 6.25H1.09371C0.490608 6.25 0 6.74061 0 7.34383V13.9063C0 14.5094 0.490608 15 1.09371 15H5.78121C6.38443 15 6.87504 14.5094 6.87504 13.9063V7.34383C6.87504 6.74061 6.38443 6.25 5.78121 6.25Z"
+                            fill="white"
+                            fill-opacity="0.3"
+                          ></path>
+                          <path
+                            _ngcontent-ixw-c51=""
+                            d="M13.9063 10H9.21883C8.61561 10 8.125 10.4906 8.125 11.0938V13.9063C8.125 14.5094 8.61561 15 9.21883 15H13.9063C14.5094 15 15 14.5094 15 13.9063V11.0938C15 10.4906 14.5094 10 13.9063 10Z"
+                            fill="white"
+                            fill-opacity="0.3"
+                          ></path>
+                          <path
+                            _ngcontent-ixw-c51=""
+                            d="M13.9063 0H9.21883C8.61561 0 8.125 0.490608 8.125 1.09371V7.65621C8.125 8.25943 8.61561 8.75004 9.21883 8.75004H13.9063C14.5094 8.75004 15 8.25943 15 7.65621V1.09371C15 0.490608 14.5094 0 13.9063 0V0Z"
+                            fill="white"
+                            fill-opacity="0.3"
+                          ></path>
+                        </g>
+                        <defs _ngcontent-ixw-c51="">
+                          <clippath _ngcontent-ixw-c51="" id="clip0_149_407">
+                            <rect
+                              _ngcontent-ixw-c51=""
+                              width="15"
+                              height="15"
+                              fill="white"
+                            ></rect>
+                          </clippath>
+                        </defs>
+                      </svg>
+                      <div _ngcontent-ixw-c51="" class="font-bold uppercase">
+                        Trang chủ
+                      </div></a
+                    ><a
+                      _ngcontent-ixw-c51=""
+                      routerlink="/orders"
+                      routerlinkactive="active"
+                      class="cursor-pointer nav-icon flex flex-col gap-1 items-center"
+                      href="#"
+                      ><svg
+                        _ngcontent-ixw-c51=""
+                        width="24"
+                        height="24"
+                        viewbox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          _ngcontent-ixw-c51=""
+                          d="M21.822 7.431C21.73 7.29808 21.6072 7.18943 21.464 7.11436C21.3209 7.0393 21.1616 7.00006 21 7H7.333L6.179 4.23C6.02769 3.86523 5.77147 3.55359 5.44282 3.33462C5.11418 3.11564 4.72791 2.99918 4.333 3H2V5H4.333L9.077 16.385C9.15299 16.5672 9.28118 16.7228 9.44542 16.8322C9.60967 16.9416 9.80263 17 10 17H18C18.417 17 18.79 16.741 18.937 16.352L21.937 8.352C21.9937 8.20063 22.0129 8.03776 21.9928 7.87735C21.9728 7.71695 21.9142 7.56379 21.822 7.431Z"
+                          fill="white"
+                          fill-opacity="0.3"
+                        ></path>
+                        <path
+                          _ngcontent-ixw-c51=""
+                          d="M10.5 21C11.3284 21 12 20.3284 12 19.5C12 18.6716 11.3284 18 10.5 18C9.67157 18 9 18.6716 9 19.5C9 20.3284 9.67157 21 10.5 21Z"
+                          fill="white"
+                          fill-opacity="0.3"
+                        ></path>
+                        <path
+                          _ngcontent-ixw-c51=""
+                          d="M17.5 21C18.3284 21 19 20.3284 19 19.5C19 18.6716 18.3284 18 17.5 18C16.6716 18 16 18.6716 16 19.5C16 20.3284 16.6716 21 17.5 21Z"
+                          fill="white"
+                          fill-opacity="0.3"
+                        ></path>
+                      </svg>
+                      <div _ngcontent-ixw-c51="" class="font-bold uppercase">
+                        Đơn hàng
+                      </div></a
+                    ><a
+                      _ngcontent-ixw-c51=""
+                      href="#"
+                      target="_blank"
+                      class="cursor-pointer nav-icon flex flex-col gap-1 items-center"
+                      ><svg
+                        _ngcontent-ixw-c51=""
+                        width="20"
+                        height="20"
+                        viewbox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          _ngcontent-ixw-c51=""
+                          d="M18.3333 4.24439C17.5889 2.71661 15.4445 1.46661 12.95 2.19439C11.758 2.53869 10.7181 3.27705 10 4.28883C9.28195 3.27705 8.24198 2.53869 7.05001 2.19439C4.55001 1.47772 2.41112 2.71661 1.66667 4.24439C0.62223 6.38328 1.05556 8.78883 2.95556 11.3944C4.44445 13.4333 6.57223 15.4999 9.66112 17.8999C9.75874 17.9761 9.87899 18.0174 10.0028 18.0174C10.1266 18.0174 10.2468 17.9761 10.3445 17.8999C13.4278 15.5055 15.5611 13.4555 17.05 11.3944C18.9445 8.78883 19.3778 6.38328 18.3333 4.24439Z"
+                          fill="white"
+                          fill-opacity="0.3"
+                        ></path>
+                      </svg>
+                      <div _ngcontent-ixw-c51="" class="font-bold uppercase">
+                        Đánh giá
+                      </div></a
+                    ><a
+                      _ngcontent-ixw-c51=""
+                      href="#"
+                      target="_blank"
+                      class="cursor-pointer nav-icon stroke flex flex-col gap-1 items-center sm:hidden"
+                      ><svg
+                        _ngcontent-ixw-c51=""
+                        width="16"
+                        height="20"
+                        viewbox="0 0 16 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          _ngcontent-ixw-c51=""
+                          d="M3.09111 17.9172C3.09111 18.4736 3.63927 18.8663 4.17106 18.6945L7.99995 16.3273L11.8288 18.6945C11.9521 18.7365 12.0836 18.7484 12.2124 18.7293C12.3412 18.7101 12.4636 18.6604 12.5692 18.5844C12.6749 18.5083 12.7609 18.4081 12.82 18.292C12.879 18.176 12.9095 18.0475 12.9088 17.9172V12.7384C13.9637 11.5468 14.5458 10.0101 14.5451 8.41865C14.5451 4.80247 11.6161 1.87354 7.99995 1.87354C4.38377 1.87354 1.45483 4.80247 1.45483 8.41865C1.45483 10.0795 2.07662 11.5848 3.09111 12.7384V17.9172ZM7.99995 3.50981C10.708 3.50981 12.9088 5.71061 12.9088 8.41865C12.9088 11.1267 10.708 13.3275 7.99995 13.3275C5.29191 13.3275 3.09111 11.1267 3.09111 8.41865C3.09111 5.71061 5.29191 3.50981 7.99995 3.50981Z"
+                          fill="white"
+                          fill-opacity="0.3"
+                          stroke="white"
+                          stroke-opacity="0.3"
+                          stroke-width="2"
+                        ></path>
+                      </svg>
+                      <div _ngcontent-ixw-c51="" class="font-bold uppercase">
+                        VIP Only
+                      </div></a
+                    ><!----><!----><a
+                      _ngcontent-ixw-c51=""
+                      routerlink="/rankings"
+                      routerlinkactive="active"
+                      class="cursor-pointer nav-icon flex flex-col gap-1 items-center"
+                      href="#"
+                      ><svg
+                        _ngcontent-ixw-c51=""
+                        width="20"
+                        height="16"
+                        viewbox="0 0 20 16"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          _ngcontent-ixw-c51=""
+                          d="M17.4041 15.9737H2.59585C1.65218 15.9737 0.887207 15.2088 0.887207 14.2651V1.73501C0.887207 0.791342 1.65218 0.0263672 2.59585 0.0263672H17.4041C18.3478 0.0263672 19.1128 0.791342 19.1128 1.73501V14.2651C19.1128 15.2088 18.3478 15.9737 17.4041 15.9737ZM12.1358 5.1523V4.01321C12.1358 3.77731 11.9445 3.58605 11.7086 3.58605H4.87405C4.63815 3.58605 4.44689 3.77731 4.44689 4.01321V5.1523C4.44689 5.3882 4.63815 5.57947 4.87405 5.57947H11.7086C11.9445 5.57947 12.1358 5.3882 12.1358 5.1523ZM15.6955 8.5696V7.4305C15.6955 7.1946 15.5042 7.00334 15.2683 7.00334H4.87405C4.63815 7.00334 4.44689 7.1946 4.44689 7.4305V8.5696C4.44689 8.8055 4.63815 8.99676 4.87405 8.99676H15.2683C15.5042 8.99676 15.6955 8.8055 15.6955 8.5696ZM8.93208 11.9869V10.8478C8.93208 10.6119 8.74082 10.4206 8.50492 10.4206H4.87405C4.63815 10.4206 4.44689 10.6119 4.44689 10.8478V11.9869C4.44689 12.2228 4.63815 12.414 4.87405 12.414H8.50492C8.74082 12.414 8.93208 12.2228 8.93208 11.9869Z"
+                          fill="white"
+                          fill-opacity="0.3"
+                        ></path>
+                      </svg>
+                      <div _ngcontent-ixw-c51="" class="font-bold uppercase">
+                        Mức Rank
+                      </div></a
+                    ><!---->
+                  </div>
+                  <div _ngcontent-ixw-c51="" class="self-center">
+                    <div
+                      _ngcontent-ixw-c51=""
+                      class="flex items-center justify-center bg-deep-purple-2 rounded-full cursor-pointer h-14 w-14"
+                    >
+                      <svg
+                        _ngcontent-ixw-c51=""
+                        width="19"
+                        height="18"
+                        viewbox="0 0 19 18"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          _ngcontent-ixw-c51=""
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M8 17C8 16.7348 7.89464 16.4804 7.70711 16.2929C7.51957 16.1054 7.26522 16 7 16H2V2H7C7.26522 2 7.51957 1.89464 7.70711 1.70711C7.89464 1.51957 8 1.26522 8 1C8 0.734784 7.89464 0.48043 7.70711 0.292893C7.51957 0.105357 7.26522 0 7 0H2C1.46957 0 0.960859 0.210714 0.585786 0.585786C0.210714 0.960859 0 1.46957 0 2V16C0 16.5304 0.210714 17.0391 0.585786 17.4142C0.960859 17.7893 1.46957 18 2 18H7C7.26522 18 7.51957 17.8946 7.70711 17.7071C7.89464 17.5196 8 17.2652 8 17Z"
+                          fill="white"
+                        ></path>
+                        <path
+                          _ngcontent-ixw-c51=""
+                          d="M18.714 9.70057C18.8969 9.51464 18.9996 9.26439 19 9.00357V8.99757C18.9995 8.73335 18.8941 8.48014 18.707 8.29357L14.707 4.29357C14.6148 4.19806 14.5044 4.12188 14.3824 4.06947C14.2604 4.01706 14.1292 3.98947 13.9964 3.98832C13.8636 3.98717 13.7319 4.01247 13.609 4.06275C13.4862 4.11303 13.3745 4.18728 13.2806 4.28117C13.1867 4.37507 13.1125 4.48672 13.0622 4.60962C13.0119 4.73251 12.9866 4.86419 12.9877 4.99697C12.9889 5.12975 13.0165 5.26097 13.0689 5.38297C13.1213 5.50498 13.1975 5.61532 13.293 5.70757L15.586 8.00057H6C5.73478 8.00057 5.48043 8.10593 5.29289 8.29346C5.10536 8.481 5 8.73535 5 9.00057C5 9.26579 5.10536 9.52014 5.29289 9.70768C5.48043 9.89521 5.73478 10.0006 6 10.0006H15.586L13.293 12.2936C13.1108 12.4822 13.01 12.7348 13.0123 12.997C13.0146 13.2592 13.1198 13.51 13.3052 13.6954C13.4906 13.8808 13.7414 13.986 14.0036 13.9882C14.2658 13.9905 14.5184 13.8897 14.707 13.7076L18.707 9.70757L18.714 9.70057Z"
+                          fill="white"
+                        ></path>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!---->
+            </div></sidebar
+          >
+          <div class="grow p-10 max-w-full md:p-0">
+            <header _nghost-ixw-c56="">
+              <div
+                _ngcontent-ixw-c56=""
+                class="w-full px-4 py-2 md:bg-[#291B2D]/70"
+              >
+                <div
+                  _ngcontent-ixw-c56=""
+                  class="flex gap-8 justify-between items-center"
+                >
+                  <div
+                    _ngcontent-ixw-c56=""
+                    class="flex items-center gap-6 hidden md:flex"
+                  >
+                    <div _ngcontent-ixw-c56="" class="nav cursor-pointer">
+                      <svg
+                        _ngcontent-ixw-c56=""
+                        width="24"
+                        height="24"
+                        viewbox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g
+                          _ngcontent-ixw-c56=""
+                          clip-path="url(#clip0_179_7042)"
+                        >
+                          <path
+                            _ngcontent-ixw-c56=""
+                            d="M18 4.8001C18 4.13738 17.4627 3.6001 16.8 3.6001H1.2C0.537283 3.6001 0 4.13738 0 4.8001C0 5.46282 0.537283 6.0001 1.2 6.0001H16.8C17.4627 6.0001 18 5.46277 18 4.8001ZM1.2 10.8001H22.8C23.4627 10.8001 24 11.3374 24 12.0001C24 12.6628 23.4627 13.2001 22.8 13.2001H1.2C0.537283 13.2001 0 12.6628 0 12.0001C0 11.3374 0.537283 10.8001 1.2 10.8001ZM1.2 18.0001H12C12.6627 18.0001 13.2 18.5374 13.2 19.2001C13.2 19.8628 12.6627 20.4001 12 20.4001H1.2C0.537283 20.4001 0 19.8628 0 19.2001C0 18.5374 0.537283 18.0001 1.2 18.0001Z"
+                            fill="#B0A4B5"
+                          ></path>
+                          <path
+                            _ngcontent-ixw-c56=""
+                            d="M18 4.80156C18 4.13884 17.4627 3.60156 16.8 3.60156H1.2C0.537283 3.60156 0 4.13884 0 4.80156C0 5.46428 0.537283 6.00156 1.2 6.00156H16.8C17.4627 6.00156 18 5.46423 18 4.80156Z"
+                            fill="#726279"
+                          ></path>
+                        </g>
+                        <defs _ngcontent-ixw-c56="">
+                          <clippath _ngcontent-ixw-c56="" id="clip0_179_7042">
+                            <rect
+                              _ngcontent-ixw-c56=""
+                              width="24"
+                              height="24"
+                              fill="white"
+                              transform="matrix(-1 0 0 1 24 0)"
+                            ></rect>
+                          </clippath>
+                        </defs>
+                      </svg>
+                    </div>
+                    <a _ngcontent-ixw-c56="" href="#"
+                      ><img
+                        _ngcontent-ixw-c56=""
+                        src="./Dashboard/logo-icon.svg"
+                        width="34px"
+                        height="34px"
+                    /></a>
+                  </div>
+                  <div _ngcontent-ixw-c56="" class="md:hidden">
+                    <div
+                      _ngcontent-ixw-c56=""
+                      class="opacity-60 text-lg font-light"
+                    >
+                      Chào mừng đến cày thuê LoL
+                    </div>
+                    <!---->
+                    <div _ngcontent-ixw-c56="" class="font-bold text-2xl">
+                      Tạ Quang Tiến Row
+                    </div>
+                  </div>
+                  <div
+                    _ngcontent-ixw-c56=""
+                    class="flex items-center gap-4 md:hidden"
+                  >
+                    <div _ngcontent-ixw-c56="">
+                      <search _ngcontent-ixw-c56=""
+                        ><div class="relative z-50">
+                          <div
+                            class="rounded-xl h-12 px-4 flex gap-2 items-center cursor-pointer bg-white/10"
+                          >
+                            <svg
+                              width="20"
+                              height="18"
+                              viewbox="0 0 20 18"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M9.0625 15.625C12.6869 15.625 15.625 12.6869 15.625 9.0625C15.625 5.43813 12.6869 2.5 9.0625 2.5C5.43813 2.5 2.5 5.43813 2.5 9.0625C2.5 12.6869 5.43813 15.625 9.0625 15.625Z"
+                                stroke="white"
+                                stroke-opacity="0.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              ></path>
+                              <path
+                                d="M13.7031 13.7031L17.5 17.5"
+                                stroke="white"
+                                stroke-opacity="0.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              ></path></svg>
+                              <input
+                              placeholder="Search"
+                              type="text"
+                              autocomplete="off"
+                              list="autocompleteOff"
+                              class="outline-none bg-transparent ng-untouched ng-pristine ng-valid"
+                            /><!----><!---->
+                          </div>
+                          <!---->
+                        </div></search
+                      >
+                    </div>
+                    <div _ngcontent-ixw-c56="">
+                      <notifications _ngcontent-ixw-c56=""
+                        ><div class="relative z-50">
+                          <div
+                            class="rounded-xl w-12 h-12 flex items-center justify-center cursor-pointer bg-white/10 md:bg-transparent"
+                          >
+                            <!----><svg
+                              width="16"
+                              height="18"
+                              viewbox="0 0 16 18"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M7.7226 17.9998C8.4731 17.9867 9.19331 17.7731 9.75583 17.3966C10.3184 17.0202 10.6869 16.5053 10.7964 15.9429H4.52966C4.64222 16.5205 5.02805 17.0476 5.61538 17.4259C6.20271 17.8043 6.95156 18.0082 7.7226 17.9998Z"
+                                fill="white"
+                              ></path>
+                              <path
+                                d="M15.326 13.9537L15.1511 13.7994C14.6551 13.3574 14.2209 12.8505 13.8603 12.2925C13.4664 11.5224 13.2304 10.6813 13.166 9.81873V7.27811C13.1639 6.96951 13.1363 6.6616 13.0837 6.35752C12.9722 5.71402 12.6904 4.84826 12 4C11.4386 3.31021 12.1314 4 11 3L10.003 2.2483C9.46608 1.98405 8.88916 1.81029 8.29558 1.73401V1.086C8.29558 0.903905 8.22324 0.729269 8.09448 0.60051C7.96572 0.47175 7.79109 0.399414 7.60899 0.399414C7.4269 0.399414 7.25227 0.47175 7.12351 0.60051C6.99475 0.729269 6.92241 0.903905 6.92241 1.086V1.75972C5.59333 1.94721 4.37695 2.60921 3.49783 3.6235C2.61872 4.63778 2.13624 5.93587 2.13947 7.27811V9.81873C2.07505 10.6813 1.839 11.5224 1.44517 12.2925C1.09076 12.8491 0.663541 13.3559 0.17486 13.7994L0 13.9537V15.404H15.326V13.9537Z"
+                                fill="white"
+                              ></path>
+                            </svg>
+                          </div>
+                          <!---->
+                        </div></notifications
+                      >
+                    </div>
+                    <div _ngcontent-ixw-c56="">
+                      <messages _ngcontent-ixw-c56=""
+                        ><div class="relative z-50">
+                          <div
+                            class="rounded-xl w-12 h-12 flex items-center justify-center cursor-pointer bg-white/10 md:bg-transparent"
+                          >
+                            <!----><svg
+                              width="20"
+                              height="20"
+                              viewbox="0 0 20 20"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M14.5833 0.833496H5.41665C2.84998 0.833496 0.833313 2.85016 0.833313 5.41683V10.9168V11.8335C0.833313 14.3085 2.84998 16.4168 5.41665 16.4168H6.79165C7.06665 16.4168 7.34165 16.6002 7.52498 16.7835L8.89998 18.6168C9.54165 19.4418 10.4583 19.4418 11.1 18.6168L12.475 16.7835C12.6583 16.5085 12.9333 16.4168 13.2083 16.4168H14.5833C17.15 16.4168 19.1666 14.4002 19.1666 11.8335V5.41683C19.1666 2.85016 17.15 0.833496 14.5833 0.833496ZM10.9166 11.6502H5.41665C5.04998 11.6502 4.68331 11.3752 4.68331 10.9168C4.68331 10.4585 4.95831 10.1835 5.41665 10.1835H10.9166C11.2833 10.1835 11.65 10.4585 11.65 10.9168C11.65 11.3752 11.2833 11.6502 10.9166 11.6502ZM14.5833 7.06683H5.41665C5.04998 7.06683 4.77498 6.70016 4.77498 6.3335C4.77498 5.96683 5.04998 5.69183 5.41665 5.69183H14.5833C14.95 5.69183 15.3166 5.96683 15.3166 6.42516C15.3166 6.8835 14.95 7.06683 14.5833 7.06683Z"
+                                fill="white"
+                              ></path>
+                            </svg>
+                          </div>
+                          <!---->
+                        </div></messages
+                      >
+                    </div>
+                    <a
+                      _ngcontent-ixw-c56=""
+                      routerlink="/profile"
+                      href="#"
+                      ><img
+                        _ngcontent-ixw-c56=""
+                        class="rounded-xl w-12 h-12"
+                        src="./Dashboard/default-avatar.webp"
+                    /></a>
+                  </div>
+                  <div
+                    _ngcontent-ixw-c56=""
+                    class="flex items-center gap-4 admin"
+                  >
+                    <div
+                      _ngcontent-ixw-c56=""
+                      class="flex items-center hidden md:flex"
+                    >
+                      <notifications _ngcontent-ixw-c56=""
+                        ><div class="relative z-50">
+                          <div
+                            class="rounded-xl w-12 h-12 flex items-center justify-center cursor-pointer bg-white/10 md:bg-transparent"
+                          >
+                            <!----><svg
+                              width="16"
+                              height="18"
+                              viewbox="0 0 16 18"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M7.7226 17.9998C8.4731 17.9867 9.19331 17.7731 9.75583 17.3966C10.3184 17.0202 10.6869 16.5053 10.7964 15.9429H4.52966C4.64222 16.5205 5.02805 17.0476 5.61538 17.4259C6.20271 17.8043 6.95156 18.0082 7.7226 17.9998Z"
+                                fill="white"
+                              ></path>
+                              <path
+                                d="M15.326 13.9537L15.1511 13.7994C14.6551 13.3574 14.2209 12.8505 13.8603 12.2925C13.4664 11.5224 13.2304 10.6813 13.166 9.81873V7.27811C13.1639 6.96951 13.1363 6.6616 13.0837 6.35752C12.9722 5.71402 12.6904 4.84826 12 4C11.4386 3.31021 12.1314 4 11 3L10.003 2.2483C9.46608 1.98405 8.88916 1.81029 8.29558 1.73401V1.086C8.29558 0.903905 8.22324 0.729269 8.09448 0.60051C7.96572 0.47175 7.79109 0.399414 7.60899 0.399414C7.4269 0.399414 7.25227 0.47175 7.12351 0.60051C6.99475 0.729269 6.92241 0.903905 6.92241 1.086V1.75972C5.59333 1.94721 4.37695 2.60921 3.49783 3.6235C2.61872 4.63778 2.13624 5.93587 2.13947 7.27811V9.81873C2.07505 10.6813 1.839 11.5224 1.44517 12.2925C1.09076 12.8491 0.663541 13.3559 0.17486 13.7994L0 13.9537V15.404H15.326V13.9537Z"
+                                fill="white"
+                              ></path>
+                            </svg>
+                          </div>
+                          <!---->
+                        </div></notifications
+                      ><messages _ngcontent-ixw-c56=""
+                        ><div class="relative z-50">
+                          <div
+                            class="rounded-xl w-12 h-12 flex items-center justify-center cursor-pointer bg-white/10 md:bg-transparent"
+                          >
+                            <!----><svg
+                              width="20"
+                              height="20"
+                              viewbox="0 0 20 20"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M14.5833 0.833496H5.41665C2.84998 0.833496 0.833313 2.85016 0.833313 5.41683V10.9168V11.8335C0.833313 14.3085 2.84998 16.4168 5.41665 16.4168H6.79165C7.06665 16.4168 7.34165 16.6002 7.52498 16.7835L8.89998 18.6168C9.54165 19.4418 10.4583 19.4418 11.1 18.6168L12.475 16.7835C12.6583 16.5085 12.9333 16.4168 13.2083 16.4168H14.5833C17.15 16.4168 19.1666 14.4002 19.1666 11.8335V5.41683C19.1666 2.85016 17.15 0.833496 14.5833 0.833496ZM10.9166 11.6502H5.41665C5.04998 11.6502 4.68331 11.3752 4.68331 10.9168C4.68331 10.4585 4.95831 10.1835 5.41665 10.1835H10.9166C11.2833 10.1835 11.65 10.4585 11.65 10.9168C11.65 11.3752 11.2833 11.6502 10.9166 11.6502ZM14.5833 7.06683H5.41665C5.04998 7.06683 4.77498 6.70016 4.77498 6.3335C4.77498 5.96683 5.04998 5.69183 5.41665 5.69183H14.5833C14.95 5.69183 15.3166 5.96683 15.3166 6.42516C15.3166 6.8835 14.95 7.06683 14.5833 7.06683Z"
+                                fill="white"
+                              ></path>
+                            </svg>
+                          </div>
+                          <!---->
+                        </div></messages
+                      >
+                    </div>
+                    <a
+                      _ngcontent-ixw-c56=""
+                      target="_blank"
+                      class="flex gap-4 items-center"
+                      href="#"
+                      ><div
+                        _ngcontent-ixw-c56=""
+                        class="font-bold uppercase md:hidden"
+                      >
+                        Mua ngay
+                      </div>
+                      <div
+                        _ngcontent-ixw-c56=""
+                        class="w-14 h-14 bg-primary-gradient flex items-center justify-center rounded-full md:scale-75"
+                        style="box-shadow: 0px 4px 34px rgba(248, 134, 84, 0.4)"
+                      >
+                        <svg
+                          _ngcontent-ixw-c56=""
+                          width="14"
+                          height="14"
+                          viewbox="0 0 14 14"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            _ngcontent-ixw-c56=""
+                            d="M6.21053 1H7.78947C7.92982 1 8 1.04444 8 1.13333V12.8667C8 12.9556 7.92982 13 7.78947 13H6.21053C6.07018 13 6 12.9556 6 12.8667V1.13333C6 1.04444 6.07018 1 6.21053 1Z"
+                            fill="white"
+                            stroke="white"
+                            stroke-width="0.2"
+                          ></path>
+                          <path
+                            _ngcontent-ixw-c56=""
+                            d="M1.13953 6H12.8605C12.9535 6 13 6.07018 13 6.21053V7.78947C13 7.92982 12.9535 8 12.8605 8H1.13953C1.04651 8 1 7.92982 1 7.78947V6.21053C1 6.07018 1.04651 6 1.13953 6Z"
+                            fill="white"
+                            stroke="white"
+                            stroke-width="0.2"
+                          ></path>
+                        </svg></div></a
+                    ><!----><!---->
+                  </div>
+                </div>
+              </div>
+            </header>
+            <div class="py-10 md:p-4 md:pb-16">
+              <router-outlet></router-outlet
+              ><home
+                ><div class="flex gap-8 md:flex-col-reverse">
+                  <div class="flex flex-col gap-8 grow">
+                    <div class="grid grid-cols-3 gap-8 md:grid-cols-2 md:gap-2">
+                      <a
+                        class="bg-deep-purple-3 p-8 py-10 rounded-xl flex flex-col justify-center items-center gap-4 duration-300 cursor-pointer hover:shadow-hover"
+                        ><svg
+                          width="33"
+                          height="37"
+                          viewbox="0 0 33 37"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M33 23.1033V26.4033C33 26.8409 32.8261 27.2606 32.5167 27.57C32.2073 27.8794 31.7876 28.0533 31.35 28.0533H31.02L28.3965 27.5253C29.4466 23.5965 29.7764 19.5101 29.37 15.4638C30.5017 16.39 31.4142 17.5555 32.0419 18.8764C32.6695 20.1973 32.9967 21.6408 33 23.1033ZM3.63 15.4308C2.49394 16.3605 1.57886 17.5313 0.951036 18.8583C0.323213 20.1853 -0.0016385 21.6353 6.21428e-06 23.1033V26.4033C6.21428e-06 26.8409 0.173845 27.2606 0.48328 27.57C0.792714 27.8794 1.2124 28.0533 1.65 28.0533H1.98L4.6035 27.5253C3.54942 23.586 3.21956 19.488 3.63 15.4308ZM25.839 32.1948C25.9621 32.6818 25.9723 33.1905 25.869 33.6821C25.7657 34.1737 25.5515 34.6352 25.2427 35.0315C24.934 35.4277 24.5389 35.7483 24.0875 35.9687C23.6361 36.1891 23.1403 36.3035 22.638 36.3033H10.362C9.85939 36.304 9.36326 36.1899 8.91145 35.9698C8.45965 35.7496 8.0641 35.4291 7.755 35.0328C7.44893 34.6381 7.23644 34.1791 7.13354 33.6903C7.03065 33.2016 7.04004 32.6959 7.161 32.2113L7.788 29.7033H25.212L25.839 32.1948ZM7.755 26.4033C5.5275 17.3613 7.4745 10.9593 9.6195 7.0653C11.0664 4.35907 13.1225 2.02619 15.6255 0.250804C15.8877 0.0869049 16.1907 0 16.5 0C16.8092 0 17.1123 0.0869049 17.3745 0.250804C19.8775 2.02619 21.9336 4.35907 23.3805 7.0653C25.5255 10.9593 27.4725 17.3613 25.245 26.4033H7.755ZM14.025 14.0283C14.025 14.5178 14.1701 14.9963 14.4421 15.4033C14.7141 15.8103 15.1006 16.1276 15.5529 16.3149C16.0051 16.5022 16.5027 16.5512 16.9828 16.4557C17.4629 16.3602 17.9039 16.1245 18.2501 15.7784C18.5962 15.4322 18.8319 14.9912 18.9274 14.5111C19.0229 14.031 18.9739 13.5334 18.7866 13.0812C18.5993 12.6289 18.282 12.2424 17.875 11.9704C17.468 11.6984 16.9895 11.5533 16.5 11.5533C15.8436 11.5533 15.2141 11.8141 14.7499 12.2782C14.2858 12.7424 14.025 13.3719 14.025 14.0283Z"
+                            fill="black"
+                          ></path>
+                          <path
+                            d="M25.839 32.1956C25.962 32.6826 25.9723 33.1913 25.869 33.6829C25.7656 34.1745 25.5515 34.636 25.2427 35.0323C24.934 35.4285 24.5389 35.7491 24.0875 35.9695C23.6361 36.1899 23.1403 36.3043 22.638 36.3041H10.362C9.85938 36.3048 9.36325 36.1908 8.91144 35.9706C8.45963 35.7504 8.06409 35.4299 7.75499 35.0336C7.44891 34.6389 7.23642 34.1799 7.13353 33.6912C7.03064 33.2024 7.04002 32.6967 7.16099 32.2121L7.78799 29.7041H25.212L25.839 32.1956Z"
+                            fill="#B0A4B5"
+                          ></path>
+                          <path
+                            d="M7.75496 26.4033C5.52746 17.3613 7.47446 10.9593 9.61946 7.0653C11.0663 4.35907 13.1224 2.02619 15.6255 0.250804C15.8877 0.0869049 16.1907 0 16.5 0C16.8092 0 17.1122 0.0869049 17.3744 0.250804C19.8775 2.02619 21.9336 4.35907 23.3804 7.0653C25.5254 10.9593 27.4724 17.3613 25.2449 26.4033H7.75496ZM14.025 14.0283C14.025 14.5178 14.1701 14.9963 14.4421 15.4033C14.714 15.8103 15.1006 16.1276 15.5528 16.3149C16.0051 16.5022 16.5027 16.5512 16.9828 16.4557C17.4629 16.3602 17.9039 16.1245 18.25 15.7784C18.5962 15.4322 18.8319 14.9912 18.9274 14.5111C19.0229 14.031 18.9739 13.5334 18.7866 13.0812C18.5992 12.6289 18.282 12.2424 17.875 11.9704C17.468 11.6984 16.9895 11.5533 16.5 11.5533C15.8435 11.5533 15.214 11.8141 14.7499 12.2782C14.2857 12.7424 14.025 13.3719 14.025 14.0283Z"
+                            fill="#F3F5F9"
+                          ></path>
+                          <path
+                            d="M3.63 15.4316C2.49394 16.3614 1.57886 17.5321 0.951036 18.8591C0.323213 20.1861 -0.0016385 21.6361 6.21427e-06 23.1041V26.4041C6.21427e-06 26.8417 0.173845 27.2614 0.483279 27.5709C0.792714 27.8803 1.2124 28.0541 1.65 28.0541H1.98L4.6035 27.5261C3.54942 23.5868 3.21956 19.4888 3.63 15.4316Z"
+                            fill="#88818F"
+                          ></path>
+                          <path
+                            d="M33 23.1019V26.4019C33 26.8395 32.8261 27.2592 32.5167 27.5686C32.2073 27.8781 31.7876 28.0519 31.35 28.0519H31.02L28.3965 27.5239C29.4466 23.5952 29.7764 19.5087 29.37 15.4624C30.5017 16.3886 31.4142 17.5541 32.0419 18.875C32.6695 20.1959 32.9967 21.6395 33 23.1019Z"
+                            fill="#88818F"
+                          ></path>
+                        </svg>
+                        <div class="text-center">
+                          Orders <br />
+                          Dịch vụ đang chạy...
+                        </div></a
+                      ><a
+                        class="bg-deep-purple-3 p-8 py-10 rounded-xl flex flex-col justify-center items-center gap-4 duration-300 cursor-pointer hover:shadow-hover"
+                        ><svg
+                          width="36"
+                          height="36"
+                          viewbox="0 0 36 36"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M7.46808 1.03418L0 9.53631H9L7.46808 1.03418Z"
+                            fill="#887E8C"
+                          ></path>
+                          <path
+                            d="M28.5319 1.03418L36 9.53631H27L28.5319 1.03418Z"
+                            fill="#887E8C"
+                          ></path>
+                          <path
+                            d="M17.9999 1.03418H7.46802L8.99993 9.53631L17.9999 1.03418Z"
+                            fill="#F3F5F9"
+                          ></path>
+                          <path
+                            d="M18 1.03418H28.5319L27 9.53631L18 1.03418Z"
+                            fill="#F3F5F9"
+                          ></path>
+                          <path
+                            d="M9 9.53631L18 1.03418L27 9.53631H9Z"
+                            fill="#887E8C"
+                          ></path>
+                          <path
+                            d="M18 34.9659L0 9.53613H36L18 34.9659Z"
+                            fill="#887E8C"
+                          ></path>
+                          <path
+                            d="M9 9.53613L18 34.9659L27 9.53613H9Z"
+                            fill="#C3BAC7"
+                          ></path>
+                        </svg>
+                        <div class="text-center">
+                          Tài khoản <br />
+                          và Acc Rác
+                        </div></a
+                      ><a
+                        class="bg-deep-purple-3 p-8 py-10 rounded-xl flex flex-col justify-center items-center gap-4 duration-300 cursor-pointer hover:shadow-hover md:hidden"
+                        ><svg
+                          width="41"
+                          height="37"
+                          viewbox="0 0 41 37"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M3.571 3.7416C5.5111 1.76829 8.04874 0.51825 10.7736 0.193591C13.4985 -0.131048 16.2515 0.488668 18.5874 1.95257L12.1882 8.46405C10.8022 9.87111 10.0122 11.7738 9.98689 13.7655C9.96157 15.7571 10.703 17.6799 12.0528 19.1229C13.4025 20.566 15.2535 21.4147 17.2102 21.488C19.1671 21.5612 21.0743 20.853 22.5247 19.5149L22.7947 19.2536L30.75 27.3443L22.7947 35.4369C22.0914 36.152 21.1378 36.5538 20.1435 36.5538C19.1491 36.5538 18.1955 36.152 17.4924 35.4369L3.56913 21.2734C1.28384 18.9484 0 15.7953 0 12.5075C0 9.21969 1.28384 6.06653 3.56913 3.7416H3.571Z"
+                            fill="#88818F"
+                          ></path>
+                          <path
+                            d="M24.3818 14.8255C24.0202 14.477 23.5301 14.2812 23.0192 14.2812C22.5081 14.2812 22.018 14.477 21.6566 14.8255L20.294 16.138C19.9384 16.4931 19.513 16.7764 19.0428 16.9713C18.5725 17.1661 18.0666 17.2687 17.5549 17.273C17.043 17.2773 16.5354 17.1832 16.0617 16.9962C15.588 16.8093 15.1577 16.5333 14.7957 16.1841C14.4338 15.835 14.1476 15.4199 13.9538 14.9629C13.76 14.506 13.6624 14.0163 13.6669 13.5227C13.6713 13.029 13.7777 12.5411 13.9797 12.0875C14.1817 11.6338 14.4754 11.2236 14.8435 10.8806L25.6943 0.41033C28.2632 -0.153301 30.951 0.0786727 33.3753 1.07322C35.7997 2.06778 37.8374 3.77431 39.1985 5.95014C40.5597 8.12597 41.1751 10.6604 40.9571 13.1929C40.7391 15.7255 39.699 18.1274 37.9847 20.0569L33.9219 24.026L24.3818 14.8237V14.8255Z"
+                            fill="#F3F5F9"
+                          ></path>
+                        </svg>
+                        <div class="text-center">
+                          Dịch vụ <br />
+                          đánh duo chung
+                        </div></a
+                      >
+                    </div>
+                    <div>
+                      <div class="flex justify-between items-center mb-2">
+                        <div class="font-bold text-lg">Các đơn hàng đã mua</div>
+                        <div class="flex items-center gap-4">
+                          <a
+                            routerlink="/orders"
+                            class="opacity-60"
+                            href="#"
+                            >See all</a
+                          >
+                        </div>
+                      </div>
+                      <div class="md:bg-deep-purple-3 md:p-4 md:rounded-xl">
+                        <dash-table _nghost-ixw-c104=""
+                          ><div _ngcontent-ixw-c104="" class="w-full relative">
+                            <loading _ngcontent-ixw-c104="" _nghost-ixw-c53=""
+                              ><!----></loading
+                            >
+                            <div
+                              _ngcontent-ixw-c104=""
+                              data-aos="fade-up"
+                              data-aos-duration="200"
+                              class="aos-init aos-animate"
+                            >
+                              <ngx-datatable
+                                _ngcontent-ixw-c104=""
+                                class="ngx-datatable dash-table custom-mobile-template center fixed-header virtualized selectable"
+                                ><div
+                                  role="table"
+                                  visibilityobserver=""
+                                  class="visible"
+                                >
+                                  <datatable-header
+                                    role="rowgroup"
+                                    class="datatable-header"
+                                    style="height: 30px; width: 100%"
+                                    ><div
+                                      role="row"
+                                      orderable=""
+                                      class="datatable-header-inner"
+                                      style="width: 836px"
+                                    >
+                                      <div
+                                        class="datatable-row-left"
+                                        style="width: 0px"
+                                      >
+                                        <!---->
+                                      </div>
+                                      <div
+                                        class="datatable-row-center"
+                                        style="
+                                          transform: translate3d(0px, 0px, 0px);
+                                          backface-visibility: hidden;
+                                          width: 836px;
+                                        "
+                                      >
+                                        <datatable-header-cell
+                                          role="columnheader"
+                                          resizeable=""
+                                          long-press=""
+                                          draggable=""
+                                          class="datatable-header-cell resizeable"
+                                          title="Item"
+                                          style="width: 76px"
+                                          ><div
+                                            class="datatable-header-cell-template-wrap"
+                                          >
+                                            <!----><!----><span
+                                              class="datatable-header-cell-wrapper"
+                                              ><span
+                                                class="datatable-header-cell-label draggable"
+                                                >Item</span
+                                              ></span
+                                            ><!----><!----><span
+                                            ></span>
+                                          </div>
+                                          <span
+                                            class="resize-handle"
+                                          ></span></datatable-header-cell
+                                        ><datatable-header-cell
+                                          role="columnheader"
+                                          resizeable=""
+                                          long-press=""
+                                          draggable=""
+                                          class="datatable-header-cell resizeable"
+                                          title="Purchase"
+                                          style="width: 228px"
+                                          ><div
+                                            class="datatable-header-cell-template-wrap"
+                                          >
+                                            <!----><!----><span
+                                              class="datatable-header-cell-wrapper"
+                                              ><span
+                                                class="datatable-header-cell-label draggable"
+                                                >Thanh toán</span
+                                              ></span
+                                            ><!----><!----><span
+                                            ></span>
+                                          </div>
+                                          <span
+                                            class="resize-handle"
+                                          ></span></datatable-header-cell
+                                        ><datatable-header-cell
+                                          role="columnheader"
+                                          resizeable=""
+                                          long-press=""
+                                          draggable=""
+                                          class="datatable-header-cell resizeable"
+                                          title="ID"
+                                          style="width: 152px"
+                                          ><div
+                                            class="datatable-header-cell-template-wrap"
+                                          >
+                                            <!----><!----><span
+                                              class="datatable-header-cell-wrapper"
+                                              ><span
+                                                class="datatable-header-cell-label draggable"
+                                                >ID</span
+                                              ></span
+                                            ><!----><!----><span
+                                            ></span>
+                                          </div>
+                                          <span
+                                            class="resize-handle"
+                                          ></span></datatable-header-cell
+                                        ><datatable-header-cell
+                                          role="columnheader"
+                                          resizeable=""
+                                          long-press=""
+                                          draggable=""
+                                          class="datatable-header-cell resizeable"
+                                          title="Employee"
+                                          style="width: 152px"
+                                          ><div
+                                            class="datatable-header-cell-template-wrap"
+                                          >
+                                            <!----><!----><span
+                                              class="datatable-header-cell-wrapper"
+                                              ><span
+                                                class="datatable-header-cell-label draggable"
+                                                >Người cày</span
+                                              ></span
+                                            ><!----><!----><span
+                                            ></span>
+                                          </div>
+                                          <span
+                                            class="resize-handle"
+                                          ></span></datatable-header-cell
+                                        ><datatable-header-cell
+                                          role="columnheader"
+                                          resizeable=""
+                                          long-press=""
+                                          draggable=""
+                                          class="datatable-header-cell resizeable"
+                                          title="Status"
+                                          style="width: 152px"
+                                          ><div
+                                            class="datatable-header-cell-template-wrap"
+                                          >
+                                            <!----><!----><span
+                                              class="datatable-header-cell-wrapper"
+                                              ><span
+                                                class="datatable-header-cell-label draggable"
+                                                >Trạng thái</span
+                                              ></span
+                                            ><!----><!----><span
+                                            ></span>
+                                          </div>
+                                          <span
+                                            class="resize-handle"
+                                          ></span></datatable-header-cell
+                                        ><datatable-header-cell
+                                          role="columnheader"
+                                          resizeable=""
+                                          long-press=""
+                                          draggable=""
+                                          class="datatable-header-cell resizeable"
+                                          title="Actions"
+                                          style="width: 128px"
+                                          ><div
+                                            class="datatable-header-cell-template-wrap"
+                                          >
+                                            <!----><!----><span
+                                              class="datatable-header-cell-wrapper"
+                                              ><span
+                                                class="datatable-header-cell-label draggable"
+                                                >Ghi chú</span
+                                              ></span
+                                            ><!----><!----><span
+                                            ></span>
+                                          </div>
+                                          <span
+                                            class="resize-handle"
+                                          ></span></datatable-header-cell
+                                        ><!---->
+                                      </div>
+                                      <div
+                                        class="datatable-row-right"
+                                        style="
+                                          transform: translate3d(0px, 0px, 0px);
+                                          backface-visibility: hidden;
+                                          width: 0px;
+                                        "
+                                      >
+                                        <!---->
+                                      </div>
+                                      <!---->
+                                    </div></datatable-header
+                                  ><!----><datatable-body
+                                    role="rowgroup"
+                                    class="datatable-body"
+                                    style="width: 100%; height: auto"
+                                    ><!----><datatable-selection
+                                      ><!---->
+                                      <div class="empty-row">
+                                        Hiện tại không có dữ liệu
+                                      </div>
+                                      <!----></datatable-selection
+                                    ></datatable-body
+                                  ><!---->
+                                </div></ngx-datatable
+                              >
+                            </div>
+                            <!---->
+                          </div></dash-table
+                        >
+                      </div>
+                    </div>
+                    <employee-rankings class="hidden md:block"
+                      ><!----></employee-rankings
+                    >
+                  </div>
+                  <div class="flex flex-col gap-8" style="min-width: 35%">
+                    <order-cards type="slider"
+                      ><div
+                        class="bg-deep-purple-3 p-8 rounded-xl relative h-full"
+                      >
+                        <loading _nghost-ixw-c53=""><!----></loading>
+                        <div class="flex gap-8">
+                          <img src="./Dashboard/samurai-2.webp" />
+                          <div class="flex flex-col gap-4">
+                            <div class="font-bold text-xl">
+                              <div class="text-lightpurple">
+                                Đơn hàng của bạn
+                              </div>
+                              <div>Sẽ được hiển thị ở đây</div>
+                            </div>
+                          </div>
+                        </div>
+                        <!----><!---->
+                      </div></order-cards
+                    ><employee-rankings class="md:hidden"
+                      ><!----></employee-rankings
+                    >
+                  </div>
+                </div></home
+              ><!---->
+            </div>
+          </div>
+          <!---->
+        </div>
+        <newsletter-modal
+          ><ngx-smart-modal
+            identifier="newsletterModal"
+            customclass="custom-modal"
+            ><!----></ngx-smart-modal
+          ></newsletter-modal
+        ></layout
+      ><!----><live-chat
+        ><div
+          class="fixed z-50 right-5 bottom-10 cursor-pointer flex items-center justify-center rounded-full bg-primary-gradient overflow-hidden p-5 duration-300 hover:bottom-12"
+        >
+          <svg
+            id="ic_bubble"
+            fill="#FFFFFF"
+            height="24"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+          >
+            <path
+              d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"
+            ></path>
+            <path d="M0 0h24v24H0z" fill="none"></path>
+          </svg>
+        </div>
+        <!----></live-chat
+      ></br-dashboard
+    >
+    <script
+      src="./Dashboard/ckeditor.js.download"
+      type="text/javascript"
+    ></script>
+    <noscript
+      >Please enable JavaScript to continue using this application.</noscript
+    >
+    <script
+      src="./Dashboard/runtime.1ea393a517ace7c5.js.download"
+      type="module"
+    ></script>
+    <script
+      src="./Dashboard/polyfills.8af294937448abd7.js.download"
+      type="module"
+    ></script>
+    <script
+      src="./Dashboard/scripts.c3632ebff9948177.js.download"
+      defer=""
+      type="text/javascript"
+    ></script>
+    <script
+      src="./Dashboard/main.9ddc26dd19fa0a66.js.download"
+      type="module"
+    ></script>
+
+    <script
+      defer=""
+      src="./Dashboard/v84a3a4012de94ce1a686ba8c167c359c1696973893317"
+      integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA=="
+      data-cf-beacon='{"rayId":"824446c9fe431fca","version":"2023.10.0","token":"e6fc94e9816c471196174536cf93db8a"}'
+      crossorigin="anonymous"
+    ></script>
+    <div
+      id="shimeji-workArea"
+      style="
+        position: fixed;
+        background: transparent;
+        z-index: 2147483643;
+        width: 100vw;
+        height: 100vh;
+        left: 0px;
+        top: 0px;
+        transform: translate(0px, 0px);
+        pointer-events: none;
+      "
+    ></div>
+  </body>
+</html>
