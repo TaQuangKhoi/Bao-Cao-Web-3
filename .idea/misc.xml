@@ -3,7 +3,7 @@
   <component name="Black">
     <option name="sdkName" value="Pipenv (Bao-Cao-Web-3)" />
   </component>
-  <component name="ProjectRootManager">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_21" project-jdk-name="Pipenv (Bao-Cao-Web-3)" project-jdk-type="Python SDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>
