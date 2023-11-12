@@ -1,0 +1,146 @@
+{% load static %}
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="{% static 'asp_net/css/others.css' %}">
+</head>
+<body>
+<div class="main">
+    <!-- Bắt đầu Content -->
+    <div class="header-title px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center mb-0 pad-top-16">
+        <h1 class="size-3">Trang giao dịch</h1>
+    </div>
+    <div class="content-trade mt-3 mb-3">
+        <div class="exhibit-detail-field">
+            <div class="exhibit-contents">
+                <p class="product-info-title">Thông tin sản phẩm</p>
+                <a href="">
+                    <div class="exhibit-images">
+                        <img alt="LV30 Unranked / Máy chủ JP | LoL (Liên minh huyền thoại)"
+                             src="https://cdn.gametrade.jp/0/exhibit_image/file/98168605/d80f3ad2-812c-42a1-a39f-2c11bca31002.jpg">
+                    </div>
+                    <div class="exhibit-description">
+                        <h2>
+                            LV30 không được xếp hạng / Máy chủ JP
+                            <span>
+                                (LoL (Liên minh huyền thoại))
+                            </span>
+                        </h2>
+                        <table>
+                            <tbody>
+                            <tr>
+                                <th>Giá cả hàng hóa</th>
+                                <td>Model.Price</td>
+                            </tr>
+                            <tr>
+                                <th>Ngày mua</th>
+                                <td>06/03 23:16</td>
+                            </tr>
+                            <tr>
+                                <th>Người bán</th>
+                                <td>Model.SellerName</td>
+                            </tr>
+                            <tr>
+                                <th>ID giao dịch</th>
+                                <td>5313463</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </a>
+            </div>
+            <div class="buyer-info">
+                <a class="user" href="/users/2241203">
+                    <span>người mua</span>
+                    <div class="profile-image">
+                        <img class="profile"
+                             src="https://cdn.gametrade.jp/assets/no-profile-image-b1a9f9d548571996f157c5fdbb08273858d438b83571990c0170ba7152d7dfb3.jpg">
+                    </div>
+                    <span class="nickname">Trần Trọng Tiến</span>
+                    <span class="last_accessed_at last-accessed-within-1day">1 giờ trước</span>
+                </a>
+            </div>
+        </div>
+        {#                <div class="todo-block ">#}
+        {#        <p class="todo">Thỏa thuận này đã kết thúc</p>#}
+        {#    </div>#}
+
+        <div class="conversation-block" id="message">
+            <h3>
+                tin nhắn
+            </h3>
+
+            <div class="messages">
+
+                <ul id="messagesList">
+
+                </ul>
+
+                <div class="post-message tc-flex">
+                    <div class="user">
+                        <img class="trading-profile"
+                             src="https://cdn.gametrade.jp/0/user/profile_image/2298509/d0ce3a90-2d08-47df-9494-d212a46a92f7.jpg">
+                    </div>
+
+                    <div class="message">
+                        <form class="new_message" id="new_message" enctype="multipart/form-data"
+                              action="/messages/5313463" accept-charset="UTF-8" method="post">
+                            <textarea placeholder="Viết tin nhắn" length="maximum 500"
+                                      id="messageInput"></textarea>
+
+                            <ul class="image-field">
+                                <li>
+                                    <label>
+                                        <div class="image-block">
+                                            <input class="board-post-image" type="file"
+                                                   name="message[file1]" id="message_file1">
+                                            <img class="no_image"
+                                                 src="https://cdn.gametrade.jp/assets/no-exhibit-image-d3fa87866c13500fdb4aa5c9a868d30901d3a10e78e027c62c448ceb72ce41dd.png">
+                                            <img
+                                                    class="thumbnail" style="display: none;" src="">
+                                            <button ,=""
+                                                    class="img_delete" id="file1_delete" type="button">
+                                                ×
+                                            </button>
+                                        </div>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <div class="image-block">
+                                            <input class="board-post-image" type="file"
+                                                   name="message[file2]" id="message_file2">
+                                            <img class="no_image"
+                                                 src="https://cdn.gametrade.jp/assets/no-exhibit-image-d3fa87866c13500fdb4aa5c9a868d30901d3a10e78e027c62c448ceb72ce41dd.png">
+                                            <img
+                                                    class="thumbnail" style="display: none;" src="">
+                                            <button ,=""
+                                                    class="img_delete" id="file2_delete" type="button">
+                                                ×
+                                            </button>
+                                        </div>
+                                    </label>
+                                </li>
+                            </ul>
+                            <p class="prohibited">
+                                * Đăng hình ảnh dẫn đến các trang web bên
+                                ngoài đều bị cấm.
+                            </p>
+                            <input type="submit" value="Gửi tin nhắn"
+                                   class="post-button"
+                                   id="sendButton">
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
