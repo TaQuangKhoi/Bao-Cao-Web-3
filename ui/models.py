@@ -17,7 +17,6 @@ class Requests(models.Model):
     number_of_wins = models.IntegerField()
     number_of_games = models.IntegerField()
     ranked_genre = models.IntegerField( )
-    desired_rank = models.OneToOneField('Ranks', on_delete=models.CASCADE)
     lp_Gain = models.IntegerField()
     current_lp = models.FloatField( max_length=99)
     request_recipient = models.DateTimeField(auto_now_add=True)
