@@ -20,7 +20,6 @@ class Requests(models.Model):
     desired_rank = models.OneToOneField('Ranks', on_delete=models.CASCADE)
     lp_Gain = models.IntegerField( max_length= 35)
     current_lp = models.FloatField( max_length=99)
-    current_rank = models.FloatField( max_length=99)
     request_recipient = models.DateTimeField(auto_now_add=True)
     request_creation_date = models.DateTimeField(auto_now_add=True)
     the_require_price = models.FloatField()   
