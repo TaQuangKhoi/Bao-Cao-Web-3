@@ -10,7 +10,6 @@ class Requests(models.Model):
     details = models.CharField(max_length=200)
     total = models.FloatField()
     status = models.CharField(max_length=200)
-    champion = models.OneToOneField('Champions', on_delete=models.CASCADE)
     stream_games = models.BooleanField(default=False)
     priority_order = models.BooleanField(default=False)
     desired_mastery = models.IntegerField( max_length=7)
@@ -22,7 +21,7 @@ class Requests(models.Model):
     lp_Gain = models.IntegerField( max_length= 35)
     current_lp = models.FloatField( max_length=99)
     current_rank = models.FloatField( max_length=99)
-    request_recipient = models.OneToOneField('RequestRecipient', on_delete=models.CASCADE)
+    request_recipient = models.DateTimeField(auto_now_add=True)
     request_creation_date = models.DateTimeField(auto_now_add=True)
     the_require_price = models.FloatField()   
 
@@ -38,7 +37,7 @@ class Servers(models.Model):
 
 class GameTypes(models.Model):
     id = models.AutoField(primary_key=True)
-    release_date = models.CharField(max_length=50)
+    release_date = models.DateTimeField(auto_now_add=True)
     name = models.CharField(max_length=50)
     publisher = models.CharField(max_length=50)
     developer = models.CharField(max_length=50)
