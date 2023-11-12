@@ -4,10 +4,10 @@ from django.db import models
 # Create your models here.
 class Requests(models.Model):
     id = models.AutoField(primary_key=True)
-    server = models.OneToOneField('Servers', on_delete=models.CASCADE)
-    current_rank = models.OneToOneField('Ranks', on_delete=models.CASCADE)
-    desired_rank = models.OneToOneField('Ranks', on_delete=models.CASCADE)
-    #employee = models.OneToOneField('Employees', on_delete=models.CASCADE)
+    server = models.ForeignKey('Servers', on_delete=models.CASCADE)
+    current_rank = models.ForeignKey('Ranks', on_delete=models.CASCADE, related_name='current_rank')
+    desired_rank = models.ForeignKey('Ranks', on_delete=models.CASCADE, related_name='desired_rank')
+    # employee = models.ForeignKey('Employees', on_delete=models.CASCADE)
     details = models.CharField(max_length=200)
     total = models.FloatField()
     status = models.CharField(max_length=200)
