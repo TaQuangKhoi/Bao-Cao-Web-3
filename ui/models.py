@@ -1,12 +1,13 @@
 from django.db import models
 
+
 # Create your models here.
 class Requests(models.Model):
     id = models.AutoField(primary_key=True)
     server = models.OneToOneField('Servers', on_delete=models.CASCADE)
     current_rank = models.OneToOneField('Ranks', on_delete=models.CASCADE)
     desired_rank = models.OneToOneField('Ranks', on_delete=models.CASCADE)
-    employee = models.OneToOneField('Employees', on_delete=models.CASCADE)
+    #employee = models.OneToOneField('Employees', on_delete=models.CASCADE)
     details = models.CharField(max_length=200)
     total = models.FloatField()
     status = models.CharField(max_length=200)
@@ -16,22 +17,25 @@ class Requests(models.Model):
     current_mastery = models.IntegerField()
     number_of_wins = models.IntegerField()
     number_of_games = models.IntegerField()
-    ranked_genre = models.IntegerField( )
+    ranked_genre = models.IntegerField()
     lp_Gain = models.IntegerField()
-    current_lp = models.FloatField( max_length=99)
+    current_lp = models.FloatField(max_length=99)
     request_recipient = models.DateTimeField(auto_now_add=True)
     request_creation_date = models.DateTimeField(auto_now_add=True)
-    the_require_price = models.FloatField()   
+    the_require_price = models.FloatField()
+
 
 class Ranks(models.Model):
     id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=50)
     position = models.CharField(max_length=50)
 
+
 class Servers(models.Model):
     id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=50)
     local = models.CharField(max_length=50)
+
 
 class GameTypes(models.Model):
     id = models.AutoField(primary_key=True)
