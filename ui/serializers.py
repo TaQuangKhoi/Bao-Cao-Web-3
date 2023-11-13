@@ -1,10 +1,10 @@
 from rest_framework import permissions
 from rest_framework.serializers import ModelSerializer
-from .models import Rank, Servers, Requests, GameTypes
+from .models import Rank, Server, Request, GameType
 
 class RequestSerializer(ModelSerializer):
     class Meta:
-        model = Requests
+        model = Request
         fields = ['id','server','current_rank','desired_rank','details','total',
         'status','stream_games','priority_order','desired_mastery','current_mastery',
         'number_of_wins','number_of_games','ranked_genre','lp_Gain','current_lp',
@@ -17,12 +17,12 @@ class RankSerializer(ModelSerializer):
 
 class ServerSerializer(ModelSerializer):
     class Meta:
-        model = Servers
+        model = Server
         fields = ['id','name','local']
 
 class GameTypeSerializer(ModelSerializer):
     class Meta:
-        model = GameTypes
+        model = GameType
         fields = ['id','release_date','name','publisher','developer','category']
         
     # def get_permissions(self):
