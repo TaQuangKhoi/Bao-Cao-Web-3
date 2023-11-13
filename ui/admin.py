@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Rank, Servers, Requests, GameTypes
+from .models import Rank, Server, Request, GameType
 
 
 class RequestAdmin(admin.ModelAdmin):
@@ -29,7 +29,7 @@ class GameTypeAdmin(admin.ModelAdmin):
     search_fields = ['release_date', 'name', 'publisher', 'developer', 'category']
 
 
-admin.site.register(Requests, RequestAdmin)
+admin.site.register(Request, RequestAdmin)
 admin.site.register(Rank, RankAdmin)
-admin.site.register(Servers, ServerAdmin)
-admin.site.register(GameTypes, GameTypeAdmin)
+admin.site.register(Server, ServerAdmin)
+admin.site.register(GameType, GameTypeAdmin)
