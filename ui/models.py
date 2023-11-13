@@ -1,11 +1,12 @@
 from django.db import models
+import uuid
 
 
 class Request(models.Model):
     id = models.AutoField(primary_key=True)
     server = models.ForeignKey('Server', on_delete=models.CASCADE)
-    current_rank = models.ForeignKey('Rank', on_delete=models.CASCADE, related_name='current_rank')
-    desired_rank = models.ForeignKey('Rank', on_delete=models.CASCADE, related_name='desired_rank')
+    # current_rank = models.ForeignKey('Rank', on_delete=models.CASCADE, related_name='current_rank')
+    # desired_rank = models.ForeignKey('Rank', on_delete=models.CASCADE, related_name='desired_rank')
     # employee = models.ForeignKey('Employees', on_delete=models.CASCADE)
     details = models.CharField(max_length=200)
     total = models.FloatField()
@@ -25,7 +26,7 @@ class Request(models.Model):
 
 
 class Rank(models.Model):
-    id = models.AutoField(primary_key=True)
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     name = models.CharField(max_length=50)
     position = models.CharField(max_length=50)
 
