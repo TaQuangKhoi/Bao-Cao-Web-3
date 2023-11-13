@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from rest_framework import viewsets
-from .models import Rank, Servers, Requests, GameTypes
+from .models import Rank, Server, Request, GameType
 from .serializers import RankSerializer
 
 

@@ -3,7 +3,7 @@ from django.db import models
 
 class Request(models.Model):
     id = models.AutoField(primary_key=True)
-    server = models.ForeignKey('Servers', on_delete=models.CASCADE)
+    server = models.ForeignKey('Server', on_delete=models.CASCADE)
     current_rank = models.ForeignKey('Rank', on_delete=models.CASCADE, related_name='current_rank')
     desired_rank = models.ForeignKey('Rank', on_delete=models.CASCADE, related_name='desired_rank')
     # employee = models.ForeignKey('Employees', on_delete=models.CASCADE)
