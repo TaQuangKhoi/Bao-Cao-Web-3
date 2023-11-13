@@ -1,4 +1,7 @@
 from django.shortcuts import render
+from rest_framework import viewsets
+from .models import Rank, Servers, Requests, GameTypes
+from .serializers import RanksSerializer
 
 
 # Create your views here.
@@ -13,3 +16,8 @@ def up_rank(request):
 
 def trading(request):
     return render(request, template_name='trading.jinja', )
+
+
+class RanksViewSet(viewsets.ModelViewSet):
+    queryset = Rank.objects.all()
+    serializer_class = RanksSerializer
