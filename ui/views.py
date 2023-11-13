@@ -1,10 +1,13 @@
 from django.shortcuts import render
 from rest_framework import viewsets
-from .models import Rank, Server, Request, GameType
+from .models import (
+    Rank,
+    Server,
+    Request,
+    GameType
+)
 from .serializers import RankSerializer
 
-
-# Create your views here.
 
 def dashboard(request):
     return render(request, template_name='dashboard.jinja', )
