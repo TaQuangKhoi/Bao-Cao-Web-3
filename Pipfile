@@ -8,6 +8,7 @@ django = "*"
 whitenoise = "*"
 gunicorn = "*"
 djangorestframework = "*"
+django-oauth-toolkit = "*"
 
 [dev-packages]
 
