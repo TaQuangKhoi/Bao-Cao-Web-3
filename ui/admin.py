@@ -29,7 +29,7 @@ class GameTypeAdmin(admin.ModelAdmin):
     search_fields = ['release_date', 'name', 'publisher', 'developer', 'category']
 
 
-admin.site.register(Requests)
-admin.site.register(Rank)
-admin.site.register(Servers)
-admin.site.register(GameTypes)
+admin.site.register(Requests, RequestAdmin)
+admin.site.register(Rank, RankAdmin)
+admin.site.register(Servers, ServerAdmin)
+admin.site.register(GameTypes, GameTypeAdmin)
