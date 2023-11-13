@@ -1,6 +1,6 @@
 from django.db import models
 
-# Create your models here.
+
 class Requests(models.Model):
     id = models.AutoField(primary_key=True)
     server = models.ForeignKey('Servers', on_delete=models.CASCADE)
