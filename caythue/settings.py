@@ -82,9 +82,22 @@ WSGI_APPLICATION = 'caythue.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': BASE_DIR / 'db.sqlite3',
+    # }
+
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'verceldb',
+        'USER': "default",
+        'PASSWORD': "Saew9yGbtRY6",
+        'HOST': "ep-super-unit-27926565-pooler.ap-southeast-1.postgres.vercel-storage.com",
+        'PORT': '5432',
+        # "OPTIONS": {
+        #     "service": "cay_thue_service",
+        #     "passfile": ".cay_thue_pgpass",
+        # },
     }
 }
 
@@ -134,5 +147,4 @@ REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'oauth2_provider.contrib.rest_framework.OAuth2Authentication',
     ),
-
 }
