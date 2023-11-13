@@ -1,7 +1,7 @@
 from django.db import models
 
 
-class Requests(models.Model):
+class Request(models.Model):
     id = models.AutoField(primary_key=True)
     server = models.ForeignKey('Servers', on_delete=models.CASCADE)
     current_rank = models.ForeignKey('Rank', on_delete=models.CASCADE, related_name='current_rank')
@@ -30,13 +30,13 @@ class Rank(models.Model):
     position = models.CharField(max_length=50)
 
 
-class Servers(models.Model):
+class Server(models.Model):
     id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=50)
     local = models.CharField(max_length=50)
 
 
-class GameTypes(models.Model):
+class GameType(models.Model):
     id = models.AutoField(primary_key=True)
     release_date = models.DateTimeField(auto_now_add=True)
     name = models.CharField(max_length=50)
