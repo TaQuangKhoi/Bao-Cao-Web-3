@@ -9,6 +9,7 @@ whitenoise = "*"
 gunicorn = "*"
 djangorestframework = "*"
 django-oauth-toolkit = "*"
+psycopg2 = "*"
 
 [dev-packages]
 

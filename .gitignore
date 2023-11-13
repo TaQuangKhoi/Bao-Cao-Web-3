@@ -135,3 +135,6 @@ GitHub.sublime-settings
 !.vscode/launch.json
 !.vscode/extensions.json
 .history
+.cay_thue_pgpass
+
+.pg_service.conf
