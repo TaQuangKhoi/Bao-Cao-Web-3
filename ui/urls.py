@@ -3,7 +3,7 @@ from . import views
 from rest_framework.routers import DefaultRouter
 
 router = DefaultRouter()
-router.register('category', views.RanksViewSet)
+router.register('ranks', views.RanksViewSet)
 
 urlpatterns = [
     path('api/', include(router.urls)),

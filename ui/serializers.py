@@ -3,7 +3,7 @@ from rest_framework.serializers import ModelSerializer
 from .models import Rank, Servers, Requests, GameTypes
 
 
-class RanksSerializer(ModelSerializer):
+class RankSerializer(ModelSerializer):
     class Meta:
         model = Rank
         fields = ['id', 'name', 'position']

@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from rest_framework import viewsets
 from .models import Rank, Servers, Requests, GameTypes
-from .serializers import RanksSerializer
+from .serializers import RankSerializer
 
 
 # Create your views here.
@@ -20,4 +20,4 @@ def trading(request):
 
 class RanksViewSet(viewsets.ModelViewSet):
     queryset = Rank.objects.all()
-    serializer_class = RanksSerializer
+    serializer_class = RankSerializer
