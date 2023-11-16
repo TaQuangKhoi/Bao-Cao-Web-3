@@ -68,46 +68,8 @@
                             Create an account
                         </div>
                     </div>
-                    <form preventdefault:submit="">
-                        <!--qv --><!--qv --><label
-                            class="⭐️nwq154-0 flex flex-col gap-2"
-                    >
-                        <div class="⭐️nwq154-0 cursor-pointer text-white leading-5">
-                            Email or username
-                        </div>
-                        <input
-                                class="⭐️nwq154-0 bg-[#3D3241] text-white/70 outline-none rounded-lg min-w-0 w-full px-4 py-3"
-                                autocomplete=""
-                                name=""
-                                placeholder="example@email.com"
-                                required=""
-                                type="text"/></label
-                    ><!--/qv--><!--/qv--><!--qv --><!--qv --><!--qv --><label
-                            class="⭐️nwq154-0 flex flex-col gap-2"
-                    >
-                        <div class="⭐️nwq154-0 cursor-pointer text-white leading-5">
-                            Password
-                        </div>
-                        <input
-                                class="⭐️nwq154-0 bg-[#3D3241] text-white/70 outline-none rounded-lg min-w-0 w-full px-4 py-3"
-                                autocomplete=""
-                                name=""
-                                type="password"/></label
-                    ><!--/qv--><!--/qv-->
-                        <div class="text-primary text-right mt-2 cursor-pointer">
-                            Forgot password?
-                        </div>
-                        <button class="w-full" type="submit">
-                            <!--qv -->
-                            <div
-                                    class="font-bold flex items-center justify-center text-center cursor-pointer text-base whitespace-nowrap duration-300 rounded-3xl leading-tight bg-primary bg-opacity-10 hover:bg-primary hover:text-white border-transparent text-white bg-primary-gradient block mt-8"
-                                    style="padding: 10px 28px; backdrop-filter: blur(8px)"
-                            >
-                                <!--qv --><!--qv -->Sign in<!--/qv--><!--/qv-->
-                            </div>
-                            <!--/qv--></button
-                        ><!--/qv-->
-                    </form>
+                    {% block form-sign-in %}
+                    {% endblock %}
                     <div class="w-full h-0.5 bg-white/10 relative my-8">
                 <span
                         class="absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 bg-deep-purple-2 w-12 h-5 flex items-center justify-center uppercase font-bold text-white/70 text-sm tracking-widest"
