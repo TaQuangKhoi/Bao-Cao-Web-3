@@ -23,5 +23,7 @@ urlpatterns = [
     path('', include('ui.urls')),
     path('signin/', include('signin.urls')),
 
+    path('up_rank/', include('uprank.urls')),
+
     path('o/', include('oauth2_provider.urls', namespace='oauth2_provider')),
 ]
