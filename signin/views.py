@@ -1,3 +1,4 @@
+from django.http import HttpResponseRedirect
 from django.shortcuts import render
 
 from signin.forms import SignInForm
@@ -12,6 +13,11 @@ def signin(request):
             cleaned_data = form.cleaned_data
             username = cleaned_data['username']
             password = cleaned_data['password']
+
+            # sign in logic here
+
+
+            HttpResponseRedirect('/')
 
     return render(
         request,
