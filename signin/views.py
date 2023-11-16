@@ -28,7 +28,3 @@ def signin(request):
         template_name='signin.jinja',
         context={'form': form}
     )
-
-
-def logout_view(request):
-    logout(request)

@@ -1,3 +1,4 @@
+from django.contrib.auth import logout
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from rest_framework import viewsets
@@ -25,3 +26,8 @@ def trading(request):
 class RanksViewSet(viewsets.ModelViewSet):
     queryset = Rank.objects.all()
     serializer_class = RankSerializer
+
+
+def logout_view(request):
+    logout(request)
+

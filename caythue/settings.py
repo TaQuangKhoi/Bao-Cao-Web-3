@@ -190,3 +190,5 @@ REST_FRAMEWORK = {
 
 LOGIN_REDIRECT_URL = "/"  # specify where to redirect the user upon a successful login
 LOGOUT_REDIRECT_URL = "/"
+
+APPEND_SLASH = True
