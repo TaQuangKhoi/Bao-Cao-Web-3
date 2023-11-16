@@ -11,6 +11,7 @@ djangorestframework = "*"
 django-oauth-toolkit = "*"
 psycopg2 = "*"
 jinja2 = "*"
+django-jinja = "*"
 
 [dev-packages]
 
