@@ -19,6 +19,7 @@ def signin(request):
 
             if user is not None:
                 login(request, user)
+                return HttpResponseRedirect('/')
             else:
                 print('The username and password were incorrect.')
                 form.add_error(None, 'Invalid username or password')
