@@ -1,3 +1,4 @@
+from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from rest_framework import viewsets
 from .models import (
@@ -10,10 +11,11 @@ from .serializers import RankSerializer
 
 
 def dashboard(request):
-    return render(request, template_name='dashboard.jinja', )
-
-
-
+    if request.user.is_authenticated:
+        print(request.user.username)
+        return render(request, template_name='dashboard.jinja', )
+    else:
+        return HttpResponseRedirect('/signin/')
 
 
 def trading(request):
