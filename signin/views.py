@@ -1,3 +1,4 @@
+from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
 
@@ -14,13 +15,20 @@ def signin(request):
             username = cleaned_data['username']
             password = cleaned_data['password']
 
-            # sign in logic here
+            user = authenticate(request, username=username, password=password)
 
-
-            HttpResponseRedirect('/')
+            if user is not None:
+                login(request, user)
+            else:
+                print('The username and password were incorrect.')
+                form.add_error(None, 'Invalid username or password')
 
     return render(
         request,
         template_name='signin.jinja',
         context={'form': form}
     )
+
+
+def logout_view(request):
+    logout(request)
