@@ -1,0 +1,9 @@
+{% for field in form %}
+    <label class="flex flex-col gap-2">
+        <div class="cursor-pointer text-white leading-5">
+            {{ field.label_tag }}
+        </div>
+        {{ field }}
+    </label>
+    {{ field.errors }}
+{% endfor %}

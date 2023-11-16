@@ -1,5 +1,13 @@
 from django.shortcuts import render
 
+from signin.forms import SignInForm
+
 
 def signin(request):
-    return render(request, template_name='signin.jinja', )
+    form = SignInForm()
+
+    return render(
+        request,
+        template_name='signin.jinja',
+        context={'form': form}
+    )

@@ -1,27 +1,29 @@
 {% extends 'signin_base.jinja' %}
 
 {% block form-sign-in %}
-    <form>
-        <label class="flex flex-col gap-2">
-            <div class="cursor-pointer text-white leading-5">
-                Email or username
-            </div>
-            <input class="bg-[#3D3241] text-white/70 outline-none rounded-lg min-w-0 w-full px-4 py-3"
-                   autocomplete=""
-                   name=""
-                   placeholder="example@email.com"
-                   required=""
-                   type="text"/>
-        </label>
-        <label class="flex flex-col gap-2">
-            <div class="cursor-pointer text-white leading-5">
-                Password
-            </div>
-            <input class=" bg-[#3D3241] text-white/70 outline-none rounded-lg min-w-0 w-full px-4 py-3"
-                   autocomplete=""
-                   name=""
-                   type="password"/>
-        </label>
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form }}
+{#        <label class="flex flex-col gap-2">#}
+{#            <div class="cursor-pointer text-white leading-5">#}
+{#                Email or username#}
+{#            </div>#}
+{#            <input class="bg-[#3D3241] text-white/70 outline-none rounded-lg min-w-0 w-full px-4 py-3"#}
+{#                   autocomplete=""#}
+{#                   name=""#}
+{#                   placeholder="example@email.com"#}
+{#                   required=""#}
+{#                   type="text"/>#}
+{#        </label>#}
+{#        <label class="flex flex-col gap-2">#}
+{#            <div class="cursor-pointer text-white leading-5">#}
+{#                Password#}
+{#            </div>#}
+{#            <input class=" bg-[#3D3241] text-white/70 outline-none rounded-lg min-w-0 w-full px-4 py-3"#}
+{#                   autocomplete=""#}
+{#                   name=""#}
+{#                   type="password"/>#}
+{#        </label>#}
         <div class="text-primary text-right mt-2 cursor-pointer">
             Forgot password?
         </div>
