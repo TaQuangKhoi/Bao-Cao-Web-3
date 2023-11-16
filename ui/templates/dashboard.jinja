@@ -1,4 +1,4 @@
-{% load static %}
+{% from 'components.jinja' import logoutButton %}
 
 <!DOCTYPE html>
 <html>
@@ -16,7 +16,7 @@
             rel="icon" type="image/x-icon" href="https://dashboard.boostroyal.com/favicon.ico?v=3"/>
     <script
             async=""
-            src="{% static 'dashboard/OneSignalSDK.js.download' %}"
+            src="{{ static('dashboard/OneSignalSDK.js.download') }}"
             type="text/javascript"></script>
 
     <!--Style-->
@@ -454,7 +454,7 @@
     </style>
     <link
             rel="stylesheet"
-            href="{% static 'dashboard/styles.13124b6b853a8a65.css' %}"
+            href="{{ static('dashboard/styles.13124b6b853a8a65.css') }}"
             media="all"
     />
     <noscript
@@ -1548,7 +1548,7 @@
                                     href="#"
                             ><img
                                     _ngcontent-ixw-c51=""
-                                    src="{% static 'dashboard/logo-icon.svg' %}"
+                                    src="{{ static('dashboard/logo-icon.svg') }}"
                                     width="52px"
                                     height="52px"
                                     style="
@@ -1717,7 +1717,7 @@
                                     VIP Only
                                 </div>
                             </a
-                            ><!----><!----><a
+                            ><a
                                     _ngcontent-ixw-c51=""
                                     routerlink="/rankings"
                                     routerlinkactive="active"
@@ -1745,34 +1745,10 @@
                             </a
                             ><!---->
                             </div>
-                            <div _ngcontent-ixw-c51="" class="self-center">
-                                <div
-                                        _ngcontent-ixw-c51=""
-                                        class="flex items-center justify-center bg-deep-purple-2 rounded-full cursor-pointer h-14 w-14"
-                                >
-                                    <svg
-                                            _ngcontent-ixw-c51=""
-                                            width="19"
-                                            height="18"
-                                            viewbox="0 0 19 18"
-                                            fill="none"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <path
-                                                _ngcontent-ixw-c51=""
-                                                fill-rule="evenodd"
-                                                clip-rule="evenodd"
-                                                d="M8 17C8 16.7348 7.89464 16.4804 7.70711 16.2929C7.51957 16.1054 7.26522 16 7 16H2V2H7C7.26522 2 7.51957 1.89464 7.70711 1.70711C7.89464 1.51957 8 1.26522 8 1C8 0.734784 7.89464 0.48043 7.70711 0.292893C7.51957 0.105357 7.26522 0 7 0H2C1.46957 0 0.960859 0.210714 0.585786 0.585786C0.210714 0.960859 0 1.46957 0 2V16C0 16.5304 0.210714 17.0391 0.585786 17.4142C0.960859 17.7893 1.46957 18 2 18H7C7.26522 18 7.51957 17.8946 7.70711 17.7071C7.89464 17.5196 8 17.2652 8 17Z"
-                                                fill="white"
-                                        ></path>
-                                        <path
-                                                _ngcontent-ixw-c51=""
-                                                d="M18.714 9.70057C18.8969 9.51464 18.9996 9.26439 19 9.00357V8.99757C18.9995 8.73335 18.8941 8.48014 18.707 8.29357L14.707 4.29357C14.6148 4.19806 14.5044 4.12188 14.3824 4.06947C14.2604 4.01706 14.1292 3.98947 13.9964 3.98832C13.8636 3.98717 13.7319 4.01247 13.609 4.06275C13.4862 4.11303 13.3745 4.18728 13.2806 4.28117C13.1867 4.37507 13.1125 4.48672 13.0622 4.60962C13.0119 4.73251 12.9866 4.86419 12.9877 4.99697C12.9889 5.12975 13.0165 5.26097 13.0689 5.38297C13.1213 5.50498 13.1975 5.61532 13.293 5.70757L15.586 8.00057H6C5.73478 8.00057 5.48043 8.10593 5.29289 8.29346C5.10536 8.481 5 8.73535 5 9.00057C5 9.26579 5.10536 9.52014 5.29289 9.70768C5.48043 9.89521 5.73478 10.0006 6 10.0006H15.586L13.293 12.2936C13.1108 12.4822 13.01 12.7348 13.0123 12.997C13.0146 13.2592 13.1198 13.51 13.3052 13.6954C13.4906 13.8808 13.7414 13.986 14.0036 13.9882C14.2658 13.9905 14.5184 13.8897 14.707 13.7076L18.707 9.70757L18.714 9.70057Z"
-                                                fill="white"
-                                        ></path>
-                                    </svg>
-                                </div>
-                            </div>
+                            <form class="self-center" method="post" action="/logout/">
+                                {% csrf_token %}
+                                {{ logoutButton() }}
+                            </form>
                         </div>
                     </div>
                     <!---->
@@ -1833,7 +1809,7 @@
                                 <a _ngcontent-ixw-c56="" href="#"
                                 ><img
                                         _ngcontent-ixw-c56=""
-                                        src="{% static 'dashboard/logo-icon.svg' %}"
+                                        src="{{ static('dashboard/logo-icon.svg') }}"
                                         width="34px"
                                         height="34px"
                                 /></a>
@@ -1959,7 +1935,7 @@
                                 ><img
                                         _ngcontent-ixw-c56=""
                                         class="rounded-xl w-12 h-12"
-                                        src="{% static 'dashboard/default-avatar.webp' %}"
+                                        src="{{ static('dashboard/default-avatar.webp') }}"
                                 /></a>
                             </div>
                             <div
@@ -2444,7 +2420,7 @@
                                     >
                                         <loading _nghost-ixw-c53=""><!----></loading>
                                         <div class="flex gap-8">
-                                            <img src="{% static 'dashboard/samurai-2.webp' %}"/>
+                                            <img src="{{ static('dashboard/samurai-2.webp') }}"/>
                                             <div class="flex flex-col gap-4">
                                                 <div class="font-bold text-xl">
                                                     <div class="text-lightpurple">
@@ -2505,7 +2481,7 @@
 </br-dashboard
 >
 <script
-        src="{% static 'dashboard/ckeditor.js.download' %}"
+        src="{{ static('dashboard/ckeditor.js.download') }}"
         type="text/javascript"
 ></script>
 <noscript
@@ -2513,28 +2489,28 @@
 </noscript
 >
 <script
-        src="{% static 'dashboard/runtime.1ea393a517ace7c5.js.download' %}"
+        src="{{ static('dashboard/runtime.1ea393a517ace7c5.js.download') }}"
         type="module"
 ></script>
 <script
-        src="{% static 'dashboard/polyfills.8af294937448abd7.js.download' %}"
+        src="{{ static('dashboard/polyfills.8af294937448abd7.js.download') }}"
         type="module"
 ></script>
 <script
-        src="{% static 'dashboard/scripts.c3632ebff9948177.js.download' %}"
+        src="{{ static('dashboard/scripts.c3632ebff9948177.js.download') }}"
         defer=""
         type="text/javascript"
 ></script>
 <script
-        src="{% static 'dashboard/main.9ddc26dd19fa0a66.js.download' %}"
+        src="{{ static('dashboard/main.9ddc26dd19fa0a66.js.download') }}"
         type="module"
 ></script>
 
 <script
         defer=""
-        src="{% static 'dashboard/v84a3a4012de94ce1a686ba8c167c359c1696973893317' %}"
+        src="{{ static('dashboard/v84a3a4012de94ce1a686ba8c167c359c1696973893317') }}"
         integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA=="
-        data-cf-beacon='{"rayId":"824446c9fe431fca","version":"2023.10.0","token":"e6fc94e9816c471196174536cf93db8a"}'
+
         crossorigin="anonymous"
 ></script>
 <div
