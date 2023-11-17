@@ -20,36 +20,6 @@
             <div style="height: 190px; background: linear-gradient(180deg, rgba(35, 21, 38, 0.7) 0%, rgba(35, 21, 38, 1) 100%)"
                  class="absolute top-0 left-0 w-full z-10"></div>
             <div class="z-20 relative">
-                {#                <div class="container mt-8 ltr sm:mt-4" on:qvisible="q-8990edbd.js#_hW[0]" q:id="1t">#}
-                {#                    <div class="flex gap-3 sm:gap-2 items-center w-full overflow-auto no-scrollbar" q:id="1u">#}
-                {#                        <a href="#"#}
-                {#                           class="shrink text-center flex items-center px-7 h-[42px] sm:h-[33px] justify-center font-medium duration-500 whitespace-nowrap rounded-full sm:text-sm hover:text-primary text-primary bg-primary/10 active"#}
-                {#                           q:key="Divisions" q:id="1v">Divisions</a>#}
-                {#                        <a href="#"#}
-                {#                           class="shrink text-center flex items-center px-7 h-[42px] sm:h-[33px] justify-center font-medium duration-500 whitespace-nowrap rounded-full sm:text-sm hover:text-primary text-white/40 bg-deep-purple-7"#}
-                {#                           q:key="Ranked Wins" q:id="1x">Ranked Wins</a>#}
-                {#                        <a href="#"#}
-                {#                           class="shrink text-center flex items-center px-7 h-[42px] sm:h-[33px] justify-center font-medium duration-500 whitespace-nowrap rounded-full sm:text-sm hover:text-primary text-white/40 bg-deep-purple-7"#}
-                {#                           q:key="Placements" q:id="1z">Placements</a>#}
-                {#                        <a href="#"#}
-                {#                           class="shrink text-center flex items-center px-7 h-[42px] sm:h-[33px] justify-center font-medium duration-500 whitespace-nowrap rounded-full sm:text-sm hover:text-primary text-white/40 bg-deep-purple-7"#}
-                {#                           q:key="Arena" q:id="21">Arena</a>#}
-                {#                        <a href="#"#}
-                {#                           class="shrink text-center flex items-center px-7 h-[42px] sm:h-[33px] justify-center font-medium duration-500 whitespace-nowrap rounded-full sm:text-sm hover:text-primary text-white/40 bg-deep-purple-7"#}
-                {#                           q:key="Champion Mastery" q:id="23">Champion Mastery</a>#}
-                {#                        <a href="#"#}
-                {#                           class="shrink text-center flex items-center px-7 h-[42px] sm:h-[33px] justify-center font-medium duration-500 whitespace-nowrap rounded-full sm:text-sm hover:text-primary text-white/40 bg-deep-purple-7"#}
-                {#                           q:key="Clash" q:id="25">Clash</a>#}
-                {#                        <a href="#"#}
-                {#                           class="shrink text-center flex items-center px-7 h-[42px] sm:h-[33px] justify-center font-medium duration-500 whitespace-nowrap rounded-full sm:text-sm hover:text-primary text-white/40 bg-deep-purple-7"#}
-                {#                           q:key="Normals" q:id="27">Normals</a>#}
-                {#                        <a href="#"#}
-                {#                           class="shrink text-center flex items-center px-7 h-[42px] sm:h-[33px] justify-center font-medium duration-500 whitespace-nowrap rounded-full sm:text-sm hover:text-primary text-white/40 bg-deep-purple-7"#}
-                {#                           q:key="Smurfs" q:id="29">Smurfs</a>#}
-                {#                    </div>#}
-                {#                </div>#}
-
-
                 <div class="container flex gap-8 md:gap-4 py-6 sm:py-4 md:flex-col">
                     <div class="grow flex flex-col gap-8">
                         <div class="px-11 py-10 md:px-8 rounded-md silver-bg" on:qvisible="q-6f195aa1.js#_hW[0]"
@@ -70,24 +40,10 @@
                             <div class="mt-8">
                                 <div id="select-rank" class="grid grid-cols-2 gap-6 mt-6 xl:grid-cols-1 md:gap-2">
                                     <div class="basis-1/2">
-                                        <div id="rank-input">
-                                            <select class="select-input">
-                                                <option value="0">Select Rank</option>
-                                                {% for rank in ranks %}
-                                                    <option value="{{ rank.name }}">{{ rank.name }}</option>
-                                                {% endfor %}
-                                            </select>
-                                        </div>
+                                        {{ form.current_rank }}
                                     </div>
                                     <div class="basis-1/2">
-                                        <div id="rank-input">
-                                            <select class="select-input">
-                                                <option value="0">Select Position</option>
-                                                {% for position in rank_positions %}
-                                                    <option value="{{ position.position }}">{{ position.position }}</option>
-                                                {% endfor %}
-                                            </select>
-                                        </div>
+                                        {{ form.current_rank_position }}
                                     </div>
                                 </div>
 
@@ -101,7 +57,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="px-11 py-10 md:px-8 rounded-md gold-bg" q:id="6q">
+                        <div class="px-11 py-10 md:px-8 rounded-md gold-bg">
                             <div class="flex items-center gap-4">
                                 <div class="rounded-full p-1 bg-white-1 flex items-center justify-center">
                                     <img loading="lazy" alt="Gold" height="60" src="{{ static('up_rank/gold(1).png') }}"
@@ -114,256 +70,15 @@
                                 </div>
                             </div>
                             <div class="mt-8">
-                                <div class="flex flex-wrap relative z-10">
-                                    <div class="md:w-1/4 p-1" on:click="q-b9f20706.js#s_5zx0X3meBNI[0 1]"
-                                         on:touchstart="q-b9f20706.js#s_4Lt13mGIWh4[0 1]" q:key="Kk_1" q:id="6u">
-                                        <div class="⭐️8m575l-0 relative" q:id="6w">
-                                            <div data-position="top"
-                                                 style="width: initial; padding: 10px 15px !important; text-align: center;"
-                                                 class="⭐️8m575l-0 tooltip-content hidden" q:id="6x">Iron
-                                            </div>
-                                            <div class="⭐️8m575l-0">
-                                                <div class="⭐️8m575l-0" on:click="q-f0970cea.js#s_HTiAmhhWSTI[0 1 2]"
-                                                     on:pointerenter="q-f0970cea.js#s_XKG0l0gKdOo[1 3]"
-                                                     on:pointerleave="q-f0970cea.js#s_IxjrBi7JzTc[0]"
-                                                     on:touchend="q-f0970cea.js#s_TOhiqPTFAtE[4 5]"
-                                                     on:touchstart="q-f0970cea.js#s_6Rj5lQEo2ZU[3]" q:id="6z">
-                                                    <div style="height: 60px;"
-                                                         class="w-[60px] md:w-auto rounded-md flex items-center justify-center cursor-pointer duration-300 hover:bg-primary/20 hover:-mt-1 bg-white/10"
-                                                         on:click="q-b9f20706.js#s_YN9xj6Pshyw[0 1]" q:id="70">
-                                                        <img loading="lazy" alt="Iron" height="45"
-                                                             src="{{ static('up_rank/iron.png') }}"
-                                                             srcset="https://boostroyal.com/cdn-cgi/image/width=90,quality=75,format=auto/images/divisions/lol/mini/iron.png 2x"
-                                                             style="width: 45px; height: 45px" title="Iron" width="45">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                <div id="select-rank" class="grid grid-cols-2 gap-6 mt-6 xl:grid-cols-1 md:gap-2">
+                                    <div class="basis-1/2">
+                                        {{ form.desired_rank }}
                                     </div>
-                                    <!--Bronze-->
-                                    <div class="md:w-1/4 p-1" on:click="q-b9f20706.js#s_5zx0X3meBNI[0 1]"
-                                         on:touchstart="q-b9f20706.js#s_4Lt13mGIWh4[0 1]" q:key="Kk_1" q:id="73">
-                                        <div class="⭐️8m575l-0 relative" q:id="75">
-                                            <div data-position="top"
-                                                 style="width: initial; padding: 10px 15px !important; text-align: center;"
-                                                 class="⭐️8m575l-0 tooltip-content hidden" q:id="76">Bronze
-                                            </div>
-                                            <div class="⭐️8m575l-0">
-                                                <div class="⭐️8m575l-0" on:click="q-f0970cea.js#s_HTiAmhhWSTI[0 1 2]"
-                                                     on:pointerenter="q-f0970cea.js#s_XKG0l0gKdOo[1 3]"
-                                                     on:pointerleave="q-f0970cea.js#s_IxjrBi7JzTc[0]"
-                                                     on:touchend="q-f0970cea.js#s_TOhiqPTFAtE[4 5]"
-                                                     on:touchstart="q-f0970cea.js#s_6Rj5lQEo2ZU[3]" q:id="78">
-                                                    <div style="height: 60px;"
-                                                         class="w-[60px] md:w-auto rounded-md flex items-center justify-center cursor-pointer duration-300 hover:bg-primary/20 hover:-mt-1 bg-white/10"
-                                                         on:click="q-b9f20706.js#s_YN9xj6Pshyw[0 1]" q:id="79">
-                                                        <img loading="lazy" alt="Bronze" height="45"
-                                                             src="{{ static('up_rank/bronze.png') }}"
-                                                             srcset="https://boostroyal.com/cdn-cgi/image/width=90,quality=75,format=auto/images/divisions/lol/mini/bronze.png 2x"
-                                                             style="width: 45px; height: 45px" title="Bronze"
-                                                             width="45">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--Sliver-->
-                                    <div class="md:w-1/4 p-1" on:click="q-b9f20706.js#s_5zx0X3meBNI[0 1]"
-                                         on:touchstart="q-b9f20706.js#s_4Lt13mGIWh4[0 1]" q:key="Kk_1" q:id="4p">
-                                        <div class="⭐️8m575l-0 relative" q:id="4r">
-                                            <div data-position="top"
-                                                 style="width: initial; padding: 10px 15px !important; text-align: center;"
-                                                 class="⭐️8m575l-0 tooltip-content hidden" q:id="4s">Silver
-                                            </div>
-                                            <div class="⭐️8m575l-0">
-                                                <div class="⭐️8m575l-0" on:click="q-f0970cea.js#s_HTiAmhhWSTI[0 1 2]"
-                                                     on:pointerenter="q-f0970cea.js#s_XKG0l0gKdOo[1 3]"
-                                                     on:pointerleave="q-f0970cea.js#s_IxjrBi7JzTc[0]"
-                                                     on:touchend="q-f0970cea.js#s_TOhiqPTFAtE[4 5]"
-                                                     on:touchstart="q-f0970cea.js#s_6Rj5lQEo2ZU[3]" q:id="4u">
-                                                    <div style="height: 60px;"
-                                                         class="w-[60px] md:w-auto rounded-md flex items-center justify-center cursor-pointer duration-300 hover:bg-primary/20 hover:-mt-1 bg-primary/20"
-                                                         on:click="q-b9f20706.js#s_YN9xj6Pshyw[0 1]" q:id="4v">
-                                                        <img loading="lazy" alt="Silver" height="45"
-                                                             src="{{ static('up_rank/silver(1).png') }}"
-                                                             srcset="https://boostroyal.com/cdn-cgi/image/width=90,quality=75,format=auto/images/divisions/lol/mini/silver.png 2x"
-                                                             style="width: 45px; height: 45px" title="Silver"
-                                                             width="45">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--Gold-->
-                                    <div class="md:w-1/4 p-1" on:click="q-b9f20706.js#s_5zx0X3meBNI[0 1]"
-                                         on:touchstart="q-b9f20706.js#s_4Lt13mGIWh4[0 1]" q:key="Kk_1" q:id="4y">
-                                        <div class="⭐️8m575l-0 relative" q:id="50">
-                                            <div data-position="top"
-                                                 style="width: initial; padding: 10px 15px !important; text-align: center;"
-                                                 class="⭐️8m575l-0 tooltip-content hidden" q:id="51">Gold
-                                            </div>
-                                            <div class="⭐️8m575l-0">
-                                                <div class="⭐️8m575l-0" on:click="q-f0970cea.js#s_HTiAmhhWSTI[0 1 2]"
-                                                     on:pointerenter="q-f0970cea.js#s_XKG0l0gKdOo[1 3]"
-                                                     on:pointerleave="q-f0970cea.js#s_IxjrBi7JzTc[0]"
-                                                     on:touchend="q-f0970cea.js#s_TOhiqPTFAtE[4 5]"
-                                                     on:touchstart="q-f0970cea.js#s_6Rj5lQEo2ZU[3]" q:id="53">
-                                                    <div style="height: 60px;"
-                                                         class="w-[60px] md:w-auto rounded-md flex items-center justify-center cursor-pointer duration-300 hover:bg-primary/20 hover:-mt-1 bg-white/10"
-                                                         on:click="q-b9f20706.js#s_YN9xj6Pshyw[0 1]" q:id="54">
-                                                        <img loading="lazy" alt="Gold" height="45"
-                                                             src="{{ static('up_rank/gold.png') }}"
-                                                             srcset="https://boostroyal.com/cdn-cgi/image/width=90,quality=75,format=auto/images/divisions/lol/mini/gold.png 2x"
-                                                             style="width: 45px; height: 45px" title="Gold" width="45">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--Platinum-->
-                                    <div class="md:w-1/4 p-1" on:click="q-b9f20706.js#s_5zx0X3meBNI[0 1]"
-                                         on:touchstart="q-b9f20706.js#s_4Lt13mGIWh4[0 1]" q:key="Kk_1" q:id="57">
-                                        <div class="⭐️8m575l-0 relative" q:id="59">
-                                            <div data-position="top"
-                                                 style="width: initial; padding: 10px 15px !important; text-align: center;"
-                                                 class="⭐️8m575l-0 tooltip-content hidden" q:id="5a">Platinum
-                                            </div>
-                                            <div class="⭐️8m575l-0">
-                                                <div class="⭐️8m575l-0" on:click="q-f0970cea.js#s_HTiAmhhWSTI[0 1 2]"
-                                                     on:pointerenter="q-f0970cea.js#s_XKG0l0gKdOo[1 3]"
-                                                     on:pointerleave="q-f0970cea.js#s_IxjrBi7JzTc[0]"
-                                                     on:touchend="q-f0970cea.js#s_TOhiqPTFAtE[4 5]"
-                                                     on:touchstart="q-f0970cea.js#s_6Rj5lQEo2ZU[3]" q:id="5c">
-                                                    <div style="height: 60px;"
-                                                         class="w-[60px] md:w-auto rounded-md flex items-center justify-center cursor-pointer duration-300 hover:bg-primary/20 hover:-mt-1 bg-white/10"
-                                                         on:click="q-b9f20706.js#s_YN9xj6Pshyw[0 1]" q:id="5d">
-                                                        <img loading="lazy" alt="Platinum" height="45"
-                                                             src="{{ static('up_rank/platinum.png') }}"
-                                                             srcset="https://boostroyal.com/cdn-cgi/image/width=90,quality=75,format=auto/images/divisions/lol/mini/platinum.png 2x"
-                                                             style="width: 45px; height: 45px" title="Platinum"
-                                                             width="45">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--Emerald-->
-                                    <div class="md:w-1/4 p-1" on:click="q-b9f20706.js#s_5zx0X3meBNI[0 1]"
-                                         on:touchstart="q-b9f20706.js#s_4Lt13mGIWh4[0 1]" q:key="Kk_1" q:id="5g">
-                                        <div class="⭐️8m575l-0 relative" q:id="5i">
-                                            <div data-position="top"
-                                                 style="width: initial; padding: 10px 15px !important; text-align: center;"
-                                                 class="⭐️8m575l-0 tooltip-content hidden" q:id="5j">Emerald
-                                            </div>
-                                            <div class="⭐️8m575l-0">
-                                                <div class="⭐️8m575l-0" on:click="q-f0970cea.js#s_HTiAmhhWSTI[0 1 2]"
-                                                     on:pointerenter="q-f0970cea.js#s_XKG0l0gKdOo[1 3]"
-                                                     on:pointerleave="q-f0970cea.js#s_IxjrBi7JzTc[0]"
-                                                     on:touchend="q-f0970cea.js#s_TOhiqPTFAtE[4 5]"
-                                                     on:touchstart="q-f0970cea.js#s_6Rj5lQEo2ZU[3]" q:id="5l">
-                                                    <div style="height: 60px;"
-                                                         class="w-[60px] md:w-auto rounded-md flex items-center justify-center cursor-pointer duration-300 hover:bg-primary/20 hover:-mt-1 bg-white/10"
-                                                         on:click="q-b9f20706.js#s_YN9xj6Pshyw[0 1]" q:id="5m">
-                                                        <img loading="lazy" alt="Emerald" height="45"
-                                                             src="{{ static('up_rank/emerald.png') }}"
-                                                             srcset="https://boostroyal.com/cdn-cgi/image/width=90,quality=75,format=auto/images/divisions/lol/mini/emerald.png 2x"
-                                                             style="width: 45px; height: 45px" title="Emerald"
-                                                             width="45">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--Diamond-->
-                                    <div class="md:w-1/4 p-1" on:click="q-b9f20706.js#s_5zx0X3meBNI[0 1]"
-                                         on:touchstart="q-b9f20706.js#s_4Lt13mGIWh4[0 1]" q:key="Kk_1" q:id="5p">
-                                        <div class="⭐️8m575l-0 relative" q:id="5r">
-                                            <div data-position="top"
-                                                 style="width: initial; padding: 10px 15px !important; text-align: center;"
-                                                 class="⭐️8m575l-0 tooltip-content hidden" q:id="5s">Diamond
-                                            </div>
-                                            <div class="⭐️8m575l-0">
-                                                <div class="⭐️8m575l-0" on:click="q-f0970cea.js#s_HTiAmhhWSTI[0 1 2]"
-                                                     on:pointerenter="q-f0970cea.js#s_XKG0l0gKdOo[1 3]"
-                                                     on:pointerleave="q-f0970cea.js#s_IxjrBi7JzTc[0]"
-                                                     on:touchend="q-f0970cea.js#s_TOhiqPTFAtE[4 5]"
-                                                     on:touchstart="q-f0970cea.js#s_6Rj5lQEo2ZU[3]" q:id="5u">
-                                                    <div style="height: 60px;"
-                                                         class="w-[60px] md:w-auto rounded-md flex items-center justify-center cursor-pointer duration-300 hover:bg-primary/20 hover:-mt-1 bg-white/10"
-                                                         on:click="q-b9f20706.js#s_YN9xj6Pshyw[0 1]" q:id="5v">
-                                                        <img loading="lazy" alt="Diamond" height="45"
-                                                             src="{{ static('up_rank/diamond.png') }}"
-                                                             srcset="https://boostroyal.com/cdn-cgi/image/width=90,quality=75,format=auto/images/divisions/lol/mini/diamond.png 2x"
-                                                             style="width: 45px; height: 45px" title="Diamond"
-                                                             width="45">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--Master-->
-                                    <div class="md:w-1/4 p-1" on:click="q-b9f20706.js#s_5zx0X3meBNI[0 1]"
-                                         on:touchstart="q-b9f20706.js#s_4Lt13mGIWh4[0 1]" q:key="Kk_1" q:id="5y">
-                                        <div class="⭐️8m575l-0 relative" q:id="60">
-                                            <div data-position="top"
-                                                 style="width: initial; padding: 10px 15px !important; text-align: center;"
-                                                 class="⭐️8m575l-0 tooltip-content hidden" q:id="61">Master
-                                            </div>
-                                            <div class="⭐️8m575l-0">
-                                                <div class="⭐️8m575l-0" on:click="q-f0970cea.js#s_HTiAmhhWSTI[0 1 2]"
-                                                     on:pointerenter="q-f0970cea.js#s_XKG0l0gKdOo[1 3]"
-                                                     on:pointerleave="q-f0970cea.js#s_IxjrBi7JzTc[0]"
-                                                     on:touchend="q-f0970cea.js#s_TOhiqPTFAtE[4 5]"
-                                                     on:touchstart="q-f0970cea.js#s_6Rj5lQEo2ZU[3]" q:id="63">
-                                                    <div style="height: 60px;"
-                                                         class="w-[60px] md:w-auto rounded-md flex items-center justify-center cursor-pointer duration-300 hover:bg-primary/20 hover:-mt-1 bg-white/10"
-                                                         on:click="q-b9f20706.js#s_YN9xj6Pshyw[0 1]" q:id="64">
-                                                        <img loading="lazy" alt="Master" height="45"
-                                                             src="{{ static('up_rank/master.png') }}"
-                                                             srcset="https://boostroyal.com/cdn-cgi/image/width=90,quality=75,format=auto/images/divisions/lol/mini/master.png 2x"
-                                                             style="width: 45px; height: 45px" title="Master"
-                                                             width="45">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                    <div class="basis-1/2">
+                                        {{ form.desired_rank_position }}
                                     </div>
                                 </div>
-                                <div class="mt-1">
-                                    <div class="shrink-0 flex flex-wrap items-start xl:w-full md:mt-4">
-                                        <div class="p-1 md:w-1/4" q:key="dR_0">
-                                            <div style="height: 60px;"
-                                                 class="w-[60px] md:w-auto font-medium rounded-md cursor-pointer flex justify-center items-center text-center duration-300 hover:-mt-1 bg-primary hover:bg-primary/10"
-                                                 on:click="q-8217e732.js#s_TCJez5xfLeU[0 1]"
-                                                 on:touchstart="q-8217e732.js#s_G8BEgjFQaN8[0 1]" q:key="IV" q:id="8v">
-                                                IV
-                                            </div>
-                                        </div>
-                                        <div class="p-1 md:w-1/4" q:key="dR_0">
-                                            <div style="height: 60px;"
-                                                 class="w-[60px] md:w-auto font-medium rounded-md cursor-pointer flex justify-center items-center text-center duration-300 hover:-mt-1 bg-white/10 text-white/60 hover:bg-primary/10"
-                                                 on:click="q-8217e732.js#s_TCJez5xfLeU[0 1]"
-                                                 on:touchstart="q-8217e732.js#s_G8BEgjFQaN8[0 1]" q:key="III" q:id="8w">
-                                                III
-                                            </div>
-                                        </div>
-                                        <div class="p-1 md:w-1/4" q:key="dR_0">
-                                            <div style="height: 60px;"
-                                                 class="w-[60px] md:w-auto font-medium rounded-md cursor-pointer flex justify-center items-center text-center duration-300 hover:-mt-1 bg-white/10 text-white/60 hover:bg-primary/10"
-                                                 on:click="q-8217e732.js#s_TCJez5xfLeU[0 1]"
-                                                 on:touchstart="q-8217e732.js#s_G8BEgjFQaN8[0 1]" q:key="II" q:id="8x">
-                                                II
-                                            </div>
-                                        </div>
-                                        <div class="p-1 md:w-1/4" q:key="dR_0">
-                                            <div style="height: 60px;"
-                                                 class="w-[60px] md:w-auto font-medium rounded-md cursor-pointer flex justify-center items-center text-center duration-300 hover:-mt-1 bg-white/10 text-white/60 hover:bg-primary/10"
-                                                 on:click="q-8217e732.js#s_TCJez5xfLeU[0 1]"
-                                                 on:touchstart="q-8217e732.js#s_G8BEgjFQaN8[0 1]" q:key="I" q:id="8y">I
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+
                                 <div class="flex gap-4 mt-6 md:flex-col">
                                     <div class="basis-1/2">
                                         <label class="⭐️wah5yh-0 react-select-container flex flex-col gap-2 my-1 groupped"
