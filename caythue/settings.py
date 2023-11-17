@@ -32,8 +32,10 @@ ALLOWED_HOSTS = [
 # Application definition
 
 INSTALLED_APPS = [
+    'django_jinja',
     'django.contrib.admin',
     'django.contrib.auth',
+
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
@@ -45,6 +47,8 @@ INSTALLED_APPS = [
     # My apps
     'ui',
     'signin',
+    'uprank',
+    'dashboard',
 ]
 
 MIDDLEWARE = [
@@ -63,8 +67,43 @@ ROOT_URLCONF = 'caythue.urls'
 
 TEMPLATES = [
     {
+        "BACKEND": "django_jinja.backend.Jinja2",
+        "DIRS": [
+            # BASE_DIR / 'ui/templates',
+        ],
+        "APP_DIRS": True,
+        "OPTIONS": {
+            "match_extension": ".jinja",
+            "match_regex": None,
+            "app_dirname": "templates",
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        }
+    },
+    {
+        'BACKEND': 'django.template.backends.jinja2.Jinja2',
+        'DIRS': [  # tell Django to look for a templates folder at the project level
+            # BASE_DIR / 'signin/templates',
+        ],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
+    {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [  # tell Django to look for a templates folder at the project level
+
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -149,3 +188,8 @@ REST_FRAMEWORK = {
         'oauth2_provider.contrib.rest_framework.OAuth2Authentication',
     ),
 }
+
+LOGIN_REDIRECT_URL = "/"  # specify where to redirect the user upon a successful login
+LOGOUT_REDIRECT_URL = "/"
+
+APPEND_SLASH = True

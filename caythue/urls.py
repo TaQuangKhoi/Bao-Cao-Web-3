@@ -20,8 +20,11 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
 
-    path('', include('ui.urls')),
+    path('', include('dashboard.urls')),
+
     path('signin/', include('signin.urls')),
+
+    path('up_rank/', include('uprank.urls')),
 
     path('o/', include('oauth2_provider.urls', namespace='oauth2_provider')),
 ]
