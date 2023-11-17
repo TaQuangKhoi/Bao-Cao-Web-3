@@ -7,12 +7,15 @@ from django.db import models
 class Request(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
 
-    server = models.ForeignKey('library_db.Server', on_delete=models.CASCADE, null=True)
-
     current_rank = models.ForeignKey('library_db.Rank', on_delete=models.CASCADE, related_name='current_rank',
                                      null=True)
-    desired_rank = models.ForeignKey('library_db.Rank', on_delete=models.CASCADE, related_name='desired_rank',
+    current_lp = models.FloatField(max_length=99)
+    lp_Gain = models.IntegerField()
+
+    desired_rank = models.ForeignKey('library_db.Rank', on_delete=models.CASCADE,
+                                     related_name='desired_rank',
                                      null=True)
+    server = models.ForeignKey('library_db.Server', on_delete=models.CASCADE, null=True)
 
     details = models.CharField(max_length=200)
     total = models.FloatField()
@@ -28,8 +31,6 @@ class Request(models.Model):
     number_of_games = models.IntegerField()
 
     ranked_genre = models.IntegerField()
-    lp_Gain = models.IntegerField()
-    current_lp = models.FloatField(max_length=99)
 
     request_recipient = models.DateTimeField()
     request_creation_date = models.DateTimeField()

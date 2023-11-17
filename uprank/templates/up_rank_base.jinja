@@ -1026,11 +1026,21 @@
     <!--End Style-->
     <link rel="modulepreload" as="script" crossorigin="" href="https://boostroyal.com/build/q-31d5a709.js">
     <link rel="modulepreload" as="script" crossorigin="" href="https://boostroyal.com/build/q-f219bdfe.js">
+
+    <!-- This is the script providing runtime support for compiled `async`/`await` code -->
+    <script src="https://unpkg.com/regenerator-runtime@0.13.2/runtime.js"></script>
+    <!-- This is what supports JSX compilation (and other transformations) -->
+    <script src="https://unpkg.com/@babel/standalone@7.10.3/babel.min.js"></script>
+
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script type="text/babel" data-presets="es2017,react,stage-3" src='{{ static('uprank/app.js') }}'></script>
 </head>
 
 
 <!--Body-->
 <body class="m-0 bg-deep-purple-2 text-white overflow-y-scroll overflow-x-hidden">
+<div id="root"></div>
 <header style="transition: padding 0.3s ease-in-out;" class="fixed top-0 w-full py-6 lg:py-3 bg-transparent z-30"
         on:qvisible="q-4f948398.js#_hW[0]
 q-4f948398.js#_hW[1]
