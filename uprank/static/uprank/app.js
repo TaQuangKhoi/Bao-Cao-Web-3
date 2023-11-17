@@ -1,9 +1,21 @@
 console.log("Khôi nhớ Hảo")
 
 function Hello(props) {
-    return <h1>Hello World!</h1>;
+    return <>
+
+    </>;
 }
 
-const container = document.getElementById("root");
+class Container extends React.Component {
+    render() {
+        return <div ref={ ref => ref.appendChild(this.props.child) }></div>;
+    }
+}
+
+const container = document.getElementById("rank-input");
+const selectRanks = document.getElementById("select-ranks");
+// remove selectRanks on DOM
+// selectRanks.remove();
+
 const root = ReactDOM.createRoot(container);
-root.render(<Hello />);
+// root.render(<Container child={ selectRanks }/>);
