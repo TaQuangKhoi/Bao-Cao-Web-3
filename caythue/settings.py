@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     # My apps
     'ui',
     'signin',
+    'signup',
     'uprank',
     'dashboard',
     'home',
