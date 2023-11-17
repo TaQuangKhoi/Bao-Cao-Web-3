@@ -11,6 +11,4 @@ urlpatterns = [
     path('api/', include(router.urls)),
 
     path('trading/', views.trading, name='trading'),
-
-    path('logout/', views.logout_view, name='Logout'),
 ]
