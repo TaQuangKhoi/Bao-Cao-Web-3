@@ -44,7 +44,11 @@ q-4f948398.js#_hW[3]" on-window:scroll="q-4f948398.js#s_zjBHDXWCp9c[4 5]" q:id="
     </div>
   </div>
   <div class="flex items-center justify-end cursor-pointer">
-      {{ goToSignInButton() }}
+      {% if user.is_authenticated %}
+          {{ goToSignInButton('/dashboard/') }}
+      {% else %}
+          {{ goToSignInButton('/signin/') }}
+      {% endif %}
 <div style="margin-right: -10px" class="p-4" on:click="q-4f948398.js#s_a00KBbouX58[0]" q:id="f">
   <svg fill="none" height="17" viewBox="0 0 20 17" width="20" xmlns="http://www.w3.org/2000/svg">
     <path d="M19 15.4083H4.5M19 8.40826H6M19 1.40826H1" stroke="#FF9155" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
