@@ -72,9 +72,16 @@ TEMPLATES = [
     {
         "BACKEND": "django_jinja.backend.Jinja2",
         "DIRS": [
-            # BASE_DIR / 'ui/templates',
+            BASE_DIR / 'caythue/templates',
+
+            BASE_DIR / 'home/templates',
+            BASE_DIR / 'dashboard/templates',
+            BASE_DIR / 'ui/templates',
+            BASE_DIR / 'signin/templates',
+            BASE_DIR / 'signup/templates',
+            BASE_DIR / 'uprank/templates',
         ],
-        "APP_DIRS": True,
+        "APP_DIRS": False,
         "OPTIONS": {
             "match_extension": ".jinja",
             "match_regex": None,
@@ -92,7 +99,7 @@ TEMPLATES = [
         'DIRS': [  # tell Django to look for a templates folder at the project level
             # BASE_DIR / 'signin/templates',
         ],
-        'APP_DIRS': True,
+        'APP_DIRS': False,
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
@@ -107,7 +114,7 @@ TEMPLATES = [
         'DIRS': [  # tell Django to look for a templates folder at the project level
 
         ],
-        'APP_DIRS': True,
+        'APP_DIRS': False,
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
