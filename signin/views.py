@@ -29,3 +29,9 @@ def signin(request):
         template_name='signin.jinja',
         context={'form': form}
     )
+
+def signup(request):
+    return render(
+        request,
+        template_name='signup.jinja',
+    )
