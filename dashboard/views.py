@@ -10,7 +10,3 @@ def dashboard(request):
     else:
         return HttpResponseRedirect('/signin/')
 
-
-def logout_view(request):
-    logout(request)
-    return HttpResponseRedirect('/signin/')
