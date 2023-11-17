@@ -4,13 +4,13 @@
        href="{{ href }}"
     >
         {{ icon }}
-        <div class="font-bold uppercase">
+        <div class="font-bold uppercase" style="{{ "color:white;" if is_active else "" }}">
             {{ text }}
         </div>
     </a>
 {%- endmacro %}
 
-{% macro iconTrangChu() -%}
+{% macro iconTrangChu(is_active) -%}
     <svg width="15"
          height="15"
          viewbox="0 0 15 15"
@@ -18,24 +18,27 @@
          xmlns="http://www.w3.org/2000/svg">
         <path d="M5.78121 0H1.09371C0.490608 0 0 0.490608 0 1.09371V3.90621C0 4.50943 0.490608 5.00004 1.09371 5.00004H5.78121C6.38443 5.00004 6.87504 4.50943 6.87504 3.90621V1.09371C6.87504 0.490608 6.38443 0 5.78121 0Z"
               fill="white"
-              fill-opacity="0.3"
+              fill-opacity="{{ 1 if is_active else 0.3 }}"
         ></path>
         <path _ngcontent-ixw-c51=""
               d="M5.78121 6.25H1.09371C0.490608 6.25 0 6.74061 0 7.34383V13.9063C0 14.5094 0.490608 15 1.09371 15H5.78121C6.38443 15 6.87504 14.5094 6.87504 13.9063V7.34383C6.87504 6.74061 6.38443 6.25 5.78121 6.25Z"
               fill="white"
-              fill-opacity="0.3"></path>
+              fill-opacity="{{ 1 if is_active else 0.3 }}">
+        </path>
         <path _ngcontent-ixw-c51=""
               d="M13.9063 10H9.21883C8.61561 10 8.125 10.4906 8.125 11.0938V13.9063C8.125 14.5094 8.61561 15 9.21883 15H13.9063C14.5094 15 15 14.5094 15 13.9063V11.0938C15 10.4906 14.5094 10 13.9063 10Z"
               fill="white"
-              fill-opacity="0.3"></path>
+              fill-opacity="{{ 1 if is_active else 0.3 }}">
+        </path>
         <path _ngcontent-ixw-c51=""
               d="M13.9063 0H9.21883C8.61561 0 8.125 0.490608 8.125 1.09371V7.65621C8.125 8.25943 8.61561 8.75004 9.21883 8.75004H13.9063C14.5094 8.75004 15 8.25943 15 7.65621V1.09371C15 0.490608 14.5094 0 13.9063 0V0Z"
               fill="white"
-              fill-opacity="0.3"></path>
+              fill-opacity="{{ 1 if is_active else 0.3 }}">
+        </path>
     </svg>
 {% endmacro %}
 
-{% macro iconDanhGia() -%}
+{% macro iconDanhGia(is_active) -%}
     <svg
             _ngcontent-ixw-c51=""
             width="20"
@@ -52,7 +55,7 @@
     </svg>
 {% endmacro %}
 
-{% macro iconDonHang() -%}
+{% macro iconDonHang(is_active) -%}
     <svg
             _ngcontent-ixw-c51=""
             width="24"
@@ -65,24 +68,24 @@
                 _ngcontent-ixw-c51=""
                 d="M21.822 7.431C21.73 7.29808 21.6072 7.18943 21.464 7.11436C21.3209 7.0393 21.1616 7.00006 21 7H7.333L6.179 4.23C6.02769 3.86523 5.77147 3.55359 5.44282 3.33462C5.11418 3.11564 4.72791 2.99918 4.333 3H2V5H4.333L9.077 16.385C9.15299 16.5672 9.28118 16.7228 9.44542 16.8322C9.60967 16.9416 9.80263 17 10 17H18C18.417 17 18.79 16.741 18.937 16.352L21.937 8.352C21.9937 8.20063 22.0129 8.03776 21.9928 7.87735C21.9728 7.71695 21.9142 7.56379 21.822 7.431Z"
                 fill="white"
-                fill-opacity="0.3"
+                fill-opacity="{{ 1 if is_active else 0.3 }}"
         ></path>
         <path
                 _ngcontent-ixw-c51=""
                 d="M10.5 21C11.3284 21 12 20.3284 12 19.5C12 18.6716 11.3284 18 10.5 18C9.67157 18 9 18.6716 9 19.5C9 20.3284 9.67157 21 10.5 21Z"
                 fill="white"
-                fill-opacity="0.3"
+                fill-opacity="{{ 1 if is_active else 0.3 }}"
         ></path>
         <path
                 _ngcontent-ixw-c51=""
                 d="M17.5 21C18.3284 21 19 20.3284 19 19.5C19 18.6716 18.3284 18 17.5 18C16.6716 18 16 18.6716 16 19.5C16 20.3284 16.6716 21 17.5 21Z"
                 fill="white"
-                fill-opacity="0.3"
+                fill-opacity="{{ 1 if is_active else 0.3 }}"
         ></path>
     </svg>
 {% endmacro %}
 
-{% macro iconVIPOnly() -%}
+{% macro iconVIPOnly(is_active) -%}
     <svg
             _ngcontent-ixw-c51=""
             width="16"
@@ -103,7 +106,7 @@
     </svg>
 {% endmacro %}
 
-{% macro iconMucRank() -%}
+{% macro iconMucRank(is_active) -%}
     <svg
             _ngcontent-ixw-c51=""
             width="20"

@@ -1396,11 +1396,11 @@
                         no-repeat;
                       background-size: 100% 100%;
                     ">
-                                {{ hv.sideBarItem("Trang chủ", "/dashboard/", hv.iconTrangChu(), true) }}
-                                {{ hv.sideBarItem("Đơn hàng", "/dashboard/order", hv.iconDonHang(), true) }}
-                                {{ hv.sideBarItem("Đánh giá", "/dashboard/order", hv.iconDanhGia(), true) }}
-                                {{ hv.sideBarItem("VIP Only", "/dashboard/order", hv.iconVIPOnly(), true) }}
-                                {{ hv.sideBarItem("Mức Rank", "/dashboard/order", hv.iconMucRank(), true) }}
+                                {{ hv.sideBarItem("Trang chủ", "/dashboard/", hv.iconTrangChu(request.path_info == "/dashboard/"), request.path_info == "/dashboard/") }}
+                                {{ hv.sideBarItem("Đơn hàng", "/dashboard/order", hv.iconDonHang(request.path_info == "/dashboard/order"), request.path_info == "/dashboard/order") }}
+                                {{ hv.sideBarItem("Đánh giá", "#", hv.iconDanhGia(false), request.path_info == "#") }}
+                                {{ hv.sideBarItem("VIP Only", "#", hv.iconVIPOnly(false), request.path_info == "#") }}
+                                {{ hv.sideBarItem("Mức Rank", "#", hv.iconMucRank(false), request.path_info == "#") }}
 
                             </div>
                             <a href="/logout/" class="self-center">
@@ -1501,7 +1501,7 @@
                                         _ngcontent-ixw-c56=""
                                         class="opacity-60 text-lg font-light"
                                 >
-                                    Chào mừng đến cày thuê LoL
+                                    Chào mừng đến cày thuê LoL {{ request.path_info }}
                                 </div>
                                 <!---->
                                 <div _ngcontent-ixw-c56="" class="font-bold text-2xl">
