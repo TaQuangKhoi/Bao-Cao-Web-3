@@ -9,8 +9,7 @@ from .models import (
 from .serializers import RankSerializer
 
 
-def dashboard(request):
-    return render(request, template_name='dashboard.jinja', )
+
 
 
 
