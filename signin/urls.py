@@ -7,5 +7,4 @@ router = DefaultRouter()
 urlpatterns = [
     path('api/', include(router.urls)),
     path('', views.signin, name='signin'),
-    path('signup', views.signup, name='signup')
 ]

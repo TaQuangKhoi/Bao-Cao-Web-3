@@ -27,10 +27,12 @@ urlpatterns = [
     path('dashboard/', include('dashboard.urls')),
 
     path('signin/', include('signin.urls')),
+    path('signup/', include('signup.urls')),
 
     path('up_rank/', include('uprank.urls')),
 
     path('o/', include('oauth2_provider.urls', namespace='oauth2_provider')),
 
     path('logout/', views.logout_view, name='Logout'),
+
 ]
