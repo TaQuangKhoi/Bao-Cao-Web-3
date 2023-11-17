@@ -1,5 +1,6 @@
 {% from 'components.jinja' import logoutButton %}
-{% from 'sidebar_item.jinja' import sideBarItem, iconTrangChu, iconDanhGia %}
+{#{% from 'sidebar_item.jinja' import sideBarItem, iconTrangChu, iconDanhGia %}#}
+{% import 'sidebar_item.jinja' as hv %}
 
 <!DOCTYPE html>
 <html>
@@ -1394,182 +1395,13 @@
                       background: url(&#39;/assets/img/nav-bg.png&#39;)
                         no-repeat;
                       background-size: 100% 100%;
-                    "
-                            >
-                                <a
-                                        _ngcontent-ixw-c51=""
-                                        routerlink="/"
-                                        routerlinkactive="active"
-                                        class="cursor-pointer nav-icon flex flex-col gap-1 items-center active"
-                                        href="/dashboard/"
-                                >
-                                    <svg width="15"
-                                         height="15"
-                                         viewbox="0 0 15 15"
-                                         fill="none"
-                                         xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <g
-                                                clip-path="url(#clip0_149_407)"
-                                        >
-                                            <path
-                                                    _ngcontent-ixw-c51=""
-                                                    d="M5.78121 0H1.09371C0.490608 0 0 0.490608 0 1.09371V3.90621C0 4.50943 0.490608 5.00004 1.09371 5.00004H5.78121C6.38443 5.00004 6.87504 4.50943 6.87504 3.90621V1.09371C6.87504 0.490608 6.38443 0 5.78121 0Z"
-                                                    fill="white"
-                                                    fill-opacity="0.3"
-                                            ></path>
-                                            <path
-                                                    _ngcontent-ixw-c51=""
-                                                    d="M5.78121 6.25H1.09371C0.490608 6.25 0 6.74061 0 7.34383V13.9063C0 14.5094 0.490608 15 1.09371 15H5.78121C6.38443 15 6.87504 14.5094 6.87504 13.9063V7.34383C6.87504 6.74061 6.38443 6.25 5.78121 6.25Z"
-                                                    fill="white"
-                                                    fill-opacity="0.3"
-                                            ></path>
-                                            <path
-                                                    _ngcontent-ixw-c51=""
-                                                    d="M13.9063 10H9.21883C8.61561 10 8.125 10.4906 8.125 11.0938V13.9063C8.125 14.5094 8.61561 15 9.21883 15H13.9063C14.5094 15 15 14.5094 15 13.9063V11.0938C15 10.4906 14.5094 10 13.9063 10Z"
-                                                    fill="white"
-                                                    fill-opacity="0.3"
-                                            ></path>
-                                            <path
-                                                    _ngcontent-ixw-c51=""
-                                                    d="M13.9063 0H9.21883C8.61561 0 8.125 0.490608 8.125 1.09371V7.65621C8.125 8.25943 8.61561 8.75004 9.21883 8.75004H13.9063C14.5094 8.75004 15 8.25943 15 7.65621V1.09371C15 0.490608 14.5094 0 13.9063 0V0Z"
-                                                    fill="white"
-                                                    fill-opacity="0.3"
-                                            ></path>
-                                        </g>
-                                        <defs>
-                                            <clippath _ngcontent-ixw-c51="" id="clip0_149_407">
-                                                <rect
-                                                        _ngcontent-ixw-c51=""
-                                                        width="15"
-                                                        height="15"
-                                                        fill="white"
-                                                ></rect>
-                                            </clippath>
-                                        </defs>
-                                    </svg>
-                                    <div class="font-bold uppercase">
-                                        Trang chủ
-                                    </div>
-                                </a>
-                                <a
-                                        _ngcontent-ixw-c51=""
-                                        routerlink="/orders"
-                                        routerlinkactive="active"
-                                        class="cursor-pointer nav-icon flex flex-col gap-1 items-center"
-                                        href="/dashboard/order"
-                                >
-                                    <svg
-                                            _ngcontent-ixw-c51=""
-                                            width="24"
-                                            height="24"
-                                            viewbox="0 0 24 24"
-                                            fill="none"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <path
-                                                _ngcontent-ixw-c51=""
-                                                d="M21.822 7.431C21.73 7.29808 21.6072 7.18943 21.464 7.11436C21.3209 7.0393 21.1616 7.00006 21 7H7.333L6.179 4.23C6.02769 3.86523 5.77147 3.55359 5.44282 3.33462C5.11418 3.11564 4.72791 2.99918 4.333 3H2V5H4.333L9.077 16.385C9.15299 16.5672 9.28118 16.7228 9.44542 16.8322C9.60967 16.9416 9.80263 17 10 17H18C18.417 17 18.79 16.741 18.937 16.352L21.937 8.352C21.9937 8.20063 22.0129 8.03776 21.9928 7.87735C21.9728 7.71695 21.9142 7.56379 21.822 7.431Z"
-                                                fill="white"
-                                                fill-opacity="0.3"
-                                        ></path>
-                                        <path
-                                                _ngcontent-ixw-c51=""
-                                                d="M10.5 21C11.3284 21 12 20.3284 12 19.5C12 18.6716 11.3284 18 10.5 18C9.67157 18 9 18.6716 9 19.5C9 20.3284 9.67157 21 10.5 21Z"
-                                                fill="white"
-                                                fill-opacity="0.3"
-                                        ></path>
-                                        <path
-                                                _ngcontent-ixw-c51=""
-                                                d="M17.5 21C18.3284 21 19 20.3284 19 19.5C19 18.6716 18.3284 18 17.5 18C16.6716 18 16 18.6716 16 19.5C16 20.3284 16.6716 21 17.5 21Z"
-                                                fill="white"
-                                                fill-opacity="0.3"
-                                        ></path>
-                                    </svg>
-                                    <div _ngcontent-ixw-c51="" class="font-bold uppercase">
-                                        Đơn hàng
-                                    </div>
-                                </a
-                                ><a
-                                    _ngcontent-ixw-c51=""
-                                    href="#"
-                                    target="_blank"
-                                    class="cursor-pointer nav-icon flex flex-col gap-1 items-center"
-                            >
-                                <svg
-                                        _ngcontent-ixw-c51=""
-                                        width="20"
-                                        height="20"
-                                        viewbox="0 0 20 20"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <path
-                                            _ngcontent-ixw-c51=""
-                                            d="M18.3333 4.24439C17.5889 2.71661 15.4445 1.46661 12.95 2.19439C11.758 2.53869 10.7181 3.27705 10 4.28883C9.28195 3.27705 8.24198 2.53869 7.05001 2.19439C4.55001 1.47772 2.41112 2.71661 1.66667 4.24439C0.62223 6.38328 1.05556 8.78883 2.95556 11.3944C4.44445 13.4333 6.57223 15.4999 9.66112 17.8999C9.75874 17.9761 9.87899 18.0174 10.0028 18.0174C10.1266 18.0174 10.2468 17.9761 10.3445 17.8999C13.4278 15.5055 15.5611 13.4555 17.05 11.3944C18.9445 8.78883 19.3778 6.38328 18.3333 4.24439Z"
-                                            fill="white"
-                                            fill-opacity="0.3"
-                                    ></path>
-                                </svg>
-                                <div _ngcontent-ixw-c51="" class="font-bold uppercase">
-                                    Đánh giá
-                                </div>
-                            </a
-                            ><a
-                                    _ngcontent-ixw-c51=""
-                                    href="#"
-                                    target="_blank"
-                                    class="cursor-pointer nav-icon stroke flex flex-col gap-1 items-center sm:hidden"
-                            >
-                                <svg
-                                        _ngcontent-ixw-c51=""
-                                        width="16"
-                                        height="20"
-                                        viewbox="0 0 16 20"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <path
-                                            _ngcontent-ixw-c51=""
-                                            d="M3.09111 17.9172C3.09111 18.4736 3.63927 18.8663 4.17106 18.6945L7.99995 16.3273L11.8288 18.6945C11.9521 18.7365 12.0836 18.7484 12.2124 18.7293C12.3412 18.7101 12.4636 18.6604 12.5692 18.5844C12.6749 18.5083 12.7609 18.4081 12.82 18.292C12.879 18.176 12.9095 18.0475 12.9088 17.9172V12.7384C13.9637 11.5468 14.5458 10.0101 14.5451 8.41865C14.5451 4.80247 11.6161 1.87354 7.99995 1.87354C4.38377 1.87354 1.45483 4.80247 1.45483 8.41865C1.45483 10.0795 2.07662 11.5848 3.09111 12.7384V17.9172ZM7.99995 3.50981C10.708 3.50981 12.9088 5.71061 12.9088 8.41865C12.9088 11.1267 10.708 13.3275 7.99995 13.3275C5.29191 13.3275 3.09111 11.1267 3.09111 8.41865C3.09111 5.71061 5.29191 3.50981 7.99995 3.50981Z"
-                                            fill="white"
-                                            fill-opacity="0.3"
-                                            stroke="white"
-                                            stroke-opacity="0.3"
-                                            stroke-width="2"
-                                    ></path>
-                                </svg>
-                                <div _ngcontent-ixw-c51="" class="font-bold uppercase">
-                                    VIP Only
-                                </div>
-                            </a
-                            ><!----><!----><a
-                                    _ngcontent-ixw-c51=""
-                                    routerlink="/rankings"
-                                    routerlinkactive="active"
-                                    class="cursor-pointer nav-icon flex flex-col gap-1 items-center"
-                                    href="#"
-                            >
-                                <svg
-                                        _ngcontent-ixw-c51=""
-                                        width="20"
-                                        height="16"
-                                        viewbox="0 0 20 16"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <path
-                                            _ngcontent-ixw-c51=""
-                                            d="M17.4041 15.9737H2.59585C1.65218 15.9737 0.887207 15.2088 0.887207 14.2651V1.73501C0.887207 0.791342 1.65218 0.0263672 2.59585 0.0263672H17.4041C18.3478 0.0263672 19.1128 0.791342 19.1128 1.73501V14.2651C19.1128 15.2088 18.3478 15.9737 17.4041 15.9737ZM12.1358 5.1523V4.01321C12.1358 3.77731 11.9445 3.58605 11.7086 3.58605H4.87405C4.63815 3.58605 4.44689 3.77731 4.44689 4.01321V5.1523C4.44689 5.3882 4.63815 5.57947 4.87405 5.57947H11.7086C11.9445 5.57947 12.1358 5.3882 12.1358 5.1523ZM15.6955 8.5696V7.4305C15.6955 7.1946 15.5042 7.00334 15.2683 7.00334H4.87405C4.63815 7.00334 4.44689 7.1946 4.44689 7.4305V8.5696C4.44689 8.8055 4.63815 8.99676 4.87405 8.99676H15.2683C15.5042 8.99676 15.6955 8.8055 15.6955 8.5696ZM8.93208 11.9869V10.8478C8.93208 10.6119 8.74082 10.4206 8.50492 10.4206H4.87405C4.63815 10.4206 4.44689 10.6119 4.44689 10.8478V11.9869C4.44689 12.2228 4.63815 12.414 4.87405 12.414H8.50492C8.74082 12.414 8.93208 12.2228 8.93208 11.9869Z"
-                                            fill="white"
-                                            fill-opacity="0.3"
-                                    ></path>
-                                </svg>
-                                <div _ngcontent-ixw-c51="" class="font-bold uppercase">
-                                    Mức Rank
-                                </div>
-                            </a
-                            ><!---->
+                    ">
+                                {{ hv.sideBarItem("Trang chủ", "/dashboard/", hv.iconTrangChu(), true) }}
+                                {{ hv.sideBarItem("Đơn hàng", "/dashboard/order", hv.iconDonHang(), true) }}
+                                {{ hv.sideBarItem("Đánh giá", "/dashboard/order", hv.iconDanhGia(), true) }}
+                                {{ hv.sideBarItem("VIP Only", "/dashboard/order", hv.iconVIPOnly(), true) }}
+                                {{ hv.sideBarItem("Mức Rank", "/dashboard/order", hv.iconMucRank(), true) }}
+
                             </div>
                             <a href="/logout/" class="self-center">
                                 <div
