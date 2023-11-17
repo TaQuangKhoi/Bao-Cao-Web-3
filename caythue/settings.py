@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'signin',
     'uprank',
     'dashboard',
+    'home'
 ]
 
 MIDDLEWARE = [
