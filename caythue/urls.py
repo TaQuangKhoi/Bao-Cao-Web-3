@@ -17,6 +17,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+from caythue import views
+
 urlpatterns = [
     path('admin/', admin.site.urls),
 
@@ -29,4 +31,6 @@ urlpatterns = [
     path('up_rank/', include('uprank.urls')),
 
     path('o/', include('oauth2_provider.urls', namespace='oauth2_provider')),
+
+    path('logout/', views.logout_view, name='Logout'),
 ]
