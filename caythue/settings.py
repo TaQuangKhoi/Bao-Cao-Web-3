@@ -49,7 +49,8 @@ INSTALLED_APPS = [
     'signin',
     'uprank',
     'dashboard',
-    'home'
+    'home',
+    'library_db',
 ]
 
 MIDDLEWARE = [
