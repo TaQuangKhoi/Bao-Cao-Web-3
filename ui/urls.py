@@ -10,8 +10,5 @@ router.register('ranks', views.RanksViewSet)
 urlpatterns = [
     path('api/', include(router.urls)),
 
-    path('', views.dashboard, name='dashboard'),
     path('trading/', views.trading, name='trading'),
-
-    path('logout/', views.logout_view, name='Logout'),
 ]
