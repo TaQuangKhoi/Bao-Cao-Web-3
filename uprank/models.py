@@ -37,3 +37,6 @@ class Request(models.Model):
     the_require_price = models.FloatField()
 
     created_by = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
+
+    def __str__(self):
+        return self.details
