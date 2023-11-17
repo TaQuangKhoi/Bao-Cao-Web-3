@@ -1,6 +1,6 @@
 from django import forms
 
-from library_db.models import Rank
+from library_db.models import Rank, Server
 
 
 class UpRankForm(forms.Form):
@@ -20,6 +20,11 @@ class UpRankForm(forms.Form):
 
     RANK_POSITION_CHOICES = [
         (rank['position'], rank['position']) for rank in rank_positions
+    ]
+
+    servers = Server.objects.values('name').distinct()
+    SERVER_CHOICES = [
+        (server['name'], server['name']) for server in servers
     ]
 
     current_rank = forms.ChoiceField(
@@ -82,4 +87,23 @@ class UpRankForm(forms.Form):
                 'class': "select-input",
             }
         ),
+    )
+    server = forms.ChoiceField(
+        choices=SERVER_CHOICES,
+        label_suffix="",
+        label="",
+        widget=forms.Select(
+            attrs={
+                'class': "select-input",
+            }
+        ),
+    )
+
+    CHOICES = [
+        ('1', 'Option 1'),
+        ('2', 'Option 2'),
+    ]
+    like = forms.ChoiceField(
+        widget=forms.RadioSelect,
+        choices=CHOICES,
     )
