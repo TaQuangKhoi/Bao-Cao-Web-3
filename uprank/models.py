@@ -21,8 +21,8 @@ class Request(models.Model):
     total = models.FloatField()
     status = models.CharField(max_length=200)
 
-    stream_games = models.BooleanField(default=False)
     priority_order = models.BooleanField(default=False)
+    stream_games = models.BooleanField(default=False)
 
     desired_mastery = models.IntegerField()
     current_mastery = models.IntegerField()

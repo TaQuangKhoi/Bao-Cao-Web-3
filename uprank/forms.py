@@ -99,11 +99,21 @@ class UpRankForm(forms.Form):
         ),
     )
 
-    CHOICES = [
-        ('1', 'Option 1'),
-        ('2', 'Option 2'),
-    ]
-    like = forms.ChoiceField(
-        widget=forms.RadioSelect,
-        choices=CHOICES,
+    priority_order = forms.BooleanField(
+        label="",
+        required=False,
+        widget=forms.CheckboxInput(
+            attrs={
+                'class': "checkbox-input",
+            }
+        ),
+    )
+    stream_games = forms.BooleanField(
+        label="",
+        required=False,
+        widget=forms.CheckboxInput(
+            attrs={
+                'class': "checkbox-input",
+            }
+        ),
     )
