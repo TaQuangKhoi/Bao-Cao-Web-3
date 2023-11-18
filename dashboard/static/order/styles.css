@@ -1,15 +1,20 @@
 table {
+    background-color: #291c2c;
     font-family: arial, sans-serif;
     border-collapse: collapse;
     width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
 }
 
 td, th {
-    border: 1px solid #dddddd;
+    /*border-bottom: 1px solid #dddddd;*/
     text-align: left;
     padding: 8px;
 }
 
 tr:nth-child(even) {
-    background-color: #dddddd;
+    background-color: #16081a;
 }

@@ -30,7 +30,7 @@
             </order-cards>
             <employee-rankings class="md:hidden"><!----></employee-rankings>
         </div>
-        <div _ngcontent-ibw-c148="" class="flex justify-between items-center py-2 flex-wrap gap-6">
+        <div class="flex justify-between items-center py-2 flex-wrap gap-6">
             <div _ngcontent-ibw-c148="" class="flex gap-4 items-center flex-wrap">
                 <div _ngcontent-ibw-c148="" class="font-bold text-2xl">Các đơn hàng đã mua</div>
                 <div _ngcontent-ibw-c148="" class="text-sm opacity-60">0 orders</div><!----><!----><!----></div>
@@ -78,153 +78,153 @@
         </div>
         <div class="flex gap-8 md:flex-col-reverse">
             <div class="flex flex-col gap-8 grow">
-                <div>
-                    <div class="md:bg-deep-purple-3 md:p-4 md:rounded-xl">
-                        <table>
+                <div class="md:bg-deep-purple-3 md:p-4 md:rounded-xl">
+                    <table>
+                        <tr>
+                            <th>Item</th>
+                            <th>Thanh toán</th>
+                            <th>ID</th>
+                            <th>Người cày</th>
+                            <th>Trạng thái</th>
+                            <th>Ghi chú</th>
+                        </tr>
+                        {% for order in orders %}
                             <tr>
-                                <th>Company</th>
-                                <th>Contact</th>
-                                <th>Country</th>
-                            </tr>
-                            <tr>
-                                <td>Alfreds Futterkiste</td>
+                                <td>Item</td>
                                 <td>Maria Anders</td>
-                                <td>Germany</td>
+                                <td>{{ order.id }}</td>
+                                <td>{{ order.created_by.username }}</td>
+                                <td>{{ order.status }}</td>
+                                <td>Notes</td>
                             </tr>
-                            <tr>
-                                <td>Centro comercial Moctezuma</td>
-                                <td>Francisco Chang</td>
-                                <td>Mexico</td>
-                            </tr>
-                        </table>
-                        </table>
-                        <dash-table _nghost-ixw-c104="">
-                            <div _ngcontent-ixw-c104="" class="w-full relative">
-                                <loading _ngcontent-ixw-c104="" _nghost-ixw-c53=""><!----></loading>
-                                <div _ngcontent-ixw-c104="" data-aos="fade-up" data-aos-duration="200"
-                                     class="aos-init aos-animate">
-                                    <ngx-datatable _ngcontent-ixw-c104=""
-                                                   class="ngx-datatable dash-table custom-mobile-template center fixed-header virtualized selectable">
-                                        <div role="table" visibilityobserver="" class="visible">
-                                            <datatable-header role="rowgroup" class="datatable-header"
-                                                              style="height: 30px; width: 100%">
-                                                <div role="row" orderable="" class="datatable-header-inner"
-                                                     style="width: 836px">
-                                                    <div class="datatable-row-left" style="width: 0px">
-                                                        <!---->
-                                                    </div>
-                                                    <div class="datatable-row-center" style="
+                        {% endfor %}
+                    </table>
+                    </table>
+                    <dash-table _nghost-ixw-c104="">
+                        <div _ngcontent-ixw-c104="" class="w-full relative">
+                            <loading _ngcontent-ixw-c104="" _nghost-ixw-c53=""><!----></loading>
+                            <div _ngcontent-ixw-c104="" data-aos="fade-up" data-aos-duration="200"
+                                 class="aos-init aos-animate">
+                                <ngx-datatable _ngcontent-ixw-c104=""
+                                               class="ngx-datatable dash-table custom-mobile-template center fixed-header virtualized selectable">
+                                    <div role="table" visibilityobserver="" class="visible">
+                                        <datatable-header role="rowgroup" class="datatable-header"
+                                                          style="height: 30px; width: 100%">
+                                            <div role="row" orderable="" class="datatable-header-inner"
+                                                 style="width: 836px">
+                                                <div class="datatable-row-left" style="width: 0px">
+                                                    <!---->
+                                                </div>
+                                                <div class="datatable-row-center" style="
                                           transform: translate3d(0px, 0px, 0px);
                                           backface-visibility: hidden;
                                           width: 836px;
                                         ">
-                                                        <datatable-header-cell role="columnheader" resizeable=""
-                                                                               long-press="" draggable=""
-                                                                               class="datatable-header-cell resizeable"
-                                                                               title="Item"
-                                                                               style="width: 76px">
-                                                            <div class="datatable-header-cell-template-wrap">
-                                                                <!----><!----><span
-                                                                    class="datatable-header-cell-wrapper"><span
-                                                                    class="datatable-header-cell-label draggable">Item</span></span>
-                                                                <!----><!----><span></span>
-                                                            </div>
-                                                            <span class="resize-handle"></span>
-                                                        </datatable-header-cell>
-                                                        <datatable-header-cell role="columnheader" resizeable=""
-                                                                               long-press="" draggable=""
-                                                                               class="datatable-header-cell resizeable"
-                                                                               title="Purchase"
-                                                                               style="width: 228px">
-                                                            <div class="datatable-header-cell-template-wrap">
-                                                                <!----><!----><span
-                                                                    class="datatable-header-cell-wrapper"><span
-                                                                    class="datatable-header-cell-label draggable">Thanh
+                                                    <datatable-header-cell role="columnheader" resizeable=""
+                                                                           long-press="" draggable=""
+                                                                           class="datatable-header-cell resizeable"
+                                                                           title="Item"
+                                                                           style="width: 76px">
+                                                        <div class="datatable-header-cell-template-wrap">
+                                                            <!----><!----><span
+                                                                class="datatable-header-cell-wrapper"><span
+                                                                class="datatable-header-cell-label draggable">Item</span></span>
+                                                            <!----><!----><span></span>
+                                                        </div>
+                                                        <span class="resize-handle"></span>
+                                                    </datatable-header-cell>
+                                                    <datatable-header-cell role="columnheader" resizeable=""
+                                                                           long-press="" draggable=""
+                                                                           class="datatable-header-cell resizeable"
+                                                                           title="Purchase"
+                                                                           style="width: 228px">
+                                                        <div class="datatable-header-cell-template-wrap">
+                                                            <!----><!----><span
+                                                                class="datatable-header-cell-wrapper"><span
+                                                                class="datatable-header-cell-label draggable">Thanh
                                                                         toán</span></span><!----><!----><span></span>
-                                                            </div>
-                                                            <span class="resize-handle"></span>
-                                                        </datatable-header-cell>
-                                                        <datatable-header-cell role="columnheader" resizeable=""
-                                                                               long-press="" draggable=""
-                                                                               class="datatable-header-cell resizeable"
-                                                                               title="ID"
-                                                                               style="width: 152px">
-                                                            <div class="datatable-header-cell-template-wrap">
-                                                                <!----><!----><span
-                                                                    class="datatable-header-cell-wrapper"><span
-                                                                    class="datatable-header-cell-label draggable">ID</span></span>
-                                                                <!----><!----><span></span>
-                                                            </div>
-                                                            <span class="resize-handle"></span>
-                                                        </datatable-header-cell>
-                                                        <datatable-header-cell role="columnheader" resizeable=""
-                                                                               long-press="" draggable=""
-                                                                               class="datatable-header-cell resizeable"
-                                                                               title="Employee"
-                                                                               style="width: 152px">
-                                                            <div class="datatable-header-cell-template-wrap">
-                                                                <!----><!----><span
-                                                                    class="datatable-header-cell-wrapper"><span
-                                                                    class="datatable-header-cell-label draggable">Người
+                                                        </div>
+                                                        <span class="resize-handle"></span>
+                                                    </datatable-header-cell>
+                                                    <datatable-header-cell role="columnheader" resizeable=""
+                                                                           long-press="" draggable=""
+                                                                           class="datatable-header-cell resizeable"
+                                                                           title="ID"
+                                                                           style="width: 152px">
+                                                        <div class="datatable-header-cell-template-wrap">
+                                                            <!----><!----><span
+                                                                class="datatable-header-cell-wrapper"><span
+                                                                class="datatable-header-cell-label draggable">ID</span></span>
+                                                            <!----><!----><span></span>
+                                                        </div>
+                                                        <span class="resize-handle"></span>
+                                                    </datatable-header-cell>
+                                                    <datatable-header-cell role="columnheader" resizeable=""
+                                                                           long-press="" draggable=""
+                                                                           class="datatable-header-cell resizeable"
+                                                                           title="Employee"
+                                                                           style="width: 152px">
+                                                        <div class="datatable-header-cell-template-wrap">
+                                                            <!----><!----><span
+                                                                class="datatable-header-cell-wrapper"><span
+                                                                class="datatable-header-cell-label draggable">Người
                                                                         cày</span></span><!----><!----><span></span>
-                                                            </div>
-                                                            <span class="resize-handle"></span>
-                                                        </datatable-header-cell>
-                                                        <datatable-header-cell role="columnheader" resizeable=""
-                                                                               long-press="" draggable=""
-                                                                               class="datatable-header-cell resizeable"
-                                                                               title="Status"
-                                                                               style="width: 152px">
-                                                            <div class="datatable-header-cell-template-wrap">
-                                                                <!----><!----><span
-                                                                    class="datatable-header-cell-wrapper"><span
-                                                                    class="datatable-header-cell-label draggable">Trạng
+                                                        </div>
+                                                        <span class="resize-handle"></span>
+                                                    </datatable-header-cell>
+                                                    <datatable-header-cell role="columnheader" resizeable=""
+                                                                           long-press="" draggable=""
+                                                                           class="datatable-header-cell resizeable"
+                                                                           title="Status"
+                                                                           style="width: 152px">
+                                                        <div class="datatable-header-cell-template-wrap">
+                                                            <!----><!----><span
+                                                                class="datatable-header-cell-wrapper"><span
+                                                                class="datatable-header-cell-label draggable">Trạng
                                                                         thái</span></span><!----><!----><span></span>
-                                                            </div>
-                                                            <span class="resize-handle"></span>
-                                                        </datatable-header-cell>
-                                                        <datatable-header-cell role="columnheader" resizeable=""
-                                                                               long-press="" draggable=""
-                                                                               class="datatable-header-cell resizeable"
-                                                                               title="Actions"
-                                                                               style="width: 128px">
-                                                            <div class="datatable-header-cell-template-wrap">
-                                                                <!----><!----><span
-                                                                    class="datatable-header-cell-wrapper"><span
-                                                                    class="datatable-header-cell-label draggable">Ghi
+                                                        </div>
+                                                        <span class="resize-handle"></span>
+                                                    </datatable-header-cell>
+                                                    <datatable-header-cell role="columnheader" resizeable=""
+                                                                           long-press="" draggable=""
+                                                                           class="datatable-header-cell resizeable"
+                                                                           title="Actions"
+                                                                           style="width: 128px">
+                                                        <div class="datatable-header-cell-template-wrap">
+                                                            <!----><!----><span
+                                                                class="datatable-header-cell-wrapper"><span
+                                                                class="datatable-header-cell-label draggable">Ghi
                                                                         chú</span></span><!----><!----><span></span>
-                                                            </div>
-                                                            <span class="resize-handle"></span>
-                                                        </datatable-header-cell><!---->
-                                                    </div>
-                                                    <div class="datatable-row-right" style="
+                                                        </div>
+                                                        <span class="resize-handle"></span>
+                                                    </datatable-header-cell><!---->
+                                                </div>
+                                                <div class="datatable-row-right" style="
                                           transform: translate3d(0px, 0px, 0px);
                                           backface-visibility: hidden;
                                           width: 0px;
                                         ">
-                                                        <!---->
-                                                    </div>
                                                     <!---->
                                                 </div>
-                                            </datatable-header><!---->
-                                            <datatable-body role="rowgroup" class="datatable-body"
-                                                            style="width: 100%; height: auto"><!---->
-                                                <datatable-selection><!---->
-                                                    <div class="empty-row">
-                                                        Hiện tại không có dữ liệu
-                                                    </div>
-                                                    <!---->
-                                                </datatable-selection>
-                                            </datatable-body><!---->
-                                        </div>
-                                    </ngx-datatable>
-                                </div>
-                                <!---->
+                                                <!---->
+                                            </div>
+                                        </datatable-header><!---->
+                                        <datatable-body role="rowgroup" class="datatable-body"
+                                                        style="width: 100%; height: auto"><!---->
+                                            <datatable-selection><!---->
+                                                <div class="empty-row">
+                                                    Hiện tại không có dữ liệu
+                                                </div>
+                                                <!---->
+                                            </datatable-selection>
+                                        </datatable-body><!---->
+                                    </div>
+                                </ngx-datatable>
                             </div>
-                        </dash-table>
-                    </div>
+                            <!---->
+                        </div>
+                    </dash-table>
                 </div>
-                <employee-rankings class="hidden md:block"><!----></employee-rankings>
             </div>
 
         </div>
