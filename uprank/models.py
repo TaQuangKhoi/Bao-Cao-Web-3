@@ -3,6 +3,8 @@ from django.contrib.auth.models import User
 
 from django.db import models
 
+from uprank.choices import *
+
 
 class Request(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
@@ -10,14 +12,18 @@ class Request(models.Model):
     current_rank = models.ForeignKey('library_db.Rank', on_delete=models.CASCADE, related_name='current_rank',
                                      null=True)
     current_lp = models.FloatField(max_length=99, null=True)
-    lp_Gain = models.IntegerField()
+
+    lp_Gain = models.IntegerField(
+        choices=LP_GAIN_CHOICES,
+        null=True
+    )
 
     desired_rank = models.ForeignKey('library_db.Rank', on_delete=models.CASCADE,
                                      related_name='desired_rank',
                                      null=True)
     server = models.ForeignKey('library_db.Server', on_delete=models.CASCADE, null=True)
 
-    details = models.CharField(max_length=200, null=True)
+    details = models.TextField(null=True)
     total = models.FloatField()
     status = models.CharField(max_length=200, null=True)
 
