@@ -3,6 +3,8 @@ from django.contrib.auth.models import User
 
 from django.db import models
 
+from uprank.choices import *
+
 
 class Request(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
@@ -11,13 +13,6 @@ class Request(models.Model):
                                      null=True)
     current_lp = models.FloatField(max_length=99, null=True)
 
-    LP_GAIN_CHOICES = [
-        (1, "14 LP or less"),
-        (2, "15 LP or more"),
-        (3, "20 LP or more"),
-        (4, "25 LP or more"),
-        (5, "34 LP or more"),
-    ]
     lp_Gain = models.IntegerField(
         choices=LP_GAIN_CHOICES,
         null=True
