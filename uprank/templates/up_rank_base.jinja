@@ -7,7 +7,6 @@
     <link href="https://boostroyal.com/manifest.json" rel="manifest" q:head="">
     <link color="#ff9155" href="https://boostroyal.com/lol-boosting/favicons/safari-pinned-tab.svg" rel="mask-icon">
     <title>Up Rank</title>
-    <link href="https://boostroyal.com/lol-boosting/" rel="canonical">
     <meta content="width=device-width, initial-scale=1.0" name="viewport" q:head="">
     <link href="https://boostroyal.com/favicon.svg" rel="icon" type="image/svg+xml" q:head="">
     <link rel="stylesheet" href="{{ static('up_rank/q-855046fd.css') }}">
@@ -22,7 +21,6 @@
         height: 0 !important;
     }</style>
 
-    <meta name="shimejiBrowserExtensionId" content="gohjpllcolmccldfdggmamodembldgpc" data-version="2.0.4">
     <style id="_goober"> @keyframes go2264125279 {
                              from {
                                  transform: scale(0) rotate(45deg);
@@ -546,31 +544,7 @@
         stroke: currentColor;
         stroke-width: 0;
     }</style>
-    <script src="{{ static('up_rank/v3') }}"></script>
-    <link rel="modulepreload" as="script" crossorigin="" href="https://boostroyal.com/build/q-babc3d0c.js">
-    <link rel="modulepreload" as="script" crossorigin="" href="https://boostroyal.com/build/q-927a77c4.js">
-    <link rel="modulepreload" as="script" crossorigin="" href="https://boostroyal.com/build/q-aeb2a814.js">
-    <link rel="modulepreload" as="script" crossorigin="" href="https://boostroyal.com/build/q-79506e2c.js">
-    <link rel="modulepreload" as="script" crossorigin="" href="https://boostroyal.com/build/q-67124dbf.js">
-    <link rel="modulepreload" as="script" crossorigin="" href="https://boostroyal.com/build/q-3eaca76b.js">
-    <link rel="modulepreload" as="script" crossorigin="" href="https://boostroyal.com/build/q-ecf7e049.js">
-    <link rel="modulepreload" as="script" crossorigin="" href="https://boostroyal.com/build/q-059fb4cd.js">
-    <link rel="modulepreload" as="script" crossorigin="" href="https://boostroyal.com/build/q-eaa928a5.js">
-    <link rel="modulepreload" as="script" crossorigin="" href="https://boostroyal.com/build/q-82437db8.js">
-    <link rel="modulepreload" as="script" crossorigin="" href="https://boostroyal.com/build/q-0bfc485d.js">
-    <link rel="modulepreload" as="script" crossorigin="" href="https://boostroyal.com/build/q-f1e93963.js">
-    <link rel="modulepreload" as="script" crossorigin="" href="https://boostroyal.com/build/q-593d7dd6.js">
-    <link rel="modulepreload" as="script" crossorigin="" href="https://boostroyal.com/build/q-86439c94.js">
-    <link rel="modulepreload" as="script" crossorigin="" href="https://boostroyal.com/build/q-bfc55721.js">
-    <link rel="modulepreload" as="script" crossorigin="" href="https://boostroyal.com/build/q-c62aabe4.js">
-    <link rel="modulepreload" as="script" crossorigin="" href="https://boostroyal.com/build/q-5c12f128.js">
-    <link rel="modulepreload" as="script" crossorigin="" href="https://boostroyal.com/build/q-c6dae603.js">
-    <link rel="modulepreload" as="script" crossorigin="" href="https://boostroyal.com/build/q-7b23d8eb.js">
-    <link rel="modulepreload" as="script" crossorigin="" href="https://boostroyal.com/build/q-7466c500.js">
-    <link rel="modulepreload" as="script" crossorigin="" href="https://boostroyal.com/build/q-24155312.js">
-    <link rel="modulepreload" as="script" crossorigin="" href="https://boostroyal.com/build/q-1c899b29.js">
-    <link rel="modulepreload" as="script" crossorigin="" href="https://boostroyal.com/build/q-f0970cea.js">
-    <link rel="modulepreload" as="script" crossorigin="" href="https://boostroyal.com/build/q-156d4a69.js">
+
     <style q:style="bcv7o6-3" hidden="">.unranked-bg, .unrated-bg, .wood-bg {
         background: linear-gradient(180deg, rgba(44, 31, 47, .2) 0%, rgba(67, 50, 55, 0) 39.35%), #2F1F31
     }
@@ -996,10 +970,6 @@
             background: #40bdab;
         }
     </style>
-    <link rel="modulepreload" as="script" crossorigin="" href="https://boostroyal.com/build/q-c1c30592.js">
-    <link rel="modulepreload" as="script" crossorigin="" href="https://boostroyal.com/build/q-9aac1fd1.js">
-    <link rel="modulepreload" as="script" crossorigin="" href="https://boostroyal.com/build/q-b2f0f866.js">
-    <link rel="modulepreload" as="script" crossorigin="" href="https://boostroyal.com/build/q-183148d3.js">
     <style>
         body.shimeji-pinned iframe {
             pointer-events: none;
@@ -1024,13 +994,23 @@
     </style>
 
     <!--End Style-->
-    <link rel="modulepreload" as="script" crossorigin="" href="https://boostroyal.com/build/q-31d5a709.js">
-    <link rel="modulepreload" as="script" crossorigin="" href="https://boostroyal.com/build/q-f219bdfe.js">
+
+{# Add React #}
+    <!-- This is the script providing runtime support for compiled `async`/`await` code -->
+    <script src="https://cdn.jsdelivr.net/npm/regenerator-runtime@0.14.0/runtime.min.js"></script>
+    <!-- This is what supports JSX compilation (and other transformations) -->
+    <script src="https://unpkg.com/@babel/standalone@7.10.3/babel.min.js"></script>
+
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script type="text/babel" data-presets="es2017,react,stage-3" src='{{ static('uprank/app.js') }}'></script>
+    <link rel="stylesheet" href="{{ static('uprank/styles.css') }}">
 </head>
 
 
 <!--Body-->
 <body class="m-0 bg-deep-purple-2 text-white overflow-y-scroll overflow-x-hidden">
+<div id="root"></div>
 <header style="transition: padding 0.3s ease-in-out;" class="fixed top-0 w-full py-6 lg:py-3 bg-transparent z-30"
         on:qvisible="q-4f948398.js#_hW[0]
 q-4f948398.js#_hW[1]
