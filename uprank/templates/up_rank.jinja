@@ -20,7 +20,8 @@
             <div style="height: 190px; background: linear-gradient(180deg, rgba(35, 21, 38, 0.7) 0%, rgba(35, 21, 38, 1) 100%)"
                  class="absolute top-0 left-0 w-full z-10"></div>
             <div class="z-20 relative">
-                <div class="container flex gap-8 md:gap-4 py-6 sm:py-4 md:flex-col">
+                <form method="post" action="" class="container flex gap-8 md:gap-4 py-6 sm:py-4 md:flex-col">
+                    {% csrf_token %}
                     <div class="grow flex flex-col gap-8">
                         <div class="px-11 py-10 md:px-8 rounded-md silver-bg" on:qvisible="q-6f195aa1.js#_hW[0]"
                              q:id="43">
@@ -84,23 +85,7 @@
                                         {{ form.server }}
                                     </div>
                                     <div class="basis-1/2">
-                                        <div class="flex items-center justify-end my-1 gap-2 md:justify-center"
-                                             on:qvisible="q-1344cdca.js#_hW[0]" q:id="93">
-                                            <label class="⭐️htn3pk-0 radioLabel bg-white/10 px-3 py-2 pl-0 rounded-lg"
-                                                   q:key="e1_0">
-                                                <input checked="" type="radio" value="Solo/Duo" class="⭐️htn3pk-0"
-                                                       on:change="q-3fe4dee2.js#s_hGRh4obn3Vc[0]" q:id="95">
-                                                <span class="⭐️htn3pk-0 control"></span><span
-                                                    class="⭐️htn3pk-0">Solo/Duo</span>
-                                            </label>
-                                            <label class="⭐️htn3pk-0 radioLabel bg-white/10 px-3 py-2 pl-0 rounded-lg"
-                                                   q:key="e1_0">
-                                                <input type="radio" value="Flex" class="⭐️htn3pk-0"
-                                                       on:change="q-3fe4dee2.js#s_hGRh4obn3Vc[0]" q:id="98">
-                                                <span class="⭐️htn3pk-0 control"></span>
-                                                <span class="⭐️htn3pk-0">Flex</span>
-                                            </label>
-                                        </div>
+
                                     </div>
                                 </div>
                             </div>
@@ -227,76 +212,11 @@
                                         </div>
                                     </div>
                                     <div>
-                                        <div class="py-2 border-b border-deep-purple-10 w-full">
-                                            <div class="⭐️ffcj5o-0 switchContainer flex flex-row-reverse gap-2 items-center justify-between"
-                                                 preventdefault:click="">
-                                                <input class="⭐️ffcj5o-0 checkboxSwitch" preventdefault:change=""
-                                                       preventdefault:click="" preventdefault:input="" type="checkbox">
-                                                <div class="⭐️ffcj5o-0 switch"></div>
-                                                <div class="⭐️ffcj5o-0">
-                                                    <div class="⭐️8m575l-0 relative">
-                                                        <div class="⭐️8m575l-0 tooltip-content hidden"
-                                                             data-position="left">
-                                                            <div q:slot="content">
-                                                                <div class="font-bold mb-2">Hiển thị offlne</div>
-                                                                This option will make your account offline in the League
-                                                                Client chat, therefore your friends won't see when the
-                                                                booster is playing on your account
-                                                            </div>
-                                                        </div>
-                                                        <div class="⭐️8m575l-0">
-                                                            <div class="⭐️8m575l-0">
-                                                                <div class="flex items-center gap-2 cursor-pointer">
-                                                                    <div class="capitalize text-white/60">Hiển thị
-                                                                        offline
-                                                                    </div>
-                                                                    <div class="text-xs rounded-full leading-relaxed whitespace-nowrap px-2 py-1 bg-white/5 text-white/40">
-                                                                        Free
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+
                                     </div>
                                     <div>
                                         <div class="py-2 border-b border-deep-purple-10 w-full">
-                                            <div class="⭐️ffcj5o-0 switchContainer flex flex-row-reverse gap-2 items-center justify-between"
-                                                 preventdefault:click="">
-                                                <input class="⭐️ffcj5o-0 checkboxSwitch" preventdefault:change=""
-                                                       preventdefault:click="" preventdefault:input="" type="checkbox">
-                                                <div class="⭐️ffcj5o-0 switch"></div>
-                                                <div class="⭐️ffcj5o-0">
-                                                    <div class="⭐️8m575l-0 relative">
-                                                        <div class="⭐️8m575l-0 tooltip-content hidden"
-                                                             data-position="left"
-                                                             style="">
-                                                            <div q:slot="content">
-                                                                <div class="font-bold mb-2">Vai trò đi đường</div>
-                                                                You may determine what role(s) your booster will queue
-                                                                up
-                                                                for while playing on your account. For additional costs,
-                                                                you
-                                                                may also determine what champions he should play.
-                                                            </div>
-                                                        </div>
-                                                        <div class="⭐️8m575l-0">
-                                                            <div class="⭐️8m575l-0">
-                                                                <div class="flex items-center gap-2 cursor-pointer">
-                                                                    <div class="capitalize text-white/60">Vai trò đi
-                                                                        đường
-                                                                    </div>
-                                                                    <div class="text-xs rounded-full leading-relaxed whitespace-nowrap px-2 py-1 bg-white/5 text-white/40">
-                                                                        Free
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
+
                                         </div>
                                     </div>
                                     <div>
@@ -337,15 +257,15 @@
                                         <div class="py-2 border-b border-deep-purple-10 w-full">
                                             <div class="⭐️ffcj5o-0 switchContainer flex flex-row-reverse gap-2 items-center justify-between"
                                                  preventdefault:click="">
-                                                <input class="⭐️ffcj5o-0 checkboxSwitch" preventdefault:change=""
-                                                       preventdefault:click="" preventdefault:input="" type="checkbox">
+{#                                                <input class="⭐️ffcj5o-0 checkboxSwitch" preventdefault:change=""#}
+{#                                                       preventdefault:click="" preventdefault:input="" type="checkbox">#}
                                                 <div class="⭐️ffcj5o-0 switch"></div>
                                                 <div class="⭐️ffcj5o-0">
                                                     <div class="⭐️8m575l-0 relative">
                                                         <div class="⭐️8m575l-0 tooltip-content hidden"
                                                              data-position="left"
                                                              style="">
-                                                            <div q:slot="content">
+                                                            <div >
                                                                 <div class="font-bold mb-2">Xem trực tiếp</div>
                                                                 Your assigned booster will record/live stream all the
                                                                 games,
@@ -355,7 +275,8 @@
                                                         <div class="⭐️8m575l-0">
                                                             <div class="⭐️8m575l-0">
                                                                 <div class="flex items-center gap-2 cursor-pointer">
-                                                                    <div class="capitalize text-white/60">Xem trực tiếp
+                                                                    <div class="capitalize text-white/60">
+                                                                        Xem trực tiếp
                                                                     </div>
                                                                     <div class="text-xs rounded-full leading-relaxed whitespace-nowrap px-2 py-1 text-primary bg-primary/30">
                                                                         +15%
@@ -370,52 +291,20 @@
                                     </div>
                                     <div>
                                         <div class="py-2">
-                                            <div class="⭐️ffcj5o-0 switchContainer flex flex-row-reverse gap-2 items-center justify-between"
-                                                 preventdefault:click="">
-                                                <input class="⭐️ffcj5o-0 checkboxSwitch" preventdefault:change=""
-                                                       preventdefault:click="" preventdefault:input="" type="checkbox">
-                                                <div class="⭐️ffcj5o-0 switch"></div>
-                                                <div class="⭐️ffcj5o-0">
-                                                    <div class="⭐️8m575l-0 relative">
-                                                        <div class="⭐️8m575l-0 tooltip-content hidden"
-                                                             data-position="left"
-                                                             style="">
-                                                            <div q:slot="content">
-                                                                <div class="font-bold mb-2">+1 Bonus win</div>
-                                                                You’ll receive an additional win in your desired
-                                                                division.
-                                                                In case of a double promotion to a higher rank, the
-                                                                extra
-                                                                win may be refunded.
-                                                            </div>
-                                                        </div>
-                                                        <div class="⭐️8m575l-0">
-                                                            <div class="⭐️8m575l-0">
-                                                                <div class="flex items-center gap-2 cursor-pointer">
-                                                                    <div class="capitalize text-white/60">+1 Bonus win
-                                                                    </div>
-                                                                    <div class="text-xs rounded-full leading-relaxed px-2 whitespace-nowrap py-1 text-primary bg-primary/30">
-                                                                        + 3.3 $
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
+
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="px-5 mt-8">
                                 <label class="flex items-center ltr w-full bg-[#3D3241] rounded-lg">
-                                    <div class="grow">
-                                        <label class="⭐️nwq154-0 flex flex-col gap-2">
-                                            <input class="⭐️nwq154-0 bg-[#3D3241] text-white/70 outline-none rounded-lg min-w-0 w-full px-4 py-3"
-                                                   autocomplete="" name="" placeholder="Discount code" type="text"
-                                                   data-ddg-inputtype="unknown">
-                                        </label>
-                                    </div>
+{#                                    <div class="grow">#}
+{#                                        <label class="⭐️nwq154-0 flex flex-col gap-2">#}
+{#                                            <input class="⭐️nwq154-0 bg-[#3D3241] text-white/70 outline-none rounded-lg min-w-0 w-full px-4 py-3"#}
+{#                                                   autocomplete="" name="" placeholder="Discount code" type="text"#}
+{#                                                   data-ddg-inputtype="unknown">#}
+{#                                        </label>#}
+{#                                    </div>#}
                                     <div class="rounded-lg cursor-pointer flex items-center justify-center"
                                          style="height: 48px; width: 48px;">
                                         <svg fill="none" height="13" viewBox="0 0 8 13" width="8"
@@ -444,15 +333,7 @@
                                 </div>
                             </div>
                             <div class="px-5 grid grid-cols-2 gap-2">
-                                <q:template q:slot="" hidden="" aria-hidden="true">
-                                    <span>Rank up now</span>
-                                    <svg class="ml-1" fill="none" height="16" viewBox="0 0 17 16" width="17"
-                                         xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M6.5 4L10.5 8L6.5 12" stroke="white" stroke-linecap="round"
-                                              stroke-linejoin="round" stroke-width="1.5"></path>
-                                    </svg>
-                                </q:template>
-                                <div class="font-bold flex items-center justify-center text-center cursor-pointer text-base whitespace-nowrap duration-300 rounded-3xl leading-tight bg-primary bg-opacity-10 hover:bg-primary hover:text-white border-transparent text-white bg-primary-gradient"
+                                <button type="submit" class="font-bold flex items-center justify-center text-center cursor-pointer text-base whitespace-nowrap duration-300 rounded-3xl leading-tight bg-primary bg-opacity-10 hover:bg-primary hover:text-white border-transparent text-white bg-primary-gradient"
                                      style="padding: 10px 28px; backdrop-filter: blur(8px);">
                                     <span>Rank up now</span>
                                     <svg class="ml-1" fill="none" height="16" viewBox="0 0 17 16" width="17"
@@ -460,7 +341,7 @@
                                         <path d="M6.5 4L10.5 8L6.5 12" stroke="white" stroke-linecap="round"
                                               stroke-linejoin="round" stroke-width="1.5"></path>
                                     </svg>
-                                </div>
+                                </button>
                                 <div id="payment-request-button"
                                      style="border-radius: 50px; overflow: hidden; width: 100%;"></div>
                             </div>
@@ -507,7 +388,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </form>
             </div>
         </div>
     </main>
