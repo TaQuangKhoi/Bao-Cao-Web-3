@@ -16,9 +16,15 @@ def up_rank(request):
                                                 position=cleaned_data['current_rank_position'])
             new_desired_rank = Rank.objects.get(name=cleaned_data['desired_rank'],
                                                 position=cleaned_data['desired_rank_position'])
+            details = f"""
+            {cleaned_data['current_rank']} {cleaned_data['current_rank_position']} 
+            to {cleaned_data['desired_rank']} {cleaned_data['desired_rank_position']} 
+            in {cleaned_data['server']}
+            """
             new_request = Request(
                 current_rank=new_current_rank,
                 desired_rank=new_desired_rank,
+                details=details,
                 current_lp=1,
                 total=1,
                 lp_Gain=cleaned_data['lp_gain'],

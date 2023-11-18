@@ -23,7 +23,7 @@ class Request(models.Model):
                                      null=True)
     server = models.ForeignKey('library_db.Server', on_delete=models.CASCADE, null=True)
 
-    details = models.TextField(max_length=200, null=True)
+    details = models.TextField(null=True)
     total = models.FloatField()
     status = models.CharField(max_length=200, null=True)
 
