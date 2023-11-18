@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from library_db.models import Rank
 from uprank.forms import UpRankForm
+from uprank.models import Request
 
 
 def up_rank(request):
@@ -10,7 +11,13 @@ def up_rank(request):
         form = UpRankForm(request.POST)
         if form.is_valid():
             cleaned_data = form.cleaned_data
-            print(cleaned_data)
+            new_current_rank = Rank.objects.get(name=cleaned_data['current_rank'],
+                                                position=cleaned_data['current_rank_position'])
+            print(new_current_rank)
+            new_request = Request(
+
+            )
+            # new_request.save()
         else:
             print('The form was invalid.')
             print(form.errors)
