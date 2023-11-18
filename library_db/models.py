@@ -9,8 +9,7 @@ class Rank(models.Model):
     position = models.CharField(max_length=50)
 
     def __str__(self):
-        detail = f"{self.name} {self.position}"
-        return detail
+        return f"{self.name} {self.position}"
 
 
 class Server(models.Model):
