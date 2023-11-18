@@ -8,7 +8,11 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin=""/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <title>This is a base</title>
+    <title>
+        {% block title %}
+            Dashboard Base
+        {% endblock %}
+    </title>
     <!--Style-->
     <style type="text/css">
         @font-face {
@@ -1351,6 +1355,8 @@
     </style>
 
     <!--End Style-->
+    {% block head %}
+    {% endblock %}
 </head>
 
 <body

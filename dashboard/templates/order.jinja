@@ -1,156 +1,232 @@
 {% extends "dashboardbase.jinja" %}
 
+{% block title %}
+    Dashboard
+{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ static('order/styles.css') }}">
+{% endblock %}
+
 {% block content %}
-<div class="py-10 md:p-4 md:pb-16">
-    <router-outlet></router-outlet>
-    <home>
-    <div class="flex flex-col gap-8 w-1/3" style="min-width: 10%">
-                <order-cards type="slider">
-                    <div class="bg-deep-purple-3 p-8 rounded-xl relative h-full">
-                        <loading _nghost-ixw-c53=""><!----></loading>
-                        <div class="flex gap-8">
-                            <img src="{{ static('dashboard/samurai-2.webp') }}" />
-                            <div class="flex flex-col gap-4">
-                                <div class="font-bold text-xl">
-                                    <div class="text-lightpurple">
-                                        Đơn hàng của bạn
-                                    </div>
-                                    <div>Sẽ được hiển thị ở đây</div>
+    <div class="py-10 md:p-4 md:pb-16">
+        <div class="flex flex-col gap-8 w-1/3" style="min-width: 10%">
+            <order-cards type="slider">
+                <div class="bg-deep-purple-3 p-8 rounded-xl relative h-full">
+                    <loading _nghost-ixw-c53=""><!----></loading>
+                    <div class="flex gap-8">
+                        <img src="{{ static('dashboard/samurai-2.webp') }}"/>
+                        <div class="flex flex-col gap-4">
+                            <div class="font-bold text-xl">
+                                <div class="text-lightpurple">
+                                    Đơn hàng của bạn
                                 </div>
+                                <div>Sẽ được hiển thị ở đây</div>
                             </div>
                         </div>
-                        <!----><!---->
                     </div>
-                </order-cards>
-                <employee-rankings class="md:hidden"><!----></employee-rankings>
-            </div>
-        <div _ngcontent-ibw-c148="" class="flex justify-between items-center py-2 flex-wrap gap-6"><div _ngcontent-ibw-c148="" class="flex gap-4 items-center flex-wrap"><div _ngcontent-ibw-c148="" class="font-bold text-2xl">Các đơn hàng đã mua</div><div _ngcontent-ibw-c148="" class="text-sm opacity-60">0 orders</div><!----><!----><!----></div><dash-table-filter _ngcontent-ibw-c148="" _nghost-ibw-c133=""><div _ngcontent-ibw-c133=""><div _ngcontent-ibw-c133="" class="flex justify-end items-center gap-2 grow"><div _ngcontent-ibw-c133="" class="cursor-pointer opacity-30 duration-300 hover:opacity-100"><svg _ngcontent-ibw-c133="" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24"><path _ngcontent-ibw-c133="" d="M13.5 2c-5.621 0-10.211 4.443-10.475 10h-3.025l5 6.625 5-6.625h-2.975c.257-3.351 3.06-6 6.475-6 3.584 0 6.5 2.916 6.5 6.5s-2.916 6.5-6.5 6.5c-1.863 0-3.542-.793-4.728-2.053l-2.427 3.216c1.877 1.754 4.389 2.837 7.155 2.837 5.79 0 10.5-4.71 10.5-10.5s-4.71-10.5-10.5-10.5z" fill="white"></path></svg></div><div _ngcontent-ibw-c133="" class="flex flex-col gap-4 grow"><div _ngcontent-ibw-c133="" class="flex flex-wrap gap-2 items-center"><input _ngcontent-ibw-c133="" placeholder="Search.." class="grow bg-deep-purple-3 rounded-xl text-white px-3 py-2 border outline-none shrink border-white/10 ng-untouched ng-pristine ng-valid"><!----><!----><select _ngcontent-ibw-c133="" class="bg-deep-purple-3 rounded-xl text-white px-3 py-2 border outline-none shrink border-white/10 ng-untouched ng-pristine ng-valid" style="max-width: 35%;"><option _ngcontent-ibw-c133="" value="id">ID</option><!----><!----><option _ngcontent-ibw-c133="" value="purchase">Purchase</option><!----><!----><option _ngcontent-ibw-c133="" value="service">Service</option><!----><!----><option _ngcontent-ibw-c133="" value="server">Server</option><!----><!----><option _ngcontent-ibw-c133="" value="employee_name">Employee</option><!----><!----><!----><!----><option _ngcontent-ibw-c133="" value="customer_name">Customer Name</option><!----><!----><!----><!----><option _ngcontent-ibw-c133="" value="nickname">In-game name</option><!----><!----><option _ngcontent-ibw-c133="" value="loginname">Login name</option><!----><!----><option _ngcontent-ibw-c133="" value="transactionid">Transaction ID</option><!----><!----><option _ngcontent-ibw-c133="" value="status">Status</option><!----><!----><!----></select><!----></div><!----></div></div><div _ngcontent-ibw-c133="" class="flex justify-end p-2 gap-4"><!----><div _ngcontent-ibw-c133="" class="text-xs opacity-50 font-bold cursor-pointer">Add filter</div><!----></div></div></dash-table-filter></div>
-        <div class="flex gap-8 md:flex-col-reverse">         
+                    <!----><!---->
+                </div>
+            </order-cards>
+            <employee-rankings class="md:hidden"><!----></employee-rankings>
+        </div>
+        <div class="flex justify-between items-center py-2 flex-wrap gap-6">
+            <div _ngcontent-ibw-c148="" class="flex gap-4 items-center flex-wrap">
+                <div _ngcontent-ibw-c148="" class="font-bold text-2xl">Các đơn hàng đã mua</div>
+                <div _ngcontent-ibw-c148="" class="text-sm opacity-60">0 orders</div><!----><!----><!----></div>
+            <dash-table-filter _ngcontent-ibw-c148="" _nghost-ibw-c133="">
+                <div _ngcontent-ibw-c133="">
+                    <div _ngcontent-ibw-c133="" class="flex justify-end items-center gap-2 grow">
+                        <div _ngcontent-ibw-c133=""
+                             class="cursor-pointer opacity-30 duration-300 hover:opacity-100">
+                            <svg _ngcontent-ibw-c133="" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                 viewbox="0 0 24 24">
+                                <path _ngcontent-ibw-c133=""
+                                      d="M13.5 2c-5.621 0-10.211 4.443-10.475 10h-3.025l5 6.625 5-6.625h-2.975c.257-3.351 3.06-6 6.475-6 3.584 0 6.5 2.916 6.5 6.5s-2.916 6.5-6.5 6.5c-1.863 0-3.542-.793-4.728-2.053l-2.427 3.216c1.877 1.754 4.389 2.837 7.155 2.837 5.79 0 10.5-4.71 10.5-10.5s-4.71-10.5-10.5-10.5z"
+                                      fill="white"></path>
+                            </svg>
+                        </div>
+                        <div _ngcontent-ibw-c133="" class="flex flex-col gap-4 grow">
+                            <div _ngcontent-ibw-c133="" class="flex flex-wrap gap-2 items-center"><input
+                                    _ngcontent-ibw-c133="" placeholder="Search.."
+                                    class="grow bg-deep-purple-3 rounded-xl text-white px-3 py-2 border outline-none shrink border-white/10 ng-untouched ng-pristine ng-valid">
+                                <!----><!----><select _ngcontent-ibw-c133=""
+                                                      class="bg-deep-purple-3 rounded-xl text-white px-3 py-2 border outline-none shrink border-white/10 ng-untouched ng-pristine ng-valid"
+                                                      style="max-width: 35%;">
+                                    <option _ngcontent-ibw-c133="" value="id">ID</option><!----><!---->
+                                    <option _ngcontent-ibw-c133="" value="purchase">Purchase</option><!----><!---->
+                                    <option _ngcontent-ibw-c133="" value="service">Service</option><!----><!---->
+                                    <option _ngcontent-ibw-c133="" value="server">Server</option><!----><!---->
+                                    <option _ngcontent-ibw-c133="" value="employee_name">Employee</option><!---->
+                                    <!----><!----><!---->
+                                    <option _ngcontent-ibw-c133="" value="customer_name">Customer Name</option>
+                                    <!----><!----><!----><!---->
+                                    <option _ngcontent-ibw-c133="" value="nickname">In-game name</option><!---->
+                                    <!---->
+                                    <option _ngcontent-ibw-c133="" value="loginname">Login name</option><!---->
+                                    <!---->
+                                    <option _ngcontent-ibw-c133="" value="transactionid">Transaction ID</option>
+                                    <!----><!---->
+                                    <option _ngcontent-ibw-c133="" value="status">Status</option><!----><!---->
+                                    <!----></select><!----></div><!----></div>
+                    </div>
+                    <div _ngcontent-ibw-c133="" class="flex justify-end p-2 gap-4"><!---->
+                        <div _ngcontent-ibw-c133="" class="text-xs opacity-50 font-bold cursor-pointer">Add filter
+                        </div><!----></div>
+                </div>
+            </dash-table-filter>
+        </div>
+        <div class="flex gap-8 md:flex-col-reverse">
             <div class="flex flex-col gap-8 grow">
-                <div>
-                    <div class="md:bg-deep-purple-3 md:p-4 md:rounded-xl">
-                        <dash-table _nghost-ixw-c104="">
-                            <div _ngcontent-ixw-c104="" class="w-full relative">
-                                <loading _ngcontent-ixw-c104="" _nghost-ixw-c53=""><!----></loading>
-                                <div _ngcontent-ixw-c104="" data-aos="fade-up" data-aos-duration="200"
-                                    class="aos-init aos-animate">
-                                    <ngx-datatable _ngcontent-ixw-c104=""
-                                        class="ngx-datatable dash-table custom-mobile-template center fixed-header virtualized selectable">
-                                        <div role="table" visibilityobserver="" class="visible">
-                                            <datatable-header role="rowgroup" class="datatable-header"
-                                                style="height: 30px; width: 100%">
-                                                <div role="row" orderable="" class="datatable-header-inner"
-                                                    style="width: 836px">
-                                                    <div class="datatable-row-left" style="width: 0px">
-                                                        <!---->
-                                                    </div>
-                                                    <div class="datatable-row-center" style="
+                <div class="md:bg-deep-purple-3 md:p-4 md:rounded-xl">
+                    <table>
+                        <tr>
+                            <th>Item</th>
+                            <th>Thanh toán</th>
+                            <th>ID</th>
+                            <th>Người cày</th>
+                            <th>Trạng thái</th>
+                            <th>Ghi chú</th>
+                        </tr>
+                        {% for order in orders %}
+                            <tr>
+                                <td>Item</td>
+                                <td>Maria Anders</td>
+                                <td>{{ order.id }}</td>
+                                <td>{{ order.created_by.username }}</td>
+                                <td>{{ order.status }}</td>
+                                <td>Notes</td>
+                            </tr>
+                        {% endfor %}
+                    </table>
+                    </table>
+                    <dash-table _nghost-ixw-c104="">
+                        <div _ngcontent-ixw-c104="" class="w-full relative">
+                            <loading _ngcontent-ixw-c104="" _nghost-ixw-c53=""><!----></loading>
+                            <div _ngcontent-ixw-c104="" data-aos="fade-up" data-aos-duration="200"
+                                 class="aos-init aos-animate">
+                                <ngx-datatable _ngcontent-ixw-c104=""
+                                               class="ngx-datatable dash-table custom-mobile-template center fixed-header virtualized selectable">
+                                    <div role="table" visibilityobserver="" class="visible">
+                                        <datatable-header role="rowgroup" class="datatable-header"
+                                                          style="height: 30px; width: 100%">
+                                            <div role="row" orderable="" class="datatable-header-inner"
+                                                 style="width: 836px">
+                                                <div class="datatable-row-left" style="width: 0px">
+                                                    <!---->
+                                                </div>
+                                                <div class="datatable-row-center" style="
                                           transform: translate3d(0px, 0px, 0px);
                                           backface-visibility: hidden;
                                           width: 836px;
                                         ">
-                                                        <datatable-header-cell role="columnheader" resizeable=""
-                                                            long-press="" draggable=""
-                                                            class="datatable-header-cell resizeable" title="Item"
-                                                            style="width: 76px">
-                                                            <div class="datatable-header-cell-template-wrap">
-                                                                <!----><!----><span
-                                                                    class="datatable-header-cell-wrapper"><span
-                                                                        class="datatable-header-cell-label draggable">Item</span></span><!----><!----><span></span>
-                                                            </div>
-                                                            <span class="resize-handle"></span>
-                                                        </datatable-header-cell>
-                                                        <datatable-header-cell role="columnheader" resizeable=""
-                                                            long-press="" draggable=""
-                                                            class="datatable-header-cell resizeable" title="Purchase"
-                                                            style="width: 228px">
-                                                            <div class="datatable-header-cell-template-wrap">
-                                                                <!----><!----><span
-                                                                    class="datatable-header-cell-wrapper"><span
-                                                                        class="datatable-header-cell-label draggable">Thanh
+                                                    <datatable-header-cell role="columnheader" resizeable=""
+                                                                           long-press="" draggable=""
+                                                                           class="datatable-header-cell resizeable"
+                                                                           title="Item"
+                                                                           style="width: 76px">
+                                                        <div class="datatable-header-cell-template-wrap">
+                                                            <!----><!----><span
+                                                                class="datatable-header-cell-wrapper"><span
+                                                                class="datatable-header-cell-label draggable">Item</span></span>
+                                                            <!----><!----><span></span>
+                                                        </div>
+                                                        <span class="resize-handle"></span>
+                                                    </datatable-header-cell>
+                                                    <datatable-header-cell role="columnheader" resizeable=""
+                                                                           long-press="" draggable=""
+                                                                           class="datatable-header-cell resizeable"
+                                                                           title="Purchase"
+                                                                           style="width: 228px">
+                                                        <div class="datatable-header-cell-template-wrap">
+                                                            <!----><!----><span
+                                                                class="datatable-header-cell-wrapper"><span
+                                                                class="datatable-header-cell-label draggable">Thanh
                                                                         toán</span></span><!----><!----><span></span>
-                                                            </div>
-                                                            <span class="resize-handle"></span>
-                                                        </datatable-header-cell>
-                                                        <datatable-header-cell role="columnheader" resizeable=""
-                                                            long-press="" draggable=""
-                                                            class="datatable-header-cell resizeable" title="ID"
-                                                            style="width: 152px">
-                                                            <div class="datatable-header-cell-template-wrap">
-                                                                <!----><!----><span
-                                                                    class="datatable-header-cell-wrapper"><span
-                                                                        class="datatable-header-cell-label draggable">ID</span></span><!----><!----><span></span>
-                                                            </div>
-                                                            <span class="resize-handle"></span>
-                                                        </datatable-header-cell>
-                                                        <datatable-header-cell role="columnheader" resizeable=""
-                                                            long-press="" draggable=""
-                                                            class="datatable-header-cell resizeable" title="Employee"
-                                                            style="width: 152px">
-                                                            <div class="datatable-header-cell-template-wrap">
-                                                                <!----><!----><span
-                                                                    class="datatable-header-cell-wrapper"><span
-                                                                        class="datatable-header-cell-label draggable">Người
+                                                        </div>
+                                                        <span class="resize-handle"></span>
+                                                    </datatable-header-cell>
+                                                    <datatable-header-cell role="columnheader" resizeable=""
+                                                                           long-press="" draggable=""
+                                                                           class="datatable-header-cell resizeable"
+                                                                           title="ID"
+                                                                           style="width: 152px">
+                                                        <div class="datatable-header-cell-template-wrap">
+                                                            <!----><!----><span
+                                                                class="datatable-header-cell-wrapper"><span
+                                                                class="datatable-header-cell-label draggable">ID</span></span>
+                                                            <!----><!----><span></span>
+                                                        </div>
+                                                        <span class="resize-handle"></span>
+                                                    </datatable-header-cell>
+                                                    <datatable-header-cell role="columnheader" resizeable=""
+                                                                           long-press="" draggable=""
+                                                                           class="datatable-header-cell resizeable"
+                                                                           title="Employee"
+                                                                           style="width: 152px">
+                                                        <div class="datatable-header-cell-template-wrap">
+                                                            <!----><!----><span
+                                                                class="datatable-header-cell-wrapper"><span
+                                                                class="datatable-header-cell-label draggable">Người
                                                                         cày</span></span><!----><!----><span></span>
-                                                            </div>
-                                                            <span class="resize-handle"></span>
-                                                        </datatable-header-cell>
-                                                        <datatable-header-cell role="columnheader" resizeable=""
-                                                            long-press="" draggable=""
-                                                            class="datatable-header-cell resizeable" title="Status"
-                                                            style="width: 152px">
-                                                            <div class="datatable-header-cell-template-wrap">
-                                                                <!----><!----><span
-                                                                    class="datatable-header-cell-wrapper"><span
-                                                                        class="datatable-header-cell-label draggable">Trạng
+                                                        </div>
+                                                        <span class="resize-handle"></span>
+                                                    </datatable-header-cell>
+                                                    <datatable-header-cell role="columnheader" resizeable=""
+                                                                           long-press="" draggable=""
+                                                                           class="datatable-header-cell resizeable"
+                                                                           title="Status"
+                                                                           style="width: 152px">
+                                                        <div class="datatable-header-cell-template-wrap">
+                                                            <!----><!----><span
+                                                                class="datatable-header-cell-wrapper"><span
+                                                                class="datatable-header-cell-label draggable">Trạng
                                                                         thái</span></span><!----><!----><span></span>
-                                                            </div>
-                                                            <span class="resize-handle"></span>
-                                                        </datatable-header-cell>
-                                                        <datatable-header-cell role="columnheader" resizeable=""
-                                                            long-press="" draggable=""
-                                                            class="datatable-header-cell resizeable" title="Actions"
-                                                            style="width: 128px">
-                                                            <div class="datatable-header-cell-template-wrap">
-                                                                <!----><!----><span
-                                                                    class="datatable-header-cell-wrapper"><span
-                                                                        class="datatable-header-cell-label draggable">Ghi
+                                                        </div>
+                                                        <span class="resize-handle"></span>
+                                                    </datatable-header-cell>
+                                                    <datatable-header-cell role="columnheader" resizeable=""
+                                                                           long-press="" draggable=""
+                                                                           class="datatable-header-cell resizeable"
+                                                                           title="Actions"
+                                                                           style="width: 128px">
+                                                        <div class="datatable-header-cell-template-wrap">
+                                                            <!----><!----><span
+                                                                class="datatable-header-cell-wrapper"><span
+                                                                class="datatable-header-cell-label draggable">Ghi
                                                                         chú</span></span><!----><!----><span></span>
-                                                            </div>
-                                                            <span class="resize-handle"></span>
-                                                        </datatable-header-cell><!---->
-                                                    </div>
-                                                    <div class="datatable-row-right" style="
+                                                        </div>
+                                                        <span class="resize-handle"></span>
+                                                    </datatable-header-cell><!---->
+                                                </div>
+                                                <div class="datatable-row-right" style="
                                           transform: translate3d(0px, 0px, 0px);
                                           backface-visibility: hidden;
                                           width: 0px;
                                         ">
-                                                        <!---->
-                                                    </div>
                                                     <!---->
                                                 </div>
-                                            </datatable-header><!---->
-                                            <datatable-body role="rowgroup" class="datatable-body"
-                                                style="width: 100%; height: auto"><!---->
-                                                <datatable-selection><!---->
-                                                    <div class="empty-row">
-                                                        Hiện tại không có dữ liệu
-                                                    </div>
-                                                    <!---->
-                                                </datatable-selection>
-                                            </datatable-body><!---->
-                                        </div>
-                                    </ngx-datatable>
-                                </div>
-                                <!---->
+                                                <!---->
+                                            </div>
+                                        </datatable-header><!---->
+                                        <datatable-body role="rowgroup" class="datatable-body"
+                                                        style="width: 100%; height: auto"><!---->
+                                            <datatable-selection><!---->
+                                                <div class="empty-row">
+                                                    Hiện tại không có dữ liệu
+                                                </div>
+                                                <!---->
+                                            </datatable-selection>
+                                        </datatable-body><!---->
+                                    </div>
+                                </ngx-datatable>
                             </div>
-                        </dash-table>
-                    </div>
+                            <!---->
+                        </div>
+                    </dash-table>
                 </div>
-                <employee-rankings class="hidden md:block"><!----></employee-rankings>
             </div>
-            
+
         </div>
-    </home><!---->
-</div>
+    </div>
 {% endblock %}
