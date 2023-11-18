@@ -10,7 +10,18 @@ class Request(models.Model):
     current_rank = models.ForeignKey('library_db.Rank', on_delete=models.CASCADE, related_name='current_rank',
                                      null=True)
     current_lp = models.FloatField(max_length=99, null=True)
-    lp_Gain = models.IntegerField()
+
+    LP_GAIN_CHOICES = [
+        (1, "14 LP or less"),
+        (2, "15 LP or more"),
+        (3, "20 LP or more"),
+        (4, "25 LP or more"),
+        (5, "34 LP or more"),
+    ]
+    lp_Gain = models.IntegerField(
+        choices=LP_GAIN_CHOICES,
+        null=True
+    )
 
     desired_rank = models.ForeignKey('library_db.Rank', on_delete=models.CASCADE,
                                      related_name='desired_rank',
